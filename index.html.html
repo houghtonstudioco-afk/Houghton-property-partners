@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0a0a0b" />
+<title>Houghton Property Partners | Connecting Investors With Exceptional Property</title>
+<meta name="description" content="A research-driven property acquisition firm sourcing curated buy-to-let, refurbishment and HMO opportunities across Bristol, the South West, London and the North for a private investor network." />
+<meta name="author" content="Houghton Property Partners" />
+<meta property="og:title" content="Houghton Property Partners" />
+<meta property="og:description" content="Connecting investors with exceptional property opportunities across Bristol, the South West, London and the North." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_GB" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  /* ---- Palette: edit these to change the whole site's colours in one place ---- */
+  :root{
+    --ink:#0a0a0b;          /* base background (near-black) */
+    --ink-2:#0e1018;        /* raised panels (navy-tinted) */
+    --ink-3:#161a26;
+    --text:#EAEDF2;         /* primary text (cool white) */
+    --text-soft:#aab2c2;    /* secondary text */
+    --muted:#838b99;
+    --muted-2:#5f6675;
+    --navy:#1F3864;         /* brand navy — solid fills / buttons */
+    --accent:#7E9DD0;       /* readable steel-blue — links, eyebrows, highlights */
+    --accent-deep:#2E477A;  /* deep navy for outlines */
+    --line:rgba(234,237,242,.10);
+    --line-2:rgba(234,237,242,.18);
+    --maxw:1180px;
+    --pad:clamp(20px,5vw,64px);
+    --r:14px;
+    --ease:cubic-bezier(.2,.7,.2,1);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--text);
+    font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    font-size:clamp(15px,1.05vw,17px);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3,h4{
+    font-family:"Fraunces",Georgia,"Times New Roman",serif;
+    font-weight:400;
+    line-height:1.04;
+    letter-spacing:-.01em;
+    margin:0;
+  }
+
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+  .eyebrow{
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--accent);font-weight:500;display:inline-flex;align-items:center;gap:12px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--accent);opacity:.7}
+
+  .section{padding-block:clamp(72px,11vw,150px);position:relative}
+  .section-head{max-width:680px;margin-bottom:clamp(36px,5vw,64px)}
+  .section-head h2{
+    font-size:clamp(30px,5.2vw,54px);margin-top:18px;
+  }
+  .lead{color:var(--text-soft);font-size:clamp(16px,1.6vw,19px);margin-top:20px}
+  .muted{color:var(--muted)}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:15px 26px;border-radius:100px;font-size:14.5px;font-weight:500;
+    letter-spacing:.01em;cursor:pointer;border:1px solid transparent;
+    transition:transform .4s var(--ease),background .4s var(--ease),border-color .4s var(--ease),color .4s var(--ease);
+    will-change:transform;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--navy);color:#fff}
+  .btn-primary:hover{background:#2a4a82}
+  .btn-ghost{border-color:var(--line-2);color:var(--text)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .btn svg{width:15px;height:15px}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:fixed;inset:0 0 auto 0;z-index:60;
+    transition:background .4s var(--ease),border-color .4s var(--ease),backdrop-filter .4s;
+    border-bottom:1px solid transparent;
+  }
+  header.scrolled{background:rgba(10,10,11,.78);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:600;letter-spacing:.01em}
+  .brand .mark{
+    width:34px;height:34px;border:1px solid var(--accent);border-radius:7px;
+    display:grid;place-items:center;font-family:"Fraunces",serif;font-size:14px;color:var(--accent);
+    letter-spacing:0;
+  }
+  .brand small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-top:1px}
+  .brand b{font-weight:500;font-size:15px}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-size:14px;color:var(--text-soft);transition:color .3s}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-cta{display:flex;align-items:center;gap:16px}
+  .nav-tel{font-size:14px;color:var(--text-soft);display:inline-flex;align-items:center;gap:8px}
+  .nav-tel:hover{color:var(--accent)}
+  .nav-tel svg{width:14px;height:14px;opacity:.7}
+
+  .burger{display:none;width:42px;height:42px;border:1px solid var(--line-2);border-radius:9px;background:none;cursor:pointer;position:relative}
+  .burger span{position:absolute;left:11px;right:11px;height:1.5px;background:var(--text);transition:.35s var(--ease)}
+  .burger span:nth-child(1){top:15px}
+  .burger span:nth-child(2){bottom:15px}
+  .burger.open span:nth-child(1){top:20px;transform:rotate(45deg)}
+  .burger.open span:nth-child(2){bottom:20px;transform:rotate(-45deg)}
+
+  .mobile-menu{
+    position:fixed;inset:74px 0 0 0;z-index:55;background:rgba(10,10,11,.97);
+    backdrop-filter:blur(8px);transform:translateY(-12px);opacity:0;pointer-events:none;
+    transition:.4s var(--ease);display:flex;flex-direction:column;padding:30px var(--pad) 40px;
+  }
+  .mobile-menu.open{transform:none;opacity:1;pointer-events:auto}
+  .mobile-menu a{font-family:"Fraunces",serif;font-size:30px;padding:14px 0;border-bottom:1px solid var(--line);color:var(--text)}
+  .mobile-menu .mm-foot{margin-top:auto;padding-top:24px;display:flex;flex-direction:column;gap:8px;color:var(--muted);font-size:14px}
+  .mobile-menu .mm-foot a{font-family:"Inter",sans-serif;font-size:15px;border:none;padding:4px 0;color:var(--accent)}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+  #scene{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:
+      radial-gradient(120% 90% at 78% 35%,transparent 0%,rgba(10,10,11,.35) 55%,var(--ink) 100%),
+      linear-gradient(180deg,rgba(10,10,11,.55) 0%,transparent 22%,transparent 60%,var(--ink) 100%);
+  }
+  .hero-inner{position:relative;z-index:2;width:100%;padding-top:90px;padding-bottom:40px}
+  .hero h1{
+    font-size:clamp(40px,8.4vw,90px);font-weight:300;max-width:13ch;margin-top:26px;
+    letter-spacing:-.02em;
+  }
+  .hero h1 em{font-style:italic;color:var(--accent);font-weight:400}
+  .hero p{max-width:46ch;color:var(--text-soft);font-size:clamp(16px,1.7vw,20px);margin:26px 0 36px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+
+  .hero-foot{
+    position:absolute;left:var(--pad);right:var(--pad);bottom:26px;z-index:2;
+    display:flex;align-items:flex-end;justify-content:space-between;gap:20px;
+  }
+  .phase{display:flex;gap:22px;align-items:center;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .phase .dot{display:inline-flex;align-items:center;gap:9px;transition:color .6s}
+  .phase .dot i{width:7px;height:7px;border-radius:50%;background:var(--muted-2);transition:background .6s,box-shadow .6s}
+  .phase .dot.active{color:var(--accent)}
+  .phase .dot.active i{background:var(--accent);box-shadow:0 0 0 4px rgba(126,157,208,.15)}
+  .scrollcue{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .scrollcue i{width:1px;height:34px;background:linear-gradient(var(--accent),transparent);display:block;animation:cue 2.4s var(--ease) infinite}
+  @keyframes cue{0%{transform:scaleY(0);transform-origin:top}40%{transform:scaleY(1);transform-origin:top}60%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,6vw,90px);align-items:center}
+  .about-copy p{color:var(--text-soft);margin:0 0 18px}
+  .pillars{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+  .pillar{display:grid;grid-template-columns:auto 1fr;gap:22px;padding:26px 0;border-bottom:1px solid var(--line)}
+  .pillar .num{font-family:"Fraunces",serif;color:var(--accent);font-size:15px;padding-top:3px}
+  .pillar h3{font-size:21px;margin-bottom:8px}
+  .pillar p{margin:0;color:var(--muted);font-size:15px}
+
+  /* ---------- SERVICES ---------- */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .card{
+    background:linear-gradient(180deg,var(--ink-2),var(--ink));
+    border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;
+    transition:border-color .4s var(--ease),transform .4s var(--ease),background .4s;
+    min-height:190px;display:flex;flex-direction:column;
+  }
+  .card:hover{border-color:var(--line-2);transform:translateY(-3px)}
+  .card .ico{width:38px;height:38px;color:var(--accent);margin-bottom:auto}
+  .card .ico svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.2}
+  .card h3{font-size:20px;margin:22px 0 10px}
+  .card p{margin:0;color:var(--muted);font-size:14.5px}
+  .card.tall{grid-row:span 1}
+
+  /* ---------- FRAMEWORK / PROCESS ---------- */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+  .step{padding:30px 26px 30px 0;border-right:1px solid var(--line);position:relative}
+  .step:last-child{border-right:none;padding-right:0}
+  .step .num{font-family:"Fraunces",serif;font-size:40px;color:var(--ink-3);-webkit-text-stroke:1px var(--accent-deep);display:block;margin-bottom:16px;line-height:1}
+  .step h3{font-size:19px;margin-bottom:10px}
+  .step .q{color:var(--accent);font-size:13.5px;font-style:italic;font-family:"Fraunces",serif;margin-bottom:8px}
+  .step p{margin:0;color:var(--muted);font-size:14px}
+  .note-band{
+    margin-top:40px;border:1px solid var(--line);border-radius:var(--r);
+    background:var(--ink-2);padding:26px 30px;color:var(--text-soft);font-size:15px;
+    display:flex;gap:16px;align-items:flex-start;
+  }
+  .note-band b{color:var(--text);font-weight:600}
+  .note-band .tag{color:var(--accent);font-size:12px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;padding-top:2px}
+
+  /* ---------- WHY ---------- */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .why{border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;background:var(--ink-2)}
+  .why .ico{width:30px;height:30px;color:var(--accent);margin-bottom:18px}
+  .why .ico svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.3}
+  .why h3{font-size:18px;margin-bottom:9px}
+  .why p{margin:0;color:var(--muted);font-size:14px}
+
+  /* ---------- AREAS ---------- */
+  .areas{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .area{
+    border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;background:linear-gradient(180deg,var(--ink-2),var(--ink));
+    transition:border-color .4s
+  }
+  .area:hover{border-color:var(--line-2)}
+  .area h3{font-size:22px;margin-bottom:12px}
+  .area p{color:var(--muted);font-size:14.5px;margin:0 0 18px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-size:12px;letter-spacing:.04em;padding:6px 12px;border:1px solid var(--line-2);border-radius:100px;color:var(--text-soft)}
+
+  /* ---------- FEES ---------- */
+  .fees{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .fee{
+    border:1px solid var(--line);border-radius:var(--r);padding:clamp(28px,4vw,42px);
+    background:linear-gradient(180deg,var(--ink-2),var(--ink));position:relative;overflow:hidden;
+  }
+  .fee::before{content:"";position:absolute;inset:0 0 auto 0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.5}
+  .fee .tag{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .fee .price{font-family:"Fraunces",serif;font-size:clamp(34px,5vw,52px);color:var(--accent);margin:16px 0 4px;font-weight:300}
+  .fee .price small{font-family:"Inter",sans-serif;font-size:15px;color:var(--muted);letter-spacing:0;display:block;margin-top:6px}
+  .fee p{color:var(--text-soft);margin:18px 0 0;font-size:15px}
+  .fee-note{margin-top:22px;color:var(--muted);font-size:14px;display:flex;gap:12px;align-items:flex-start}
+  .fee-note svg{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:1.4;flex-shrink:0;margin-top:2px}
+
+  /* ---------- CONTACT / FORM ---------- */
+  .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,5vw,64px);align-items:start}
+  .contact-aside h2{font-size:clamp(30px,5vw,50px);margin:16px 0 22px}
+  .contact-aside .lead{margin-top:0}
+  .contact-channels{margin-top:34px;display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line)}
+  .channel{display:flex;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);transition:padding-left .35s var(--ease)}
+  a.channel:hover{padding-left:8px}
+  .channel .ic{width:40px;height:40px;border:1px solid var(--line-2);border-radius:10px;display:grid;place-items:center;color:var(--accent);flex-shrink:0}
+  .channel .ic svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.4}
+  .channel small{display:block;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:3px}
+  .channel span{font-size:16px;color:var(--text)}
+
+  form{background:var(--ink-2);border:1px solid var(--line);border-radius:18px;padding:clamp(24px,4vw,40px)}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{margin-bottom:18px;display:flex;flex-direction:column}
+  .field.full{grid-column:1/-1}
+  label{font-size:13px;color:var(--text-soft);margin-bottom:9px;font-weight:500;letter-spacing:.01em}
+  label .opt{color:var(--muted-2);font-weight:400}
+  input,select,textarea{
+    background:var(--ink);border:1px solid var(--line-2);border-radius:10px;
+    color:var(--text);font-family:inherit;font-size:15px;padding:13px 15px;width:100%;
+    transition:border-color .3s,background .3s;-webkit-appearance:none;appearance:none;
+  }
+  textarea{resize:vertical;min-height:96px}
+  input::placeholder,textarea::placeholder{color:var(--muted-2)}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);background:#0d0d0f}
+  select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238b8b93' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+
+  .seg{display:flex;gap:8px;flex-wrap:wrap}
+  .seg label{
+    flex:1;min-width:110px;margin:0;display:flex;align-items:center;justify-content:center;
+    padding:12px 10px;border:1px solid var(--line-2);border-radius:10px;cursor:pointer;
+    font-size:13.5px;color:var(--text-soft);transition:.3s;text-align:center;
+  }
+  .seg input{position:absolute;opacity:0;width:0;height:0}
+  .seg label:has(input:checked){border-color:var(--accent);color:var(--accent);background:rgba(126,157,208,.07)}
+
+  .checks{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .checks label{display:flex;align-items:center;gap:10px;margin:0;font-size:14px;color:var(--text-soft);cursor:pointer;padding:4px 0}
+  .checks input{width:17px;height:17px;accent-color:var(--accent);flex-shrink:0}
+  .hp{position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden}
+
+  .form-foot{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:6px}
+  button[type=submit]{border:none}
+  .consent{font-size:12.5px;color:var(--muted);max-width:42ch}
+  .form-msg{font-size:14.5px;margin-top:18px;padding:14px 16px;border-radius:10px;display:none}
+  .form-msg.show{display:block}
+  .form-msg.ok{background:rgba(126,157,208,.1);border:1px solid var(--accent-deep);color:var(--text)}
+  .form-msg.err{background:rgba(180,80,70,.12);border:1px solid #6e3b36;color:#e9c7c2}
+
+  /* ---------- FOOTER ---------- */
+  footer{border-top:1px solid var(--line);padding-block:60px 34px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:46px}
+  .foot-brand p{color:var(--muted);font-size:14.5px;max-width:38ch;margin:18px 0 0}
+  .foot-col h4{font-family:"Inter",sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 16px}
+  .foot-col a,.foot-col span{display:block;color:var(--text-soft);font-size:14.5px;padding:5px 0;transition:color .3s}
+  .foot-col a:hover{color:var(--accent)}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding-top:26px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+  .foot-bottom .links{display:flex;gap:22px}
+  .disclaimer{margin-top:24px;color:var(--muted-2);font-size:12px;line-height:1.65;max-width:80ch}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .scrollcue i{animation:none}
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:1000px){
+    .nav-links,.nav-tel{display:none}
+    .burger{display:block}
+    .about-grid{grid-template-columns:1fr;gap:40px}
+    .cards,.why-grid{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .step{border-right:none;border-bottom:1px solid var(--line);padding:24px 0}
+    .step:nth-child(odd){border-right:1px solid var(--line);padding-right:24px}
+    .areas{grid-template-columns:1fr}
+    .contact-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:640px){
+    .cards,.why-grid,.fees{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    .step,.step:nth-child(odd){border-right:none;padding-right:0}
+    .form-row,.checks{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:30px}
+    .hero-foot{position:static;margin-top:30px;flex-direction:column;align-items:flex-start;padding:0 var(--pad)}
+    .scrollcue{display:none}
+    .note-band{flex-direction:column;gap:8px}
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#home" class="brand" aria-label="Houghton Property Partners home">
+      <span class="mark">HP</span>
+      <span><b>Houghton</b><small>Property Partners</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#services">What We Do</a>
+      <a href="#framework">Our Method</a>
+      <a href="#areas">Areas</a>
+      <a href="#fees">Fees</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-tel" href="tel:+447444577053"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>07444 577053</a>
+      <a href="#contact" class="btn btn-primary">Join Our Network</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#services">What We Do</a>
+  <a href="#framework">Our Method</a>
+  <a href="#areas">Areas We Cover</a>
+  <a href="#fees">Fees</a>
+  <a href="#contact">Contact</a>
+  <div class="mm-foot">
+    <a href="tel:+447444577053">07444 577053</a>
+    <a href="mailto:benghoughton07@icloud.com">benghoughton07@icloud.com</a>
+    <span style="color:var(--muted)">Bristol · South West · London · The North</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <canvas id="scene"></canvas>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Bristol · London · The North</span>
+    <h1>Connecting investors with <em>exceptional</em> property opportunities.</h1>
+    <p>A research-led acquisitions firm. We source, underwrite and structure deals — then match them to a private network of investors seeking dependable, data-backed returns.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Tell us what you're looking for
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#services" class="btn btn-ghost">View what we do</a>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <div class="phase" id="phase">
+      <span class="dot" data-phase="0"><i></i>Construction</span>
+      <span class="dot" data-phase="1"><i></i>Finished</span>
+    </div>
+    <div class="scrollcue">Scroll <i></i></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-copy reveal">
+      <span class="eyebrow">About the firm</span>
+      <h2 style="font-size:clamp(28px,4.6vw,46px);margin:18px 0 24px">Research-driven property acquisition</h2>
+      <p>Houghton Property Partners identifies, analyses and structures property opportunities across our core regions — then connects them with a private network of investors.</p>
+      <p>We are not an estate agency. Our work begins where the listing ends: in the numbers, the local fundamentals and the long-term investment case behind every asset.</p>
+      <a href="#framework" class="btn btn-ghost" style="margin-top:10px">See how we assess a deal</a>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar"><span class="num">01</span><div><h3>Sourced off-market</h3><p>Relationships with agents, developers and vendors give us access to opportunities before they reach the open market.</p></div></div>
+      <div class="pillar"><span class="num">02</span><div><h3>Underwritten with rigour</h3><p>Every opportunity is stress-tested against local rental data, refurbishment costs and exit scenarios before it is presented.</p></div></div>
+      <div class="pillar"><span class="num">03</span><div><h3>Matched to mandate</h3><p>We connect each opportunity with investors whose strategy, budget and risk appetite genuinely align.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Opportunities across the investment spectrum</h2>
+      <p class="lead">From single-let income to value-add refurbishment, every mandate is sourced, analysed and presented to the same exacting standard.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 21v-6h6v6"/></svg></div><h3>Buy-to-let</h3><p>Income-generating residential assets in proven rental locations, underwritten for sustainable yield.</p></div>
+      <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M14 2l-3 9h6l-3 9M3 21h18"/></svg></div><h3>Refurbishment</h3><p>Value-add projects where strategic refurbishment unlocks capital growth and uplifted rents.</p></div>
+      <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21V9l5-3 5 3v12M13 21V11l4-2 4 2v10M3 21h18M7 13v0M7 17v0"/></svg></div><h3>HMOs</h3><p>Houses in multiple occupation engineered for higher gross yields and resilient multi-tenant income.</p></div>
+      <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-5 3 3 5-7"/></svg></div><h3>Market research</h3><p>Granular analysis of local fundamentals — yields, demand, supply and regeneration — behind every decision.</p></div>
+      <div class="card reveal"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20a6 6 0 0 1 12 0M14 20a5 5 0 0 1 7-4"/></svg></div><h3>Investor networking</h3><p>A curated private network where vetted opportunities meet aligned capital, with discretion.</p></div>
+      <div class="card reveal" style="display:flex;justify-content:center;align-items:center;text-align:center;background:linear-gradient(180deg,rgba(126,157,208,.08),var(--ink));border-color:var(--line-2)">
+        <div><p style="color:var(--text);font-family:'Fraunces',serif;font-size:21px;line-height:1.3;margin:0 0 16px">Looking for something specific?</p><a href="#contact" class="btn btn-primary">Send your brief</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRAMEWORK -->
+<section class="section" id="framework" style="background:var(--ink-2);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our method</span>
+      <h2>How we assess every opportunity</h2>
+      <p class="lead">Before anything reaches the network, we underwrite it across four dimensions — a disciplined, repeatable framework that surfaces the genuine investment case, and flags anything that doesn't stand up.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><span class="num">01</span><h3>Purchase price</h3><div class="q">Priced on value, or on hope?</div><p>Benchmarked against comparable sales and genuine market value — never simply the asking price.</p></div>
+      <div class="step"><span class="num">02</span><h3>Estimated rent</h3><div class="q">What will it realistically let for?</div><p>Achievable rent modelled from live local letting data and demand — grounded figures, not optimism.</p></div>
+      <div class="step"><span class="num">03</span><h3>Gross & net yield</h3><div class="q">Does the income case stand alone?</div><p>We work the return through before any assumptions about future growth are made.</p></div>
+      <div class="step"><span class="num">04</span><h3>Potential upside</h3><div class="q">Where is value to be added?</div><p>We identify the levers — refurbishment, re-letting, planning, repositioning — that grow rent and capital value.</p></div>
+    </div>
+    <div class="note-band reveal">
+      <span class="tag">A new firm</span>
+      <div><b>No track record to dress up.</b> Houghton Property Partners is a new firm — so our promise is the process itself: rigorous research and a transparent investment case on every opportunity we bring forward.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The investor process</span>
+      <h2>A disciplined path from sourcing to acquisition</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><span class="num">01</span><h3>Identify opportunity</h3><p>We source on- and off-market property through our network of agents, developers and vendors across our core regions.</p></div>
+      <div class="step"><span class="num">02</span><h3>Analyse financials</h3><p>Each opportunity is underwritten — yield, refurbishment cost, demand and exit — against current local market data.</p></div>
+      <div class="step"><span class="num">03</span><h3>Present to investors</h3><p>A concise, transparent investment case is shared with the members of our network whose mandate it fits.</p></div>
+      <div class="step"><span class="num">04</span><h3>Support to acquisition</h3><p>We support the investor through to completion, coordinating the parties required to complete with confidence.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section" id="why" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Houghton</span>
+      <h2>Built on discipline, not hype</h2>
+      <p class="lead">A simple principle: every opportunity is researched, underwritten and presented with complete transparency.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M21 12v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11"/></svg></div><h3>Professional process</h3><p>A consistent, considered approach to every opportunity — the same standard, every time.</p></div>
+      <div class="why reveal"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Transparent analysis</h3><p>Open underwriting and clear reasoning — you see exactly how an opportunity was assessed.</p></div>
+      <div class="why reveal"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Investor focused</h3><p>Opportunities matched to your strategy and goals — we work to your mandate, not ours.</p></div>
+      <div class="why reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l3-3 3 3 5-6"/></svg></div><h3>Data-led research</h3><p>Local fundamentals and live market data sit behind every figure and recommendation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="section" id="areas" style="background:var(--ink-2);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Areas we cover</span>
+      <h2>Focused where we know best</h2>
+      <p class="lead">We deliberately concentrate where our research, relationships and local knowledge create a genuine edge.</p>
+    </div>
+    <div class="areas">
+      <div class="area reveal"><h3>Bristol &amp; South West</h3><p>Our home market. A resilient, high-demand rental city with strong yields, a young professional base and ongoing regeneration.</p><div class="chips"><span class="chip">Buy-to-Let</span><span class="chip">HMO</span><span class="chip">Refurbishment</span></div></div>
+      <div class="area reveal"><h3>London</h3><p>Selective acquisitions where fundamentals and entry price support a clear, defensible investment case.</p><div class="chips"><span class="chip">Buy-to-Let</span><span class="chip">Value-Add</span></div></div>
+      <div class="area reveal"><h3>The North</h3><p>Higher-yielding markets across the North East and North West — including freehold blocks and HMOs sourced for income-led mandates.</p><div class="chips"><span class="chip">HMO</span><span class="chip">Freehold Blocks</span><span class="chip">High Yield</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEES -->
+<section class="section" id="fees">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Fee structure</span>
+      <h2>Clear fees, agreed up front</h2>
+      <p class="lead">In keeping with how we work, our fees are simple and transparent. You'll always know exactly what you're paying before you commit to anything.</p>
+    </div>
+    <div class="fees">
+      <div class="fee reveal">
+        <span class="tag">On-market properties</span>
+        <div class="price">£2,000 – £5,000<small>Flat sourcing fee per acquisition</small></div>
+        <p>For opportunities sourced from the open market — fully researched, underwritten and presented with a complete investment case, then supported through to completion.</p>
+      </div>
+      <div class="fee reveal">
+        <span class="tag">Off-market properties</span>
+        <div class="price">1% – 2%<small>Of the purchase price</small></div>
+        <p>For off-market deals accessed through our network. The fee reflects the sourcing, negotiation and access advantage of opportunities you won't find listed.</p>
+      </div>
+    </div>
+    <div class="fee-note reveal">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h0"/></svg>
+      <span>Every fee is confirmed in writing before any engagement. The exact figure depends on the property, the work involved and your mandate — discuss it with us first, with no obligation.</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact" style="background:var(--ink-2);border-top:1px solid var(--line)">
+  <div class="wrap contact-grid">
+    <div class="contact-aside reveal">
+      <span class="eyebrow">Investor network</span>
+      <h2>Tell us what you're looking for</h2>
+      <p class="lead">Share your budget, preferred areas and the kind of property you're after. We'll come back with curated opportunities aligned to your mandate. Membership is complimentary and entirely without obligation.</p>
+      <div class="contact-channels">
+        <a class="channel" href="tel:+447444577053">
+          <span class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+          <span><small>Call or text</small>07444 577053</span>
+        </a>
+        <a class="channel" href="mailto:benghoughton07@icloud.com">
+          <span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+          <span><small>Email</small>benghoughton07@icloud.com</span>
+        </a>
+        <div class="channel">
+          <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+          <span><small>Based in</small>Bristol · covering the South West, London &amp; the North</span>
+        </div>
+      </div>
+    </div>
+
+    <form id="enquiry" class="reveal" novalidate>
+      <div class="form-row">
+        <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" placeholder="Your name" required /></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@email.com" required /></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="phone">Phone <span class="opt">(optional)</span></label><input id="phone" name="phone" type="tel" placeholder="07…" /></div>
+        <div class="field"><label for="budget">Investment budget</label>
+          <select id="budget" name="budget" required>
+            <option value="" disabled selected>Select a range</option>
+            <option>£50k – £150k</option>
+            <option>£150k – £350k</option>
+            <option>£350k – £750k</option>
+            <option>£750k – £1.5m</option>
+            <option>£1.5m+</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field full">
+        <label>Preferred areas <span class="opt">(select any)</span></label>
+        <div class="checks">
+          <label><input type="checkbox" name="areas" value="Bristol & South West" /> Bristol &amp; South West</label>
+          <label><input type="checkbox" name="areas" value="London" /> London</label>
+          <label><input type="checkbox" name="areas" value="The North" /> The North</label>
+          <label><input type="checkbox" name="areas" value="Flexible / Anywhere" /> Flexible / anywhere</label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field"><label for="strategy">Preferred strategy</label>
+          <select id="strategy" name="strategy">
+            <option value="" disabled selected>Select a strategy</option>
+            <option>Buy-to-Let</option>
+            <option>Refurbishment / Value-Add</option>
+            <option>HMO</option>
+            <option>Freehold Block</option>
+            <option>Diversified Portfolio</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field"><label for="timeline">Timeline</label>
+          <select id="timeline" name="timeline">
+            <option value="" disabled selected>When are you looking?</option>
+            <option>Ready to proceed now</option>
+            <option>Within 1–3 months</option>
+            <option>Within 3–6 months</option>
+            <option>Just exploring</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field full">
+        <label>Market preference</label>
+        <div class="seg">
+          <label><input type="radio" name="market" value="On-market" /> On-market</label>
+          <label><input type="radio" name="market" value="Off-market" /> Off-market</label>
+          <label><input type="radio" name="market" value="No preference" checked /> No preference</label>
+        </div>
+      </div>
+
+      <div class="field full">
+        <label for="brief">The properties you're looking for</label>
+        <textarea id="brief" name="brief" placeholder="e.g. 6-bed HMO in Bristol, freehold block in the North East, target gross yield 8%+, mix of beds, any deal-breakers…"></textarea>
+      </div>
+
+      <!-- anti-spam honeypot -->
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" />
+
+      <div class="form-foot">
+        <button type="submit" class="btn btn-primary" id="submitBtn">Send my requirements
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <p class="consent">By submitting you agree to be contacted about opportunities. We never share your details.</p>
+      </div>
+      <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#home" class="brand"><span class="mark">HP</span><span><b>Houghton</b><small>Property Partners</small></span></a>
+        <p>A research-driven property acquisition firm connecting investors with curated opportunities across Bristol, the South West, London and the North.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Navigate</h4>
+        <a href="#about">About</a>
+        <a href="#services">What We Do</a>
+        <a href="#framework">Our Method</a>
+        <a href="#areas">Areas We Cover</a>
+        <a href="#fees">Fees</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:+447444577053">07444 577053</a>
+        <a href="mailto:benghoughton07@icloud.com">benghoughton07@icloud.com</a>
+        <span>Bristol BS1</span>
+        <a href="#contact">Join the network</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Houghton Property Partners. All rights reserved.</span>
+      <div class="links"><a href="#contact">Contact</a><a href="#fees">Fees</a></div>
+    </div>
+    <p class="disclaimer">Houghton Property Partners introduces opportunities and does not provide financial, investment or tax advice. The value of property investments can fall as well as rise. Your capital is at risk. Figures shown are indicative; all fees are confirmed in writing before any engagement.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+/* =========================================================
+   CONFIG — set your free Web3Forms access key here.
+   Get one in ~30s at https://web3forms.com  (enter benghoughton07@icloud.com).
+   Until it's set, the form opens a pre-filled email to you instead.
+========================================================= */
+const WEB3FORMS_ACCESS_KEY = "REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY";
+const CONTACT_EMAIL = "benghoughton07@icloud.com";
+
+const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const isMobile = window.matchMedia("(max-width: 760px)").matches;
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+/* ---------- header / nav ---------- */
+const hdr = document.getElementById("hdr");
+const burger = document.getElementById("burger");
+const mobileMenu = document.getElementById("mobileMenu");
+addEventListener("scroll", () => hdr.classList.toggle("scrolled", scrollY > 30), {passive:true});
+function closeMenu(){ burger.classList.remove("open"); mobileMenu.classList.remove("open"); burger.setAttribute("aria-expanded","false"); document.body.style.overflow=""; }
+burger.addEventListener("click", () => {
+  const open = burger.classList.toggle("open");
+  mobileMenu.classList.toggle("open", open);
+  burger.setAttribute("aria-expanded", open);
+  document.body.style.overflow = open ? "hidden" : "";
+});
+mobileMenu.querySelectorAll("a[href^='#']").forEach(a => a.addEventListener("click", closeMenu));
+
+/* ---------- reveal on scroll ---------- */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+}, {threshold:0.12, rootMargin:"0px 0px -8% 0px"});
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+/* =========================================================
+   FORM → email (Web3Forms with mailto fallback)
+========================================================= */
+const form = document.getElementById("enquiry");
+const msg = document.getElementById("formMsg");
+const submitBtn = document.getElementById("submitBtn");
+
+function showMsg(type, text){ msg.className = "form-msg show " + type; msg.textContent = text; }
+
+function collect(){
+  const fd = new FormData(form);
+  const areas = fd.getAll("areas").join(", ") || "—";
+  return {
+    name: (fd.get("name")||"").trim(),
+    email: (fd.get("email")||"").trim(),
+    phone: fd.get("phone") || "—",
+    budget: fd.get("budget") || "—",
+    strategy: fd.get("strategy") || "—",
+    timeline: fd.get("timeline") || "—",
+    market: fd.get("market") || "—",
+    areas,
+    brief: fd.get("brief") || "—",
+    botcheck: fd.get("botcheck")
+  };
+}
+
+function mailtoFallback(d){
+  const body =
+`New enquiry from the Houghton Property Partners website
+
+Name: ${d.name}
+Email: ${d.email}
+Phone: ${d.phone}
+
+Budget: ${d.budget}
+Preferred areas: ${d.areas}
+Strategy: ${d.strategy}
+Timeline: ${d.timeline}
+Market preference: ${d.market}
+
+Looking for:
+${d.brief}`;
+  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("New investor enquiry — " + d.name)}&body=${encodeURIComponent(body)}`;
+}
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const d = collect();
+  if (d.botcheck) return; // bot trap
+  if (!d.name || !d.email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(d.email)){
+    showMsg("err", "Please add your name and a valid email so we can reply.");
+    return;
+  }
+  if (d.budget === "—"){ showMsg("err", "Please choose an investment budget."); return; }
+
+  // No key configured yet → open a pre-filled email instead.
+  if (WEB3FORMS_ACCESS_KEY.startsWith("REPLACE_")){
+    mailtoFallback(d);
+    showMsg("ok", "Opening your email app with the details ready to send. (Tip for the site owner: add a Web3Forms key to receive these automatically.)");
+    return;
+  }
+
+  submitBtn.disabled = true;
+  const label = submitBtn.innerHTML;
+  submitBtn.textContent = "Sending…";
+  try {
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method:"POST",
+      headers:{ "Content-Type":"application/json", "Accept":"application/json" },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: "New investor enquiry — " + d.name,
+        from_name: "Houghton Property Partners website",
+        name: d.name, email: d.email, phone: d.phone,
+        budget: d.budget, preferred_areas: d.areas, strategy: d.strategy,
+        timeline: d.timeline, market_preference: d.market, looking_for: d.brief
+      })
+    });
+    const out = await res.json();
+    if (out.success){
+      form.reset();
+      showMsg("ok", "Thank you — your requirements are on their way. We'll be in touch shortly.");
+    } else {
+      showMsg("err", "Something went wrong sending that. Please call 07444 577053 or email " + CONTACT_EMAIL + ".");
+    }
+  } catch(err){
+    showMsg("err", "Network issue sending the form. Please call 07444 577053 or email " + CONTACT_EMAIL + ".");
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = label;
+  }
+});
+
+/* =========================================================
+   3D HERO — a house, construction → finished.
+   Frame & roof assemble, then the windows light up.
+   Light on phones: capped DPR, fewer windows, pauses
+   off-screen / on hidden tab, respects reduced motion.
+========================================================= */
+(function(){
+  const canvas = document.getElementById("scene");
+  if (!window.THREE) return;
+
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x0a0a0b, 0.05);
+
+  const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: !isMobile, alpha: true, powerPreference: "high-performance" });
+  renderer.setClearColor(0x000000, 0);
+  const DPR_CAP = isMobile ? 1.5 : 2;
+
+  // lighting (cool, to suit the navy palette)
+  scene.add(new THREE.AmbientLight(0x9aa6bf, 0.55));
+  const key = new THREE.DirectionalLight(0xeef2fb, 1.1); key.position.set(6, 11, 7); scene.add(key);
+  const rim = new THREE.DirectionalLight(0x7E9DD0, 0.65); rim.position.set(-8, 4, -6); scene.add(rim);
+
+  const group = new THREE.Group();
+  scene.add(group);
+
+  // ---- House parts. Each part assembles (drops into place + fades from
+  //      wireframe to solid); windows ramp their glow up in the finished state.
+  const parts = [];
+  const wallMat = new THREE.MeshStandardMaterial({ color:0x12151d, metalness:0.15, roughness:0.85, transparent:true, opacity:0 });
+  const roofMat = new THREE.MeshStandardMaterial({ color:0x1b2433, metalness:0.20, roughness:0.70, transparent:true, opacity:0 });
+  const doorMat = new THREE.MeshStandardMaterial({ color:0x24416f, metalness:0.20, roughness:0.60, transparent:true, opacity:0 });
+  const winMat  = () => new THREE.MeshStandardMaterial({ color:0x0c0e13, emissive:0x9db9ec, emissiveIntensity:0, metalness:0.1, roughness:0.4, transparent:true, opacity:0 });
+  const edgeMat = new THREE.LineBasicMaterial({ color:0x8FB0E0, transparent:true, opacity:0.9 });
+
+  function addPart({geo, mat, pos, rise, delay, edges=true, glow=false, maxOp=0.95}){
+    const holder = new THREE.Group();
+    const mesh = new THREE.Mesh(geo, mat);
+    holder.add(mesh);
+    let edgeLines = null;
+    if (edges){ edgeLines = new THREE.LineSegments(new THREE.EdgesGeometry(geo), edgeMat.clone()); holder.add(edgeLines); }
+    holder.position.set(pos[0], pos[1], pos[2]);
+    holder.userData = { baseY:pos[1], rise, delay, mesh, edges:edgeLines, glow, maxOp };
+    group.add(holder); parts.push(holder);
+  }
+
+  // walls
+  addPart({ geo:new THREE.BoxGeometry(3.2, 2.0, 2.6), mat:wallMat, pos:[0, 0, 0], rise:1.1, delay:0.0 });
+
+  // gable roof — extruded triangle with a small overhang
+  const tri = new THREE.Shape();
+  tri.moveTo(-1.75, 0); tri.lineTo(1.75, 0); tri.lineTo(0, 1.15); tri.lineTo(-1.75, 0);
+  const roofGeo = new THREE.ExtrudeGeometry(tri, { depth:2.9, bevelEnabled:false });
+  roofGeo.translate(0, 0, -1.45); // centre the extrusion on Z
+  addPart({ geo:roofGeo, mat:roofMat, pos:[0, 1.0, 0], rise:2.4, delay:0.34 });
+
+  // chimney
+  addPart({ geo:new THREE.BoxGeometry(0.36, 1.0, 0.36), mat:wallMat.clone(), pos:[0.85, 1.55, -0.55], rise:2.8, delay:0.52 });
+
+  // door (front face)
+  addPart({ geo:new THREE.BoxGeometry(0.6, 1.05, 0.1), mat:doorMat, pos:[0, -0.48, 1.31], rise:0.7, delay:0.18, edges:false });
+
+  // windows that light up — fewer on mobile
+  const winGeo = new THREE.BoxGeometry(0.62, 0.6, 0.08);
+  const winPos = isMobile
+    ? [ [-1.0, 0.15, 1.31], [1.0, 0.15, 1.31] ]
+    : [ [-1.0, 0.15, 1.31], [1.0, 0.15, 1.31], [0, 0.2, -1.31], [1.61, 0.2, 0.0] ];
+  winPos.forEach((p, i) => {
+    const g = winGeo.clone();
+    if (p[0] > 1.4) g.rotateY(Math.PI / 2); // side window faces +X
+    addPart({ geo:g, mat:winMat(), pos:p, rise:0.9, delay:0.42 + i*0.05, edges:false, glow:true, maxOp:0.96 });
+  });
+
+  group.position.y = 0.15;
+
+  // subtle ground ring
+  const ring = new THREE.Mesh(
+    new THREE.RingGeometry(3.0, 3.08, 64),
+    new THREE.MeshBasicMaterial({ color:0x7E9DD0, transparent:true, opacity:0.14, side:THREE.DoubleSide })
+  );
+  ring.rotation.x = -Math.PI/2; ring.position.y = -1.06; group.add(ring);
+
+  // phase indicator
+  const dots = [...document.querySelectorAll("#phase .dot")];
+  function setPhase(p){ dots.forEach(dt => dt.classList.toggle("active", +dt.dataset.phase === p)); }
+
+  function resize(){
+    const r = canvas.getBoundingClientRect();
+    const w = r.width || innerWidth, h = r.height || innerHeight;
+    renderer.setPixelRatio(Math.min(devicePixelRatio || 1, DPR_CAP));
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h; camera.updateProjectionMatrix();
+  }
+  addEventListener("resize", () => { clearTimeout(window.__rz); window.__rz = setTimeout(resize, 150); });
+  resize();
+
+  // camera framing: shift right & up so the house sits behind the headline gap
+  function frame(){
+    const tight = innerWidth < 760;
+    camera.position.set(tight ? 0.2 : 3.6, tight ? 1.9 : 2.4, tight ? 9.0 : 8.4);
+    camera.lookAt(tight ? 0 : 0.5, tight ? 0.1 : 0.15, 0);
+  }
+  frame();
+  addEventListener("resize", frame);
+
+  // construction(0) -> finished(1) state applied each frame
+  function applyState(t){
+    // t: 0 = frame/wireframe & raised, 1 = solid, settled, windows lit
+    parts.forEach(p => {
+      const u = p.userData;
+      const local = Math.min(1, Math.max(0, (t - u.delay) / (1 - u.delay)));
+      const e = local<0.5 ? 2*local*local : 1-Math.pow(-2*local+2,2)/2; // easeInOutQuad
+      p.position.y = u.baseY + u.rise * (1 - e);
+      u.mesh.material.opacity = e * u.maxOp;
+      if (u.edges) u.edges.material.opacity = 0.9 - e*0.64;
+      if (u.glow) u.mesh.material.emissiveIntensity = e * 1.5;
+    });
+  }
+
+  let running = true, raf = 0, clock = new THREE.Clock();
+  let phaseT = 0, dir = 1, dwell = 0;
+
+  function render(){
+    if (!running){ raf = 0; return; }
+    const dt = Math.min(clock.getDelta(), 0.05);
+
+    if (!prefersReduced){
+      group.rotation.y += dt * 0.18;
+      // cycle construction <-> finished with a dwell at each end
+      if (dwell > 0){ dwell -= dt; }
+      else {
+        phaseT += dir * dt * 0.32;
+        if (phaseT >= 1){ phaseT = 1; dir = -1; dwell = 2.2; setPhase(1); }
+        else if (phaseT <= 0){ phaseT = 0; dir = 1; dwell = 2.2; setPhase(0); }
+      }
+      applyState(phaseT);
+    }
+    renderer.render(scene, camera);
+    raf = requestAnimationFrame(render);
+  }
+
+  function start(){ if (!raf){ clock.getDelta(); running = true; render(); } }
+  function stop(){ running = false; }
+
+  if (prefersReduced){
+    applyState(1); setPhase(1); renderer.render(scene, camera); // static finished frame
+  } else {
+    applyState(0); setPhase(0);
+    // pause when hero scrolled away
+    const heroIO = new IntersectionObserver(([en]) => { if (en.isIntersecting) start(); else stop(); }, {threshold:0.02});
+    heroIO.observe(document.getElementById("home"));
+    document.addEventListener("visibilitychange", () => { document.hidden ? stop() : start(); });
+    start();
+  }
+})();
+</script>
+</body>
+</html>
