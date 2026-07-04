@@ -131,6 +131,8 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
   London school-placement consultancy.
 - Batch 22 (2026-07-04, 6 rows — database at 288): Epsom/Ashtead/Leatherhead
   estate agents, Surrey tutoring, Cotswolds/Gloucestershire wedding caterers.
+- Batch 23 (2026-07-04, 7 rows — database at 295): Twickenham/Teddington
+  estate agents, dentists, IFA, architects.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
