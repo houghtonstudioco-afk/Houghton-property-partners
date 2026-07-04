@@ -142,6 +142,7 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 29 (2026-07-04, 7 rows — database at 339): Reading/Wokingham estate agents, dentists, heritage architects, accountants.
 - Batch 30 (2026-07-04, 8 rows — database at 347): Basingstoke estate agents/dentists/vets, Wokingham solar, Reading heating engineer.
 - Batch 31 (2026-07-04, 8 rows — database at 355): Newbury estate agents & architects, Berkshire wedding venues (Hungerford/Maidenhead), Reading/Wokingham private GP.
+- Batch 32 (2026-07-04, 8 rows — database at 363): Witney/Abingdon estate agents & dentists, Oxfordshire architects, Oxford accountants.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
