@@ -79,6 +79,13 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
   employment law (London), surveyors (London), Bath dentists & physios, Surrey
   builders, SW London nurseries, Bath recruiters, osteopaths (Bristol), events
   agencies (London), IFA (Wimbledon), premium plumbers (Chelsea).
+- Batch 5 (2026-07-04, 31 rows — database at 159): Cheltenham estate agents,
+  dentists & aesthetics clinics, Oxford estate agents & mortgage brokers,
+  Cotswolds architects (Cheltenham/Tewkesbury), Guildford/Surrey vets, Bath
+  heritage trades (sash windows), Bristol IT/MSP support, Cheltenham personal
+  training studios, N London nurseries (Highgate/Islington), Surrey/Oxfordshire
+  live-in care, Kent & Hampshire wedding venues, immigration law firms (London),
+  Bristol conveyancing solicitors, Cotswolds/Broadway private GP membership group.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
