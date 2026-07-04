@@ -86,6 +86,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
   training studios, N London nurseries (Highgate/Islington), Surrey/Oxfordshire
   live-in care, Kent & Hampshire wedding venues, immigration law firms (London),
   Bristol conveyancing solicitors, Cotswolds/Broadway private GP membership group.
+- Batch 6 (2026-07-04, 15 rows — database at 174): Henley/Marlow/Beaconsfield
+  estate agents & IFAs, Blackheath & Notting Hill estate agents, Winchester
+  dentists, Henley architects, Guildford private GP, Oxfordshire/Cotswolds
+  wedding venues (Bicester, Chipping Norton).
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
