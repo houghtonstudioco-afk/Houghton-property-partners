@@ -129,6 +129,8 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 21 (2026-07-04, 6 rows — database at 282): home cinema/AV installers
   (Surrey), curtains/soft furnishings (Bristol/Bath), Bristol wine merchant,
   London school-placement consultancy.
+- Batch 22 (2026-07-04, 6 rows — database at 288): Epsom/Ashtead/Leatherhead
+  estate agents, Surrey tutoring, Cotswolds/Gloucestershire wedding caterers.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
