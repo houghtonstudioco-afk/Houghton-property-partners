@@ -58,24 +58,24 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 
 ## Niches covered so far
 
-- Batch 1 (2026-07-04): estate agents (Bristol), mortgage brokers (London),
-- Batch 2 (2026-07-04): letting agents (Bristol), wedding venues (Cotswolds),
-  cosmetic clinics (Bristol), pilates studios (Bristol), financial advisers
-  (Bristol), private tutors (London), osteopaths (SW London), design & build
-  firms (Bristol/Somerset).
+- Batch 1 (2026-07-04, 24 rows): estate agents (Bristol), mortgage brokers (London),
   dentists (Bristol), law firms (Bristol), aesthetics clinics (London),
   architects (Bath/Bristol), physios (SW London), solar installers (Bristol),
   recruitment (Bristol), accountants (Bath), vets (London), interior design (London).
+- Batch 2 (2026-07-04, 16 rows): letting agents (Bristol), wedding venues (Cotswolds),
+  cosmetic clinics (Bristol), pilates studios (Bristol), financial advisers
+  (Bristol), private tutors (London), osteopaths (SW London), design & build
+  firms (Bristol/Somerset).
 
 ## Suggested next niches
 
-- Letting agents (Bristol BS6/BS7, London zones 2-3)
-- Cosmetic clinics & dental implant clinics (Bristol)
-- Wedding venues & event companies (Cotswolds / Somerset / Surrey)
-- Private tutors & tuition centres (London)
-- Gyms / PT / pilates studios (Clifton, Chelsea, Richmond)
-- Financial advisers / wealth managers (Bath, Bristol)
-- Builders / premium home services (Surrey, Berkshire commuter belt)
-- Care providers & nurseries (SW London)
-- Osteopaths & chiropractors (London villages: Dulwich, Wimbledon, Hampstead)
+- Care providers & nurseries (SW London / Bristol)
 - Business consultants & B2B services (Bristol)
+- Event companies & caterers (London / Somerset)
+- Roofers, electricians, plumbing & heating (premium, Bristol/Bath)
+- Gyms & personal training studios (Chelsea, Richmond, Clifton)
+- Private GPs & health clinics (London, Bristol)
+- Letting agents (London zones 2-3)
+- Chiropractors (Hampstead, Richmond)
+- Solicitors — niche practices (London: family, employment, immigration)
+- Landscape designers / garden rooms (Surrey, Cotswolds)
