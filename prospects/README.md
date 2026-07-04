@@ -138,6 +138,7 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 25 (2026-07-04, 7 rows — database at 309): Kingston upon Thames/Surbiton estate agents, dentists, architects, accountants.
 - Batch 26 (2026-07-04, 8 rows — database at 317): Bromley/Beckenham estate agents, dentists, accountants, architects.
 - Batch 27 (2026-07-04, 9 rows — database at 326): Purley/South Croydon estate agents, Bromley/Beckenham GPs & vets, Surrey manor wedding venues.
+- Batch 28 (2026-07-04, 6 rows — database at 332): Sutton/Cheam estate agents & dentists, Berkshire recruitment, SE London mortgage broker.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
