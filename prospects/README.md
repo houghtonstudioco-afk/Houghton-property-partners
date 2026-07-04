@@ -108,6 +108,8 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
   Somerset (Portishead/Nailsea/Clevedon) estate agents, London dermatology.
 - Batch 13 (2026-07-04, 7 rows — database at 235): Primrose Hill/St John's
   Wood/South Kensington estate agents, Guildford/Weybridge pilates studios.
+- Batch 14 (2026-07-04, 6 rows — database at 241): Guildford nursery & IT/MSP
+  support, East London wills/probate solicitors, Surrey business consultancy.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
