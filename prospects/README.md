@@ -112,6 +112,9 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
   support, East London wills/probate solicitors, Surrey business consultancy.
 - Batch 15 (2026-07-04, 4 rows — database at 245): Horsham/Haywards Heath
   (West Sussex) estate agents, accountants, architects, dentists.
+- Batch 16 (2026-07-04, 8 rows — database at 253): kitchen/bathroom design
+  (Bath/Bristol/Surrey), removals (Bristol), funeral directors (Bristol/Bath),
+  chiropractors/osteopaths (Guildford).
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
