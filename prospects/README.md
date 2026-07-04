@@ -99,6 +99,8 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 9 (2026-07-04, 9 rows — database at 206): Guildford/Weybridge
   recruitment & wealth management/IFA, Surrey electricians & roofers,
   Wiltshire wedding venues (Salisbury/Downton).
+- Batch 10 (2026-07-04, 8 rows — database at 214): Guildford/Godalming,
+  Reigate/Redhill/Dorking, Wandsworth/Balham/Clapham, Ealing estate agents.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
