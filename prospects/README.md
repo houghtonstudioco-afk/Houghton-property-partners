@@ -115,6 +115,9 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 16 (2026-07-04, 8 rows — database at 253): kitchen/bathroom design
   (Bath/Bristol/Surrey), removals (Bristol), funeral directors (Bristol/Bath),
   chiropractors/osteopaths (Guildford).
+- Batch 17 (2026-07-04, 7 rows — database at 260): garden rooms (Bristol/
+  Surrey), driveways/paving (Surrey), Somerset/Devon wedding venues, Tunbridge
+  Wells IFA/mortgage broker.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
