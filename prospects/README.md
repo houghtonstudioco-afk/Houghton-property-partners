@@ -124,6 +124,8 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
   (Stow/Bourton/Chipping Norton) estate agents, Marlborough (Wiltshire) estate
   agents, wedding photography/videography (London/Surrey), Bristol commercial
   property litigation.
+- Batch 20 (2026-07-04, 7 rows — database at 276): Whitstable/East Kent estate
+  agents, Bristol architects, Sussex solar, Cheltenham/Cotswolds recruitment.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
