@@ -90,6 +90,9 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
   estate agents & IFAs, Blackheath & Notting Hill estate agents, Winchester
   dentists, Henley architects, Guildford private GP, Oxfordshire/Cotswolds
   wedding venues (Bicester, Chipping Norton).
+- Batch 7 (2026-07-04, 12 rows — database at 186): Tunbridge Wells & Sevenoaks
+  estate agents/dentists/accountants/physios/vets, St Albans estate agents/
+  accountants/physios/architects.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
