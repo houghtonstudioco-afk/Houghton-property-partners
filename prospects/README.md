@@ -103,6 +103,9 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
   Reigate/Redhill/Dorking, Wandsworth/Balham/Clapham, Ealing estate agents.
 - Batch 11 (2026-07-04, 6 rows — database at 220): Balham/Chiswick dentists,
   Balham physio, Battersea/Wandsworth architects.
+- Batch 12 (2026-07-04, 8 rows — database at 228): independent opticians
+  (Chelsea/Clerkenwell/Fulham), Canterbury/Maidstone estate agents, North
+  Somerset (Portishead/Nailsea/Clevedon) estate agents, London dermatology.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
