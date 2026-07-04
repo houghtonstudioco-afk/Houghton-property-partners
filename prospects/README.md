@@ -120,6 +120,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
   Wells IFA/mortgage broker.
 - Batch 18 (2026-07-04, 5 rows — database at 265): Sevenoaks/Tunbridge Wells
   private GP, aesthetics, vets, personal training gyms.
+- Batch 19 (2026-07-04, 4 rows — database at 269): Cotswolds market towns
+  (Stow/Bourton/Chipping Norton) estate agents, Marlborough (Wiltshire) estate
+  agents, wedding photography/videography (London/Surrey), Bristol commercial
+  property litigation.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
