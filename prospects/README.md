@@ -110,6 +110,8 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
   Wood/South Kensington estate agents, Guildford/Weybridge pilates studios.
 - Batch 14 (2026-07-04, 6 rows — database at 241): Guildford nursery & IT/MSP
   support, East London wills/probate solicitors, Surrey business consultancy.
+- Batch 15 (2026-07-04, 4 rows — database at 245): Horsham/Haywards Heath
+  (West Sussex) estate agents, accountants, architects, dentists.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
