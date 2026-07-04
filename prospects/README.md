@@ -144,6 +144,7 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 31 (2026-07-04, 8 rows — database at 355): Newbury estate agents & architects, Berkshire wedding venues (Hungerford/Maidenhead), Reading/Wokingham private GP.
 - Batch 32 (2026-07-04, 8 rows — database at 363): Witney/Abingdon estate agents & dentists, Oxfordshire architects, Oxford accountants.
 - Batch 33 (2026-07-04, 8 rows — database at 371): Banbury/Bicester estate agents & dentists, Oxfordshire vets, Aynho wedding venue.
+- Batch 34 (2026-07-04, 8 rows — database at 379): Windsor/Maidenhead/Ascot estate agents, dentists, architects, IFA.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
