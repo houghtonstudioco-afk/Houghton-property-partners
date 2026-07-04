@@ -148,6 +148,7 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 35 (2026-07-04, 7 rows — database at 386): Amersham/Chesham (Bucks) estate agents & dentists, Ashford (Kent) estate agents, Amersham accountants.
 - Batch 36 (2026-07-04, 8 rows — database at 394): dedicated recruitment/training/education push begins - healthcare recruitment, executive search, first aid training, teaching/supply agencies, construction recruitment, hospitality staffing.
 - Batch 37 (2026-07-04, 6 rows — database at 400): finance recruitment, forklift/plant training, legal recruitment.
+- Batch 38 (2026-07-04, 6 rows — database at 406): language school, engineering recruitment, business/sales coaching, HGV driver training.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
