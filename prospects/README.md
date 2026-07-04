@@ -59,6 +59,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 ## Niches covered so far
 
 - Batch 1 (2026-07-04): estate agents (Bristol), mortgage brokers (London),
+- Batch 2 (2026-07-04): letting agents (Bristol), wedding venues (Cotswolds),
+  cosmetic clinics (Bristol), pilates studios (Bristol), financial advisers
+  (Bristol), private tutors (London), osteopaths (SW London), design & build
+  firms (Bristol/Somerset).
   dentists (Bristol), law firms (Bristol), aesthetics clinics (London),
   architects (Bath/Bristol), physios (SW London), solar installers (Bristol),
   recruitment (Bristol), accountants (Bath), vets (London), interior design (London).
