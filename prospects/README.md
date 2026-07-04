@@ -133,6 +133,8 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
   estate agents, Surrey tutoring, Cotswolds/Gloucestershire wedding caterers.
 - Batch 23 (2026-07-04, 7 rows — database at 295): Twickenham/Teddington
   estate agents, dentists, IFA, architects.
+- Batch 24 (2026-07-04, 7 rows — database at 302): Richmond/Twickenham/
+  Teddington private GPs, vets, personal training.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
