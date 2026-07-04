@@ -66,6 +66,15 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
   cosmetic clinics (Bristol), pilates studios (Bristol), financial advisers
   (Bristol), private tutors (London), osteopaths (SW London), design & build
   firms (Bristol/Somerset).
+- Batch 3 (2026-07-04, 60 rows — database at 100): private GPs (London/Bristol),
+  roofers/heating/electricians (Bristol/Bath), caterers (London), home care
+  (Bristol), nurseries (Bristol), PT studios (Chelsea/Kensington), family law
+  (London/Bath), chiropractors (Hampstead), mortgage brokers (Bristol), vets
+  (Bristol), estate & letting agents (Dulwich/Richmond/Bath/N16), dentists &
+  orthodontists (Fulham/City), interior designers (Bath), garden/landscape
+  design (Surrey/Cotswolds), architects (Richmond/Surrey), gyms & physios
+  (Bristol), aesthetics clinics (Richmond), solar (Surrey), tutors (Bristol),
+  recruitment (London), business consultants (Bristol).
 
 ## Suggested next niches
 
