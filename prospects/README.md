@@ -75,16 +75,34 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
   design (Surrey/Cotswolds), architects (Richmond/Surrey), gyms & physios
   (Bristol), aesthetics clinics (Richmond), solar (Surrey), tutors (Bristol),
   recruitment (London), business consultants (Bristol).
+- Batch 4 (2026-07-04, 28 rows — database at 128): Wimbledon/Chiswick estate agents,
+  employment law (London), surveyors (London), Bath dentists & physios, Surrey
+  builders, SW London nurseries, Bath recruiters, osteopaths (Bristol), events
+  agencies (London), IFA (Wimbledon), premium plumbers (Chelsea).
 
-## Suggested next niches
+## Suggested next niches (pool for future batches — rotate through these)
 
-- Care providers & nurseries (SW London / Bristol)
-- Business consultants & B2B services (Bristol)
-- Event companies & caterers (London / Somerset)
-- Roofers, electricians, plumbing & heating (premium, Bristol/Bath)
-- Gyms & personal training studios (Chelsea, Richmond, Clifton)
-- Private GPs & health clinics (London, Bristol)
-- Letting agents (London zones 2-3)
-- Chiropractors (Hampstead, Richmond)
-- Solicitors — niche practices (London: family, employment, immigration)
-- Landscape designers / garden rooms (Surrey, Cotswolds)
+Geographies still under-covered: Cheltenham, Oxford, Windsor/Ascot, Sevenoaks,
+St Albans, Tunbridge Wells, Esher/Cobham, Henley, Marlow, Winchester,
+Hampstead/Highgate, Notting Hill, Islington, Greenwich/Blackheath.
+
+- Immigration & private-client solicitors (London)
+- Conveyancing firms (Bristol, Bath, Surrey)
+- Accountants & tax advisers (London villages, Cheltenham, Oxford)
+- IFAs & mortgage brokers (Surrey, Kent, Oxford)
+- Estate/letting agents (all under-covered geographies above)
+- Dentists, orthodontists, implant clinics (Cheltenham, Oxford, Surrey, N London)
+- Private GPs, dermatology, physio, osteo, chiro (all geographies)
+- Vets (Surrey, Kent, Oxfordshire)
+- Aesthetics clinics (Cheltenham, Marlow, Esher)
+- Architects, interior designers, landscape designers (Cotswolds, Kent, Bucks)
+- Builders, roofers, electricians, heating, driveways, windows (premium areas)
+- Solar & heat pump installers (Kent, Hampshire, Oxfordshire)
+- Wedding venues & caterers (Kent, Hampshire, Wiltshire, Oxfordshire)
+- Nurseries, tutors, tuition centres (N London, Surrey, Bristol suburbs)
+- Care providers & retirement services (Home Counties)
+- Recruitment agencies (Reading, Oxford, Cheltenham)
+- Gyms, PT, pilates, yoga studios (all geographies)
+- Business consultants, marketing-adjacent B2B, IT support MSPs (regional)
+- Wealth managers & private banks' independent rivals (Home Counties)
+- Specialist trades: lime plastering, sash windows, listed-building joinery (Bath/Cotswolds)
