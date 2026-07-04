@@ -101,6 +101,8 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
   Wiltshire wedding venues (Salisbury/Downton).
 - Batch 10 (2026-07-04, 8 rows — database at 214): Guildford/Godalming,
   Reigate/Redhill/Dorking, Wandsworth/Balham/Clapham, Ealing estate agents.
+- Batch 11 (2026-07-04, 6 rows — database at 220): Balham/Chiswick dentists,
+  Balham physio, Battersea/Wandsworth architects.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
