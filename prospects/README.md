@@ -136,6 +136,7 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 24 (2026-07-04, 7 rows — database at 302): Richmond/Twickenham/
   Teddington private GPs, vets, personal training.
 - Batch 25 (2026-07-04, 7 rows — database at 309): Kingston upon Thames/Surbiton estate agents, dentists, architects, accountants.
+- Batch 26 (2026-07-04, 8 rows — database at 317): Bromley/Beckenham estate agents, dentists, accountants, architects.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
