@@ -106,6 +106,8 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 12 (2026-07-04, 8 rows — database at 228): independent opticians
   (Chelsea/Clerkenwell/Fulham), Canterbury/Maidstone estate agents, North
   Somerset (Portishead/Nailsea/Clevedon) estate agents, London dermatology.
+- Batch 13 (2026-07-04, 7 rows — database at 235): Primrose Hill/St John's
+  Wood/South Kensington estate agents, Guildford/Weybridge pilates studios.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
