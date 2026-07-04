@@ -118,6 +118,8 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 17 (2026-07-04, 7 rows — database at 260): garden rooms (Bristol/
   Surrey), driveways/paving (Surrey), Somerset/Devon wedding venues, Tunbridge
   Wells IFA/mortgage broker.
+- Batch 18 (2026-07-04, 5 rows — database at 265): Sevenoaks/Tunbridge Wells
+  private GP, aesthetics, vets, personal training gyms.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
