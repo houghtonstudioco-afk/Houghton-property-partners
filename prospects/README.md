@@ -146,6 +146,7 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 33 (2026-07-04, 8 rows — database at 371): Banbury/Bicester estate agents & dentists, Oxfordshire vets, Aynho wedding venue.
 - Batch 34 (2026-07-04, 8 rows — database at 379): Windsor/Maidenhead/Ascot estate agents, dentists, architects, IFA.
 - Batch 35 (2026-07-04, 7 rows — database at 386): Amersham/Chesham (Bucks) estate agents & dentists, Ashford (Kent) estate agents, Amersham accountants.
+- Batch 36 (2026-07-04, 8 rows — database at 394): dedicated recruitment/training/education push begins - healthcare recruitment, executive search, first aid training, teaching/supply agencies, construction recruitment, hospitality staffing.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
