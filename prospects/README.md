@@ -126,6 +126,9 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
   property litigation.
 - Batch 20 (2026-07-04, 7 rows — database at 276): Whitstable/East Kent estate
   agents, Bristol architects, Sussex solar, Cheltenham/Cotswolds recruitment.
+- Batch 21 (2026-07-04, 6 rows — database at 282): home cinema/AV installers
+  (Surrey), curtains/soft furnishings (Bristol/Bath), Bristol wine merchant,
+  London school-placement consultancy.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
