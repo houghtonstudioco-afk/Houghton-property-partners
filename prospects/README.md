@@ -96,6 +96,9 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 8 (2026-07-04, 11 rows — database at 197): Cobham/Virginia Water/
   Beaconsfield/Chalfont St Giles estate agents, Weybridge dentists & aesthetics
   clinics, Weybridge/Esher/Cobham vets & architects.
+- Batch 9 (2026-07-04, 9 rows — database at 206): Guildford/Weybridge
+  recruitment & wealth management/IFA, Surrey electricians & roofers,
+  Wiltshire wedding venues (Salisbury/Downton).
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
