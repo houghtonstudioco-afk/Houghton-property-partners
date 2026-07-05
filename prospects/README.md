@@ -159,6 +159,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 46 (2026-07-05, 4 rows — database at 439): Surrey, Kent & Oxford independent IFAs and mortgage brokers.
 - Batch 47 (2026-07-05, 3 rows — database at 442): Surrey, Kent & Oxfordshire independent vets.
 - Batch 48 (2026-07-05, 5 rows — database at 447): Bristol, Bath & Surrey independent conveyancing solicitors.
+- Batch 49 (2026-07-05, 6 rows — database at 453): Kent, Hampshire & Oxfordshire solar/heat pump installers.
+- Batch 50 (2026-07-05, 6 rows — database at 459): Richmond, Cheltenham & Oxford independent gyms/Pilates/yoga studios.
+- Batch 51 (2026-07-05, 5 rows — database at 464): London boutique immigration & private-client (HNW estate planning) law firms.
+- Batch 52 (2026-07-05, 6 rows — database at 470): Surrey, Kent, Berkshire & Oxfordshire independent home care providers.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
