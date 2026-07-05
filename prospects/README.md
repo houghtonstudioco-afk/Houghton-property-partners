@@ -163,6 +163,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 50 (2026-07-05, 6 rows — database at 459): Richmond, Cheltenham & Oxford independent gyms/Pilates/yoga studios.
 - Batch 51 (2026-07-05, 5 rows — database at 464): London boutique immigration & private-client (HNW estate planning) law firms.
 - Batch 52 (2026-07-05, 6 rows — database at 470): Surrey, Kent, Berkshire & Oxfordshire independent home care providers.
+- Batch 53 (2026-07-05, 5 rows — database at 475): North London, Surrey & Bristol independent nurseries and tutors.
+- Batch 54 (2026-07-05, 5 rows — database at 480): Surrey, Hertfordshire, Buckinghamshire & Berkshire independent IFAs/wealth managers.
+- Batch 55 (2026-07-05, 5 rows — database at 485): Bristol, Bath, Reading & Oxford independent IT support MSPs and business consultants.
+- Batch 56 (2026-07-05, 6 rows — database at 491): Bath & Cotswolds heritage trades (lime plastering, sash-window joinery, conservation building).
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
