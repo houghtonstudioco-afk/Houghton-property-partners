@@ -175,6 +175,8 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 63-64 (2026-07-05, 4 rows — database at 517): Bristol independent vets, Bath mortgage broker, Richmond private GP, Surrey/Cotswolds wedding barns.
 - Batch 65 (2026-07-05, 4 rows — database at 521): Cotswolds/Cheltenham independent care homes, Guildford business consultancy.
 - Batch 66 (2026-07-05, 2 rows — database at 523): Cheltenham & Oxfordshire independent chartered accountants.
+- Batch 67 (2026-07-05, 2 rows — database at 525): Sussex/Kent/Cotswolds landscape designers, West Sussex solar installer.
+- Batch 68 (2026-07-05, 6 rows — database at 531): Wimbledon & Dulwich independent tutors and nurseries.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
