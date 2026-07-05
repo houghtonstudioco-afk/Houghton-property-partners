@@ -155,6 +155,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 42 (2026-07-05, 6 rows — database at 425): Cheltenham & Oxford private GP, dermatology and aesthetics clinics.
 - Batch 43 (2026-07-05, 3 rows — database at 428): Cheltenham, Oxford & Windsor/Ascot independent estate agents.
 - Batch 44 (2026-07-05, 2 rows — database at 430): Bristol & West London ADI driving-instructor training schools.
+- Batch 45 (2026-07-05, 5 rows — database at 435): Kent, Hampshire, Wiltshire & Oxfordshire independent wedding barns/estates.
+- Batch 46 (2026-07-05, 4 rows — database at 439): Surrey, Kent & Oxford independent IFAs and mortgage brokers.
+- Batch 47 (2026-07-05, 3 rows — database at 442): Surrey, Kent & Oxfordshire independent vets.
+- Batch 48 (2026-07-05, 5 rows — database at 447): Bristol, Bath & Surrey independent conveyancing solicitors.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
