@@ -151,6 +151,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 38 (2026-07-04, 6 rows — database at 406): language school, engineering recruitment, business/sales coaching, HGV driver training.
 - Batch 39 (2026-07-04, 4 rows — database at 410): Bristol tech recruitment, London/Surrey beauty & aesthetics training academies.
 - Batch 40 (2026-07-05, 3 rows — database at 413): London medical aesthetics training, Bristol yoga teacher training, London creative/marketing recruitment.
+- Batch 41 (2026-07-05, 6 rows — database at 419): Cotswolds & Kent architects and interior designers.
+- Batch 42 (2026-07-05, 6 rows — database at 425): Cheltenham & Oxford private GP, dermatology and aesthetics clinics.
+- Batch 43 (2026-07-05, 3 rows — database at 428): Cheltenham, Oxford & Windsor/Ascot independent estate agents.
+- Batch 44 (2026-07-05, 2 rows — database at 430): Bristol & West London ADI driving-instructor training schools.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
