@@ -171,6 +171,7 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 58 (2026-07-05, 4 rows — database at 500): Buckinghamshire & Kent independent builders, roofers and electricians.
 - Batch 59 (2026-07-05, 3 rows — database at 503): Cheltenham, Guildford & Esher independent dental/implant practices.
 - Batch 60 (2026-07-05, 4 rows — database at 507): Winchester, Henley-on-Thames & Marlow independent estate agents, interior designers and aesthetics clinics.
+- Batch 61-62 (2026-07-05, 6 rows — database at 513): Hampstead/Highgate estate agents, Notting Hill dentist & interior designer, Greenwich/Blackheath Pilates studio.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
