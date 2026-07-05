@@ -177,6 +177,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 66 (2026-07-05, 2 rows — database at 523): Cheltenham & Oxfordshire independent chartered accountants.
 - Batch 67 (2026-07-05, 2 rows — database at 525): Sussex/Kent/Cotswolds landscape designers, West Sussex solar installer.
 - Batch 68 (2026-07-05, 6 rows — database at 531): Wimbledon & Dulwich independent tutors and nurseries.
+- Batch 69 (2026-07-05, 6 rows — database at 537): Richmond & Wimbledon independent architects and interior designers.
+- Batch 70 (2026-07-05, 6 rows — database at 543): Guildford & Sevenoaks independent medical aesthetics clinics.
+- Batch 71 (2026-07-05, 4 rows — database at 547): Bristol & Bath independent IFAs/wealth managers and a leadership consultancy.
+- Batch 72 (2026-07-05, 4 rows — database at 551): Surrey & Kent independent care homes and home care agencies.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
