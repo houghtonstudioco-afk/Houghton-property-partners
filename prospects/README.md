@@ -150,6 +150,7 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 37 (2026-07-04, 6 rows — database at 400): finance recruitment, forklift/plant training, legal recruitment.
 - Batch 38 (2026-07-04, 6 rows — database at 406): language school, engineering recruitment, business/sales coaching, HGV driver training.
 - Batch 39 (2026-07-04, 4 rows — database at 410): Bristol tech recruitment, London/Surrey beauty & aesthetics training academies.
+- Batch 40 (2026-07-05, 3 rows — database at 413): London medical aesthetics training, Bristol yoga teacher training, London creative/marketing recruitment.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
