@@ -167,6 +167,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 54 (2026-07-05, 5 rows — database at 480): Surrey, Hertfordshire, Buckinghamshire & Berkshire independent IFAs/wealth managers.
 - Batch 55 (2026-07-05, 5 rows — database at 485): Bristol, Bath, Reading & Oxford independent IT support MSPs and business consultants.
 - Batch 56 (2026-07-05, 6 rows — database at 491): Bath & Cotswolds heritage trades (lime plastering, sash-window joinery, conservation building).
+- Batch 57 (2026-07-05, 5 rows — database at 496): Surrey & Kent independent chiropractors, osteopaths and physiotherapists.
+- Batch 58 (2026-07-05, 4 rows — database at 500): Buckinghamshire & Kent independent builders, roofers and electricians.
+- Batch 59 (2026-07-05, 3 rows — database at 503): Cheltenham, Guildford & Esher independent dental/implant practices.
+- Batch 60 (2026-07-05, 4 rows — database at 507): Winchester, Henley-on-Thames & Marlow independent estate agents, interior designers and aesthetics clinics.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
