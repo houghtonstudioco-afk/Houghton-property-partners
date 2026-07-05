@@ -181,6 +181,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 70 (2026-07-05, 6 rows — database at 543): Guildford & Sevenoaks independent medical aesthetics clinics.
 - Batch 71 (2026-07-05, 4 rows — database at 547): Bristol & Bath independent IFAs/wealth managers and a leadership consultancy.
 - Batch 72 (2026-07-05, 4 rows — database at 551): Surrey & Kent independent care homes and home care agencies.
+- Batch 73 (2026-07-05, 5 rows — database at 556): Weybridge, Cobham & Esher independent estate agents.
+- Batch 74 (2026-07-05, 3 rows — database at 559): Notting Hill, Islington & Kensington independent fitness studios.
+- Batch 75 (2026-07-05, 6 rows — database at 565): Richmond & Wimbledon independent dental practices.
+- Batch 76 (2026-07-05, 4 rows — database at 569): Guildford & Woking independent IT support MSPs.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
