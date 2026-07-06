@@ -197,6 +197,9 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 86 (2026-07-06, 4 rows — database at 610): Guildford & Weybridge independent physiotherapy/osteopathy clinics.
 - Batch 87 (2026-07-06, 6 rows — database at 616): Cheltenham & Oxford independent nurseries and tutors.
 - Batch 88 (2026-07-06, 6 rows — database at 622): Cheltenham & Bath independent IT MSPs and business consultants.
+- Batch 89 (2026-07-06, 5 rows — database at 627): Winchester & Basingstoke independent aesthetics clinics and dentists.
+- Batch 90 (2026-07-06, 3 rows — database at 630): Cirencester estate agent and Cheltenham/Cirencester dental practices.
+- Batch 91 (2026-07-06, 5 rows — database at 635): Bath/Bristol independent care homes/home care and recruitment agencies.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
