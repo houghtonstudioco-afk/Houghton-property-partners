@@ -185,6 +185,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 74 (2026-07-05, 3 rows — database at 559): Notting Hill, Islington & Kensington independent fitness studios.
 - Batch 75 (2026-07-05, 6 rows — database at 565): Richmond & Wimbledon independent dental practices.
 - Batch 76 (2026-07-05, 4 rows — database at 569): Guildford & Woking independent IT support MSPs.
+- Batch 77 (2026-07-06, 4 rows — database at 573): Cheltenham & Bath independent physiotherapy and Pilates studios.
+- Batch 78 (2026-07-06, 6 rows — database at 579): Bath & Bristol independent architects and interior designers.
+- Batch 79 (2026-07-06, 5 rows — database at 584): Sevenoaks & Tunbridge Wells independent 11+/entrance-exam tutors.
+- Batch 80 (2026-07-06, 6 rows — database at 590): Oxfordshire independent IFAs/wealth managers and architects.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
