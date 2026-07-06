@@ -193,6 +193,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 82 (2026-07-06, 2 rows — database at 596): Windsor/Maidenhead/Ascot independent vets.
 - Batch 83 (2026-07-06, 2 rows — database at 598): Maidenhead independent dental practices.
 - Batch 84 (2026-07-06, 2 rows — database at 600): Reigate independent solicitors.
+- Batch 85 (2026-07-06, 6 rows — database at 606): Cotswolds & Surrey independent wedding photographers and caterers.
+- Batch 86 (2026-07-06, 4 rows — database at 610): Guildford & Weybridge independent physiotherapy/osteopathy clinics.
+- Batch 87 (2026-07-06, 6 rows — database at 616): Cheltenham & Oxford independent nurseries and tutors.
+- Batch 88 (2026-07-06, 6 rows — database at 622): Cheltenham & Bath independent IT MSPs and business consultants.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
