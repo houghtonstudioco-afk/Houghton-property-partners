@@ -189,6 +189,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 78 (2026-07-06, 6 rows — database at 579): Bath & Bristol independent architects and interior designers.
 - Batch 79 (2026-07-06, 5 rows — database at 584): Sevenoaks & Tunbridge Wells independent 11+/entrance-exam tutors.
 - Batch 80 (2026-07-06, 6 rows — database at 590): Oxfordshire independent IFAs/wealth managers and architects.
+- Batch 81 (2026-07-06, 4 rows — database at 594): Cheltenham & Bath independent gyms and fitness studios.
+- Batch 82 (2026-07-06, 2 rows — database at 596): Windsor/Maidenhead/Ascot independent vets.
+- Batch 83 (2026-07-06, 2 rows — database at 598): Maidenhead independent dental practices.
+- Batch 84 (2026-07-06, 2 rows — database at 600): Reigate independent solicitors.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
