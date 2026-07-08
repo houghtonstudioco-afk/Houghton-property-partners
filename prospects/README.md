@@ -210,6 +210,7 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 99 (2026-07-08, 6 rows — database at 675): Cotswolds (Stroud/Cirencester/Tetbury/Nailsworth) independent vets and dentists.
 - Batch 100 (2026-07-08, 4 rows — database at 679): Richmond & Wimbledon independent private tutors.
 - Batch 101 (2026-07-08, 6 rows — database at 685): Cheltenham & Cirencester independent IFAs/wealth managers.
+- Batch 102 (2026-07-08, 6 rows — database at 691): Hampstead, Highgate, Notting Hill & Islington independent private-client/immigration solicitors.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
