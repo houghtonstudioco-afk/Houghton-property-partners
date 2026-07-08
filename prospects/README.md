@@ -211,6 +211,8 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 100 (2026-07-08, 4 rows — database at 679): Richmond & Wimbledon independent private tutors.
 - Batch 101 (2026-07-08, 6 rows — database at 685): Cheltenham & Cirencester independent IFAs/wealth managers.
 - Batch 102 (2026-07-08, 6 rows — database at 691): Hampstead, Highgate, Notting Hill & Islington independent private-client/immigration solicitors.
+- Batch 103 (2026-07-08, 6 rows — database at 697): Tunbridge Wells, Sevenoaks, Marlow & Beaconsfield independent architects and interior designers.
+- Batch 104 (2026-07-08, 6 rows — database at 703): Oxford, Hampstead & Highgate independent dentists and orthodontists.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
