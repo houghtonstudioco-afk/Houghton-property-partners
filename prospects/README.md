@@ -206,6 +206,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 95 (2026-07-06, 5 rows — database at 655): Cheltenham & Oxford independent accountants and solicitors.
 - Batch 96 (2026-07-06, 6 rows — database at 661): Windsor & Ascot independent aesthetics clinics and gyms/PT studios.
 - Batch 97 (2026-07-06, 5 rows — database at 666): Kent & Surrey independent nurseries and wedding venues.
+- Batch 98 (2026-07-08, 3 rows — database at 669): Richmond & Kew independent estate agents and a conservation architecture practice.
+- Batch 99 (2026-07-08, 6 rows — database at 675): Cotswolds (Stroud/Cirencester/Tetbury/Nailsworth) independent vets and dentists.
+- Batch 100 (2026-07-08, 4 rows — database at 679): Richmond & Wimbledon independent private tutors.
+- Batch 101 (2026-07-08, 6 rows — database at 685): Cheltenham & Cirencester independent IFAs/wealth managers.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
