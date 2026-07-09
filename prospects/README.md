@@ -241,6 +241,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 130 (2026-07-08, 5 rows — database at 821): Bristol, Bath & Winchester independent architects.
 - Batch 131 (2026-07-08, 4 rows — database at 825): Windsor, Ascot & Marlow independent estate agents.
 - Batch 132 (2026-07-08, 6 rows — database at 831): Surrey & Berkshire/Bucks independent business coaches/consultants.
+- Batch 133 (2026-07-08, 5 rows — database at 836): Surrey & Kent independent conveyancing solicitors.
+- Batch 134 (2026-07-08, 3 rows — database at 839): Bath, Bristol & Wimbledon independent interior designers.
+- Batch 135 (2026-07-08, 5 rows — database at 844): Bristol & Kent independent care homes/home care.
+- Batch 136 (2026-07-08, 3 rows — database at 847): Surrey, Bristol & Kent independent IFAs/wealth managers.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
