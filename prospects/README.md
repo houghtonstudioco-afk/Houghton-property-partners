@@ -256,6 +256,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 145 (2026-07-08, 5 rows — database at 888): Guildford, Sevenoaks & Tunbridge Wells independent accountants.
 - Batch 146 (2026-07-08, 4 rows — database at 892): Guildford, Weybridge & Esher independent dentists.
 - Batch 147 (2026-07-08, 6 rows — database at 898): Kent & Buckinghamshire independent heritage trades.
+- Batch 148 (2026-07-08, 6 rows — database at 904): Cotswolds & Oxfordshire independent wedding photographers.
+- Batch 149 (2026-07-08, 6 rows — database at 910): Surrey, Kent & Cheltenham independent nurseries.
+- Batch 150 (2026-07-08, 4 rows — database at 914): Windsor & Oxford independent IFAs.
+- Batch 151 (2026-07-08, 3 rows — database at 917): Guildford & Weybridge independent estate agents.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
