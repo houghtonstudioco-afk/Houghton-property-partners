@@ -226,6 +226,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 115 (2026-07-08, 5 rows — database at 744): Bristol suburbs & Hampstead/Highgate independent nurseries and pre-schools.
 - Batch 116 (2026-07-08, 4 rows — database at 748): Surrey & Kent independent builders, electricians and driveway contractors.
 - Batch 117 (2026-07-08, 5 rows — database at 753): Oxford, Reading & Guildford independent IT MSPs.
+- Batch 118 (2026-07-08, 6 rows — database at 759): Islington, Richmond & Wimbledon independent accountants.
+- Batch 119 (2026-07-08, 4 rows — database at 763): Surrey, Kent & Oxfordshire independent vets.
+- Batch 120 (2026-07-08, 4 rows — database at 767): Bristol, Bath & Guildford independent dentists/orthodontists.
+- Batch 121 (2026-07-08, 6 rows — database at 773): Kent & Hampshire independent wedding photographers and caterers.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
