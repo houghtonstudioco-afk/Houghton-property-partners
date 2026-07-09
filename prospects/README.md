@@ -237,6 +237,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 126 (2026-07-08, 6 rows — database at 801): Richmond, Cheltenham & Oxford independent opticians.
 - Batch 127 (2026-07-08, 5 rows — database at 806): Bristol & Reading independent immigration/private-client solicitors.
 - Batch 128 (2026-07-08, 5 rows — database at 811): Surrey & Cotswolds independent bespoke kitchen/bathroom firms.
+- Batch 129 (2026-07-08, 5 rows — database at 816): Guildford, Wimbledon & Kent independent aesthetics clinics.
+- Batch 130 (2026-07-08, 5 rows — database at 821): Bristol, Bath & Winchester independent architects.
+- Batch 131 (2026-07-08, 4 rows — database at 825): Windsor, Ascot & Marlow independent estate agents.
+- Batch 132 (2026-07-08, 6 rows — database at 831): Surrey & Berkshire/Bucks independent business coaches/consultants.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
