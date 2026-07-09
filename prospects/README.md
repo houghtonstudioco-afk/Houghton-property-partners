@@ -222,6 +222,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 111 (2026-07-08, 5 rows — database at 726): Bath & Cotswolds independent heritage trades (stonemasons, joinery, lime plastering, sash windows).
 - Batch 112 (2026-07-08, 5 rows — database at 731): Surrey, Berkshire, Hertfordshire & Buckinghamshire independent care homes/home care agencies.
 - Batch 113 (2026-07-08, 5 rows — database at 736): Reading, Oxford & Cheltenham independent recruitment agencies.
+- Batch 114 (2026-07-08, 3 rows — database at 739): Hampstead & Islington independent gyms/PT/yoga studios.
+- Batch 115 (2026-07-08, 5 rows — database at 744): Bristol suburbs & Hampstead/Highgate independent nurseries and pre-schools.
+- Batch 116 (2026-07-08, 4 rows — database at 748): Surrey & Kent independent builders, electricians and driveway contractors.
+- Batch 117 (2026-07-08, 5 rows — database at 753): Oxford, Reading & Guildford independent IT MSPs.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
