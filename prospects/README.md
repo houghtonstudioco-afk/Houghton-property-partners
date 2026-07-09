@@ -214,6 +214,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 103 (2026-07-08, 6 rows — database at 697): Tunbridge Wells, Sevenoaks, Marlow & Beaconsfield independent architects and interior designers.
 - Batch 104 (2026-07-08, 6 rows — database at 703): Oxford, Hampstead & Highgate independent dentists and orthodontists.
 - Batch 105 (2026-07-08, 3 rows — database at 706): Bristol & Bath independent conveyancing solicitors.
+- Batch 106 (2026-07-08, 2 rows — database at 708): Hampshire independent wedding barn venues.
+- Batch 107 (2026-07-08, 4 rows — database at 712): Notting Hill, Islington & Blackheath/Greenwich independent estate agents.
+- Batch 108 (2026-07-08, 1 row — database at 713): Tunbridge Wells independent dermatology clinic.
+- Batch 109 (2026-07-08, 3 rows — database at 716): Cheltenham & Esher independent aesthetics clinics.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
