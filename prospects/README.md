@@ -248,6 +248,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 137 (2026-07-08, 5 rows — database at 852): Wiltshire & Dorset independent wedding venues.
 - Batch 138 (2026-07-08, 3 rows — database at 855): Bristol & Bath independent vets.
 - Batch 139 (2026-07-08, 2 rows — database at 857): Guildford & Bristol independent recruitment agencies.
+- Batch 140 (2026-07-08, 6 rows — database at 863): Surrey, Kent & Bristol independent employment/commercial solicitors.
+- Batch 141 (2026-07-08, 6 rows — database at 869): Bristol/Clifton & Bath independent aesthetics clinics.
+- Batch 142 (2026-07-08, 6 rows — database at 875): Surrey, Kent & Cotswolds independent property management companies.
+- Batch 143 (2026-07-08, 4 rows — database at 879): Windsor, Marlow & Henley-on-Thames independent dentists.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
