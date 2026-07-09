@@ -218,6 +218,7 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 107 (2026-07-08, 4 rows — database at 712): Notting Hill, Islington & Blackheath/Greenwich independent estate agents.
 - Batch 108 (2026-07-08, 1 row — database at 713): Tunbridge Wells independent dermatology clinic.
 - Batch 109 (2026-07-08, 3 rows — database at 716): Cheltenham & Esher independent aesthetics clinics.
+- Batch 110 (2026-07-08, 5 rows — database at 721): Kent, Hampshire & Oxfordshire independent solar/heat pump installers.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
