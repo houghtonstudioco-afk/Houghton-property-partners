@@ -233,6 +233,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 122 (2026-07-08, 6 rows — database at 779): Surrey, Kent & Cotswolds independent chartered surveyors.
 - Batch 123 (2026-07-08, 4 rows — database at 783): Bristol, Bath & Oxford independent physio/osteo/chiro clinics.
 - Batch 124 (2026-07-08, 6 rows — database at 789): Surrey, Kent & Cotswolds independent prep schools.
+- Batch 125 (2026-07-08, 6 rows — database at 795): Cotswolds, Surrey & Kent independent garden/landscape designers.
+- Batch 126 (2026-07-08, 6 rows — database at 801): Richmond, Cheltenham & Oxford independent opticians.
+- Batch 127 (2026-07-08, 5 rows — database at 806): Bristol & Reading independent immigration/private-client solicitors.
+- Batch 128 (2026-07-08, 5 rows — database at 811): Surrey & Cotswolds independent bespoke kitchen/bathroom firms.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
