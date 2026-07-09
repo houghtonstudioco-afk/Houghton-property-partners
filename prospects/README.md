@@ -213,6 +213,7 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 102 (2026-07-08, 6 rows — database at 691): Hampstead, Highgate, Notting Hill & Islington independent private-client/immigration solicitors.
 - Batch 103 (2026-07-08, 6 rows — database at 697): Tunbridge Wells, Sevenoaks, Marlow & Beaconsfield independent architects and interior designers.
 - Batch 104 (2026-07-08, 6 rows — database at 703): Oxford, Hampstead & Highgate independent dentists and orthodontists.
+- Batch 105 (2026-07-08, 3 rows — database at 706): Bristol & Bath independent conveyancing solicitors.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
