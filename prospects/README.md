@@ -230,6 +230,9 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 119 (2026-07-08, 4 rows — database at 763): Surrey, Kent & Oxfordshire independent vets.
 - Batch 120 (2026-07-08, 4 rows — database at 767): Bristol, Bath & Guildford independent dentists/orthodontists.
 - Batch 121 (2026-07-08, 6 rows — database at 773): Kent & Hampshire independent wedding photographers and caterers.
+- Batch 122 (2026-07-08, 6 rows — database at 779): Surrey, Kent & Cotswolds independent chartered surveyors.
+- Batch 123 (2026-07-08, 4 rows — database at 783): Bristol, Bath & Oxford independent physio/osteo/chiro clinics.
+- Batch 124 (2026-07-08, 6 rows — database at 789): Surrey, Kent & Cotswolds independent prep schools.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
