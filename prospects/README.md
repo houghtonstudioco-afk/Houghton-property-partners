@@ -245,6 +245,9 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 134 (2026-07-08, 3 rows — database at 839): Bath, Bristol & Wimbledon independent interior designers.
 - Batch 135 (2026-07-08, 5 rows — database at 844): Bristol & Kent independent care homes/home care.
 - Batch 136 (2026-07-08, 3 rows — database at 847): Surrey, Bristol & Kent independent IFAs/wealth managers.
+- Batch 137 (2026-07-08, 5 rows — database at 852): Wiltshire & Dorset independent wedding venues.
+- Batch 138 (2026-07-08, 3 rows — database at 855): Bristol & Bath independent vets.
+- Batch 139 (2026-07-08, 2 rows — database at 857): Guildford & Bristol independent recruitment agencies.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
