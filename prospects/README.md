@@ -219,6 +219,9 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 108 (2026-07-08, 1 row — database at 713): Tunbridge Wells independent dermatology clinic.
 - Batch 109 (2026-07-08, 3 rows — database at 716): Cheltenham & Esher independent aesthetics clinics.
 - Batch 110 (2026-07-08, 5 rows — database at 721): Kent, Hampshire & Oxfordshire independent solar/heat pump installers.
+- Batch 111 (2026-07-08, 5 rows — database at 726): Bath & Cotswolds independent heritage trades (stonemasons, joinery, lime plastering, sash windows).
+- Batch 112 (2026-07-08, 5 rows — database at 731): Surrey, Berkshire, Hertfordshire & Buckinghamshire independent care homes/home care agencies.
+- Batch 113 (2026-07-08, 5 rows — database at 736): Reading, Oxford & Cheltenham independent recruitment agencies.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
