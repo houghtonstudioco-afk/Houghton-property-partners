@@ -252,6 +252,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 141 (2026-07-08, 6 rows — database at 869): Bristol/Clifton & Bath independent aesthetics clinics.
 - Batch 142 (2026-07-08, 6 rows — database at 875): Surrey, Kent & Cotswolds independent property management companies.
 - Batch 143 (2026-07-08, 4 rows — database at 879): Windsor, Marlow & Henley-on-Thames independent dentists.
+- Batch 144 (2026-07-08, 4 rows — database at 883): Surrey & Kent independent physio/osteo/chiro clinics.
+- Batch 145 (2026-07-08, 5 rows — database at 888): Guildford, Sevenoaks & Tunbridge Wells independent accountants.
+- Batch 146 (2026-07-08, 4 rows — database at 892): Guildford, Weybridge & Esher independent dentists.
+- Batch 147 (2026-07-08, 6 rows — database at 898): Kent & Buckinghamshire independent heritage trades.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
