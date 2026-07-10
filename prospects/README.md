@@ -268,6 +268,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 157 (2026-07-08, 5 rows — database at 942): Cotswolds & Cheltenham independent wills/probate solicitors.
 - Batch 158 (2026-07-08, 3 rows — database at 945): Cheltenham & Cotswolds independent dentists.
 - Batch 159 (2026-07-08, 5 rows — database at 950): Oxford & Windsor independent physio/osteo/chiro clinics.
+- Batch 160 (2026-07-08, 5 rows — database at 955): Sevenoaks & Tunbridge Wells independent estate agents.
+- Batch 161 (2026-07-08, 6 rows — database at 961): Oxford & Bath independent chartered surveyors.
+- Batch 162 (2026-07-08, 6 rows — database at 967): Oxford & Bath independent prep schools.
+- Batch 163 (2026-07-08, 5 rows — database at 972): Kent & Bristol independent business coaches.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
