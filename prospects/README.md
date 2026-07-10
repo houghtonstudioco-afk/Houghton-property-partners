@@ -272,6 +272,9 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 161 (2026-07-08, 6 rows — database at 961): Oxford & Bath independent chartered surveyors.
 - Batch 162 (2026-07-08, 6 rows — database at 967): Oxford & Bath independent prep schools.
 - Batch 163 (2026-07-08, 5 rows — database at 972): Kent & Bristol independent business coaches.
+- Batch 164 (2026-07-08, 3 rows — database at 975): Sevenoaks & Tunbridge Wells independent dentists/orthodontists.
+- Batch 165 (2026-07-08, 4 rows — database at 979): Sevenoaks & Marlow independent aesthetics clinics.
+- Batch 166 (2026-07-08, 3 rows — database at 982): Bath & Cheltenham independent vets.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
