@@ -275,6 +275,8 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 164 (2026-07-08, 3 rows — database at 975): Sevenoaks & Tunbridge Wells independent dentists/orthodontists.
 - Batch 165 (2026-07-08, 4 rows — database at 979): Sevenoaks & Marlow independent aesthetics clinics.
 - Batch 166 (2026-07-08, 3 rows — database at 982): Bath & Cheltenham independent vets.
+- Batch 167 (2026-07-08, 4 rows — database at 986): Bristol & Bath independent IT MSPs.
+- Batch 168 (2026-07-08, 6 rows — database at 992): Kent (Ashford/Canterbury/Dover/Maidstone/Faversham/Whitstable) independent wedding venues.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
