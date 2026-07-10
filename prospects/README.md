@@ -260,6 +260,10 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 149 (2026-07-08, 6 rows — database at 910): Surrey, Kent & Cheltenham independent nurseries.
 - Batch 150 (2026-07-08, 4 rows — database at 914): Windsor & Oxford independent IFAs.
 - Batch 151 (2026-07-08, 3 rows — database at 917): Guildford & Weybridge independent estate agents.
+- Batch 152 (2026-07-08, 5 rows — database at 922): Guildford, Bath & Bristol independent opticians.
+- Batch 153 (2026-07-08, 5 rows — database at 927): Cotswolds & Oxford independent care homes/home care.
+- Batch 154 (2026-07-08, 3 rows — database at 930): Kent independent IT MSPs.
+- Batch 155 (2026-07-08, 4 rows — database at 934): Guildford & Surrey independent architects.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
