@@ -278,6 +278,7 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 167 (2026-07-08, 4 rows — database at 986): Bristol & Bath independent IT MSPs.
 - Batch 168 (2026-07-08, 6 rows — database at 992): Kent (Ashford/Canterbury/Dover/Maidstone/Faversham/Whitstable) independent wedding venues.
 - Batch 169 (2026-07-08, 6 rows — database at 998): Kent & Surrey independent recruitment agencies.
+- Batch 170 (2026-07-08, 3 rows — database at 1001): Oxford & Cheltenham independent conveyancing solicitors. **Database target of 1,000 rows reached.**
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
