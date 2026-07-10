@@ -265,6 +265,9 @@ businesses, dropshipping stores, anyone who obviously can't afford £249/month.
 - Batch 154 (2026-07-08, 3 rows — database at 930): Kent independent IT MSPs.
 - Batch 155 (2026-07-08, 4 rows — database at 934): Guildford & Surrey independent architects.
 - Batch 156 (2026-07-08, 3 rows — database at 937): Surrey & Cotswolds independent wedding caterers.
+- Batch 157 (2026-07-08, 5 rows — database at 942): Cotswolds & Cheltenham independent wills/probate solicitors.
+- Batch 158 (2026-07-08, 3 rows — database at 945): Cheltenham & Cotswolds independent dentists.
+- Batch 159 (2026-07-08, 5 rows — database at 950): Oxford & Windsor independent physio/osteo/chiro clinics.
 
 ## Suggested next niches (pool for future batches — rotate through these)
 
