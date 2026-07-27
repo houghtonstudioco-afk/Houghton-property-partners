@@ -86,6 +86,52 @@ def load_working_rows(input_csv: Path, output_csv: Path) -> list[dict[str, str]]
     return rows
 
 
+WEBDEV_EXPORT_COLUMNS = [
+    "Web Dev Priority",
+    "Web Dev Opportunity",
+    "Company Name",
+    "Phone Number",
+    "Location",
+    "Industry",
+    "Services",
+    "Website",
+    "HTTP Status",
+    "Site Health",
+    "SSL Status",
+    "Website Outdated Score (unverified)",
+    "Outdated Signals",
+    "Contact Method",
+    "Google Reviews (verified)",
+    "Google Rating (verified)",
+    "Companies House Number",
+    "Lead Score /100",
+]
+
+
+def export_webdev(rows: list[dict[str, str]], path: Path) -> tuple[int, int]:
+    """Write the web-development outreach list, hottest prospects first.
+
+    Rows whose website status could not be established are included but sorted
+    last with a blank priority, so they are visibly "verify this first" rather
+    than silently mixed in with confirmed findings.
+    """
+    candidates = [r for r in rows if (r.get("Web Dev Opportunity") or "").strip()]
+
+    def sort_key(row: dict[str, str]):
+        priority = (row.get("Web Dev Priority") or "").strip()
+        rank = int(priority) if priority.isdigit() else 99
+        reviews = str(row.get("Google Reviews (verified)", "") or "").strip()
+        # Within a tier, more Google reviews means a busier business with more
+        # to gain, so lead with those.
+        return (rank, -(int(reviews) if reviews.isdigit() else 0))
+
+    candidates.sort(key=sort_key)
+    write_rows_atomic(path, candidates, WEBDEV_EXPORT_COLUMNS)
+    confirmed = sum(1 for r in candidates
+                    if (r.get("Web Dev Priority") or "").strip().isdigit())
+    return len(candidates), confirmed
+
+
 def print_report(rows: list[dict[str, str]]) -> None:
     total = len(rows)
 
@@ -150,6 +196,19 @@ def print_report(rows: list[dict[str, str]]) -> None:
     for key, n in sorted(conf.items(), key=lambda kv: -kv[1]):
         print(f"    confidence {key:<8}{n:>4}")
 
+    print("\nWeb development prospects")
+    webdev: dict[str, int] = {}
+    for r in rows:
+        key = (r.get("Web Dev Opportunity") or "").strip()
+        if key:
+            prio = (r.get("Web Dev Priority") or "-").strip() or "-"
+            webdev[f"{prio}  {key}"] = webdev.get(f"{prio}  {key}", 0) + 1
+    if webdev:
+        for key, n in sorted(webdev.items()):
+            print(f"    {key:<52}{n:>4}")
+    else:
+        print("    none classified yet (run stage 4)")
+
     print(f"\n  Top 10 prospects")
     ranked = sorted(
         (r for r in rows if str(r.get("Lead Score /100", "")).strip().isdigit()),
@@ -182,6 +241,11 @@ def main(argv: list[str] | None = None) -> int:
                         help="start from the input CSV, ignoring existing output")
     parser.add_argument("--report", action="store_true",
                         help="print a summary of the current output CSV and exit")
+    parser.add_argument("--export-webdev", type=Path, nargs="?",
+                        const=config.REPO_ROOT / "web_dev_prospects.csv",
+                        default=None, metavar="PATH",
+                        help="also write a web-development outreach list "
+                             "(default: web_dev_prospects.csv)")
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args(argv)
 
@@ -192,7 +256,12 @@ def main(argv: list[str] | None = None) -> int:
     if args.report:
         if not args.output.exists():
             raise SystemExit(f"{args.output} does not exist yet - run a stage first.")
-        print_report(read_rows(args.output))
+        report_rows = read_rows(args.output)
+        print_report(report_rows)
+        if args.export_webdev:
+            total, confirmed = export_webdev(report_rows, args.export_webdev)
+            print(f"  wrote {args.export_webdev} "
+                  f"({total} rows, {confirmed} with a confirmed priority)\n")
         return 0
 
     if args.input.resolve() == args.output.resolve():
@@ -290,6 +359,17 @@ def main(argv: list[str] | None = None) -> int:
         cache.close()
 
     print_report(rows)
+
+    if args.export_webdev:
+        total, confirmed = export_webdev(rows, args.export_webdev)
+        log.info("web dev list: %s (%d rows, %d with a confirmed priority)",
+                 args.export_webdev, total, confirmed)
+        if confirmed < total:
+            log.warning(
+                "%d row(s) are in the list WITHOUT a confirmed priority - their "
+                "website status could not be established. Verify those by hand "
+                "before contacting them.", total - confirmed,
+            )
     return 0
 
 

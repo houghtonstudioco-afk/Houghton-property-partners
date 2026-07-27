@@ -125,6 +125,66 @@ def score_row(row: dict[str, str]) -> tuple[int, str, str]:
     return score, " ".join(parts), confidence
 
 
+# ------------------------------------------------ web development pipeline ---
+# Separate from the lead score: this answers "could I sell them a website?"
+# rather than "could I sell them automation?". Priority 1 is hottest.
+
+WEBDEV_TIERS = {
+    1: "no website - needs one built",
+    2: "site dead - needs rebuild",
+    3: "placeholder only - needs a real site",
+    4: "insecure - needs cert/HTTPS migration",
+    5: "very dated - needs redesign",
+    6: "somewhat dated - possible refresh",
+}
+
+
+def classify_webdev(row: dict[str, str]) -> tuple[str, str]:
+    """Return (opportunity, priority) for web-development outreach.
+
+    The important distinction is between "we looked and there is no site" and
+    "we never managed to look". Reporting the second as the first would send
+    someone cold-calling a company about the website it demonstrably has, so an
+    unconfirmed row is labelled as such and given no priority.
+    """
+    has_site = bool(str(row.get("Website", "") or "").strip())
+    confidence = (row.get("Website Confidence") or "").strip().lower()
+    evidence = (row.get("Website Evidence") or "").strip().lower()
+    health = (row.get("Site Health") or "").strip().lower()
+    status = (row.get("HTTP Status") or "").strip().lower()
+
+    if not has_site:
+        if confidence != "none":
+            # Stage 1 never processed this row.
+            return "unknown - website discovery not run", ""
+        if not evidence or evidence == "no-evidence" or "proxy_error" in evidence:
+            # Stage 1 ran but every lookup failed, so absence is unproven.
+            return "unconfirmed - all website lookups failed, verify manually", ""
+        return WEBDEV_TIERS[1], "1"
+
+    if health in ("", "unknown") or status in ("", "proxy_error", "not_checked",
+                                               "robots_disallowed"):
+        return "unknown - site not successfully checked", ""
+
+    if health == "unreachable" or status in ("404", "410") or health == "broken":
+        return WEBDEV_TIERS[2], "2"
+    if health == "placeholder":
+        return WEBDEV_TIERS[3], "3"
+    if health == "insecure":
+        return WEBDEV_TIERS[4], "4"
+
+    raw = str(row.get("Website Outdated Score (unverified)", "") or "").strip()
+    try:
+        outdated = int(float(raw))
+    except (TypeError, ValueError):
+        return "", ""
+    if outdated >= 8:
+        return WEBDEV_TIERS[5], "5"
+    if outdated >= 5:
+        return WEBDEV_TIERS[6], "6"
+    return "", ""
+
+
 def run(rows: list[dict[str, str]], failures: FailureLog, checkpoint,
         limit: int | None = None) -> dict[str, int]:
     stats = {"rescored": 0, "high_confidence": 0, "medium_confidence": 0,
@@ -149,6 +209,14 @@ def run(rows: list[dict[str, str]], failures: FailureLog, checkpoint,
         row["Lead Score /100"] = str(score)   # authorised overwrite
         row["Lead Score Breakdown"] = breakdown
         row["Lead Score Confidence"] = confidence
+
+        opportunity, priority = classify_webdev(row)
+        row["Web Dev Opportunity"] = opportunity
+        row["Web Dev Priority"] = priority
+        if priority:
+            stats[f"webdev_p{priority}"] = stats.get(f"webdev_p{priority}", 0) + 1
+        elif opportunity:
+            stats["webdev_unconfirmed"] = stats.get("webdev_unconfirmed", 0) + 1
 
         stats["rescored"] += 1
         stats[f"{confidence}_confidence"] += 1

@@ -66,6 +66,8 @@ STAGE4_COLUMNS = [
     "Lead Score (Original)",       # preserved before the rescore overwrites
     "Lead Score Breakdown",
     "Lead Score Confidence",       # high | medium | low
+    "Web Dev Opportunity",         # what a web developer could sell them
+    "Web Dev Priority",            # 1 (hottest) .. 6, blank = not a prospect
 ]
 
 APPENDED_COLUMNS = (

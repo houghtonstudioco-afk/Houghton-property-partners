@@ -630,6 +630,119 @@ class TestScoring(unittest.TestCase):
 
 # --------------------------------------------- store / never-overwrite -------
 
+class TestWebDevClassification(unittest.TestCase):
+    """The critical property: 'we never looked' must never be reported as
+    'they have no website'."""
+
+    def test_confirmed_no_website_is_priority_1(self):
+        row = blank_row(**{"Company Name": "No Site Ltd", "Website": "",
+                           "Website Confidence": "none",
+                           "Website Evidence": "name-moderate(0.61)+parked-page"})
+        opportunity, priority = stage4_score.classify_webdev(row)
+        self.assertEqual(priority, "1")
+        self.assertIn("needs one built", opportunity)
+
+    def test_discovery_never_run_is_not_a_prospect(self):
+        row = blank_row(**{"Company Name": "Unknown Ltd", "Website": ""})
+        opportunity, priority = stage4_score.classify_webdev(row)
+        self.assertEqual(priority, "")
+        self.assertIn("not run", opportunity)
+
+    def test_all_lookups_failed_is_flagged_unconfirmed_not_no_website(self):
+        row = blank_row(**{"Company Name": "Blocked Ltd", "Website": "",
+                           "Website Confidence": "none",
+                           "Website Evidence": "no-evidence"})
+        opportunity, priority = stage4_score.classify_webdev(row)
+        self.assertEqual(priority, "")
+        self.assertIn("unconfirmed", opportunity)
+        self.assertNotIn("needs one built", opportunity)
+
+    def test_proxy_blocked_discovery_is_unconfirmed(self):
+        row = blank_row(**{"Company Name": "Proxied Ltd", "Website": "",
+                           "Website Confidence": "none",
+                           "Website Evidence": "proxy_error"})
+        _, priority = stage4_score.classify_webdev(row)
+        self.assertEqual(priority, "")
+
+    def test_dead_site_is_priority_2(self):
+        for health, status in (("unreachable", "dns_error"), ("broken", "404")):
+            row = blank_row(**{"Website": "https://x.co.uk", "Site Health": health,
+                               "HTTP Status": status})
+            _, priority = stage4_score.classify_webdev(row)
+            self.assertEqual(priority, "2", health)
+
+    def test_placeholder_is_priority_3(self):
+        row = blank_row(**{"Website": "https://x.co.uk", "Site Health": "placeholder",
+                           "HTTP Status": "200"})
+        _, priority = stage4_score.classify_webdev(row)
+        self.assertEqual(priority, "3")
+
+    def test_insecure_is_priority_4(self):
+        row = blank_row(**{"Website": "https://x.co.uk", "Site Health": "insecure",
+                           "HTTP Status": "200_ssl_expired"})
+        _, priority = stage4_score.classify_webdev(row)
+        self.assertEqual(priority, "4")
+
+    def test_dated_tiers(self):
+        for score, expected in (("10", "5"), ("8", "5"), ("6", "6"), ("5", "6")):
+            row = blank_row(**{"Website": "https://x.co.uk", "Site Health": "ok",
+                               "HTTP Status": "200",
+                               "Website Outdated Score (unverified)": score})
+            _, priority = stage4_score.classify_webdev(row)
+            self.assertEqual(priority, expected, score)
+
+    def test_healthy_modern_site_is_not_a_prospect(self):
+        row = blank_row(**{"Website": "https://x.co.uk", "Site Health": "ok",
+                           "HTTP Status": "200",
+                           "Website Outdated Score (unverified)": "2"})
+        opportunity, priority = stage4_score.classify_webdev(row)
+        self.assertEqual((opportunity, priority), ("", ""))
+
+    def test_unchecked_site_is_not_a_prospect(self):
+        row = blank_row(**{"Website": "https://x.co.uk", "HTTP Status": "proxy_error",
+                           "Site Health": "unknown"})
+        opportunity, priority = stage4_score.classify_webdev(row)
+        self.assertEqual(priority, "")
+        self.assertIn("not successfully checked", opportunity)
+
+    def test_export_sorts_confirmed_first_then_by_reviews(self):
+        import enrich_leads
+        import tempfile
+        rows = [
+            blank_row(**{"Company Name": "Unconfirmed", "Website": "",
+                         "Website Confidence": "none", "Website Evidence": "no-evidence"}),
+            blank_row(**{"Company Name": "Dated", "Website": "https://d.co.uk",
+                         "Site Health": "ok", "HTTP Status": "200",
+                         "Website Outdated Score (unverified)": "9"}),
+            blank_row(**{"Company Name": "NoSiteQuiet", "Website": "",
+                         "Website Confidence": "none", "Website Evidence": "town-town",
+                         "Google Reviews (verified)": "10"}),
+            blank_row(**{"Company Name": "NoSiteBusy", "Website": "",
+                         "Website Confidence": "none", "Website Evidence": "town-town",
+                         "Google Reviews (verified)": "500"}),
+            blank_row(**{"Company Name": "Healthy", "Website": "https://h.co.uk",
+                         "Site Health": "ok", "HTTP Status": "200",
+                         "Website Outdated Score (unverified)": "1"}),
+        ]
+        for r in rows:
+            r["Web Dev Opportunity"], r["Web Dev Priority"] = \
+                stage4_score.classify_webdev(r)
+
+        tmp = Path(tempfile.mkdtemp()) / "webdev.csv"
+        total, confirmed = enrich_leads.export_webdev(rows, tmp)
+
+        out = read_rows(tmp)
+        names = [r["Company Name"] for r in out]
+        # Healthy site excluded entirely; busiest no-site first; unconfirmed last.
+        self.assertNotIn("Healthy", names)
+        self.assertEqual(names[0], "NoSiteBusy")
+        self.assertEqual(names[1], "NoSiteQuiet")
+        self.assertEqual(names[-1], "Unconfirmed")
+        self.assertEqual((total, confirmed), (4, 3))
+        import shutil
+        shutil.rmtree(tmp.parent, ignore_errors=True)
+
+
 class TestStore(TempMixin, unittest.TestCase):
     def test_set_if_blank_writes_only_when_empty(self):
         row = {"Website": ""}
