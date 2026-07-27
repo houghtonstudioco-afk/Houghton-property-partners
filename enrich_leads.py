@@ -31,7 +31,7 @@ import sys
 from pathlib import Path
 
 from leadgen import config
-from leadgen.fetcher import Fetcher
+from leadgen.fetcher import EgressBlocked, Fetcher
 from leadgen.schema import (
     APPENDED_COLUMNS,
     ORIGINAL_COLUMNS,
@@ -253,6 +253,17 @@ def main(argv: list[str] | None = None) -> int:
             summaries["stage4"] = stage4_score.run(
                 rows, failures, checkpoint, args.limit)
 
+    except EgressBlocked as exc:
+        log.error("aborting: %s", exc)
+        log.error(
+            "No rows were marked unreachable on this account - work already "
+            "completed is checkpointed in %s. Fix outbound HTTPS access and "
+            "re-run the same command; cached results are reused.",
+            args.output.name,
+        )
+        checkpoint()
+        failures.record("run", 0, "-", "egress_blocked", str(exc))
+        return 2
     except KeyboardInterrupt:
         log.warning("interrupted - checkpointing before exit")
         checkpoint()

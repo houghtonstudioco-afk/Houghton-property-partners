@@ -333,6 +333,32 @@ class TestClassify(unittest.TestCase):
         status, health = stage2_audit.classify(self.make(error="timeout: too slow"))
         self.assertEqual((status, health), ("timeout", "unreachable"))
 
+    def test_circuit_breaker_trips_on_sustained_proxy_failure(self):
+        from leadgen.fetcher import PROXY_ERROR_CIRCUIT_BREAK, EgressBlocked
+        import tempfile
+        from requests.exceptions import ProxyError
+
+        tmp = Path(tempfile.mkdtemp())
+        cache = Cache(tmp / "c.sqlite")
+        fetcher = Fetcher(cache, offline=False, respect_robots=False)
+        fetcher._sleep = lambda host: None          # no delays in the test
+
+        def always_proxy_error(*a, **kw):
+            raise ProxyError("CONNECT tunnel failed, response 403")
+
+        fetcher.session.get = always_proxy_error
+
+        for i in range(PROXY_ERROR_CIRCUIT_BREAK - 1):
+            resp = fetcher.get(f"https://host{i}.co.uk", check_robots=False)
+            self.assertTrue(resp.error.startswith("proxy_error"))
+
+        with self.assertRaises(EgressBlocked):
+            fetcher.get("https://final.co.uk", check_robots=False)
+
+        cache.close()
+        import shutil
+        shutil.rmtree(tmp, ignore_errors=True)
+
     def test_proxy_error_is_not_blamed_on_the_site(self):
         # A local egress failure must never present as a dead company site,
         # or every row scores as a hot prospect for the wrong reason.

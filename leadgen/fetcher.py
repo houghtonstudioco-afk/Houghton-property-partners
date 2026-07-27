@@ -33,6 +33,15 @@ from .store import Cache, CachedResponse
 
 log = logging.getLogger("leadgen")
 
+# A proxy that rejects one host rejects them all. Past this many failures in a
+# row with nothing succeeding in between, the run is producing no information
+# and should stop rather than spend an hour confirming the network is down.
+PROXY_ERROR_CIRCUIT_BREAK = 12
+
+
+class EgressBlocked(RuntimeError):
+    """Raised when every request is failing at the proxy layer."""
+
 
 # ------------------------------------------------------------- URL helpers ---
 
@@ -142,6 +151,7 @@ class Fetcher:
         self.request_count = 0
         self.cache_hits = 0
         self.proxy_errors = 0
+        self.consecutive_proxy_errors = 0
 
     # -- politeness --
 
@@ -276,6 +286,7 @@ class Fetcher:
                 text = body.decode(encoding, errors="replace")
                 self._mark(host)
                 self.request_count += 1
+                self.consecutive_proxy_errors = 0
                 return CachedResponse(
                     url=url,
                     status=resp.status_code,
@@ -285,8 +296,10 @@ class Fetcher:
                     ssl_status="valid" if (verify and url.startswith("https://")) else None,
                 )
             except SSLError as exc:
+                # A TLS error proves we reached the host, so egress is fine.
                 self._mark(host)
                 self.request_count += 1
+                self.consecutive_proxy_errors = 0
                 return CachedResponse(
                     url=url, error=f"ssl_error: {exc}",
                     ssl_status=diagnose_ssl(str(exc)),
@@ -299,6 +312,14 @@ class Fetcher:
                 self._mark(host)
                 self.request_count += 1
                 self.proxy_errors += 1
+                self.consecutive_proxy_errors += 1
+                if self.consecutive_proxy_errors >= PROXY_ERROR_CIRCUIT_BREAK:
+                    raise EgressBlocked(
+                        f"{self.consecutive_proxy_errors} consecutive proxy "
+                        f"failures with no successful request. Outbound HTTPS "
+                        f"appears blocked, so continuing would only mark every "
+                        f"remaining company as unverifiable. Last error: {exc}"
+                    ) from exc
                 return CachedResponse(url=url, error=f"proxy_error: {exc}")
             except ReadTimeout as exc:
                 last = CachedResponse(url=url, error=f"timeout: {exc}")
@@ -310,8 +331,11 @@ class Fetcher:
                 if "name or service not known" in text or "nodename nor servname" in text \
                         or "temporary failure in name resolution" in text \
                         or "getaddrinfo failed" in text:
+                    # DNS resolution ran, so egress is working - this domain is
+                    # genuinely dead, which is a real finding.
                     self._mark(host)
                     self.request_count += 1
+                    self.consecutive_proxy_errors = 0
                     return CachedResponse(url=url, error=f"dns_error: {exc}")
                 last = CachedResponse(url=url, error=f"connection_error: {exc}")
             except Exception as exc:  # noqa: BLE001
