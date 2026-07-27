@@ -175,6 +175,39 @@ score higher than no site at all, because a dated site with no chat, no booking
 and no CRM evidences all six components while a missing site only evidences
 presence. Sort by `Lead Score Confidence` alongside the score.
 
+## Web development prospect list
+
+A second, independent read on the same data: not "could I sell them automation?"
+but "could I sell them a website?".
+
+```bash
+python enrich_leads.py --stages all --export-webdev
+python enrich_leads.py --report --export-webdev my_list.csv   # no re-crawl
+```
+
+Writes `web_dev_prospects.csv`, hottest tier first, and within a tier the
+businesses with the most Google reviews first — those have the most inbound
+enquiries to lose, so they feel the pain of a bad site most.
+
+| Priority | Meaning |
+|---|---|
+| 1 | No website — needs one built |
+| 2 | Site dead (404, 5xx, dead DNS) — needs rebuild |
+| 3 | Placeholder or parked — needs a real site |
+| 4 | Insecure (expired certificate, http-only) — needs migration |
+| 5 | Very dated (outdated 8–10) — needs redesign |
+| 6 | Somewhat dated (outdated 5–7) — possible refresh |
+| *(blank)* | Status could not be established — **verify before contacting** |
+
+Healthy modern sites get no priority and are excluded from the list entirely.
+
+**The blank-priority rows are the important safeguard.** "We looked and there is
+no site" and "we never managed to look" are different facts. Conflating them
+would have you cold-calling a company about the website it demonstrably has, so
+rows whose lookups all failed — or where stage 1 never ran — are labelled
+`unconfirmed`, given no priority, sorted last, and counted in a warning at the
+end of the run. Treat them as a to-verify queue, not a prospect list.
+
 ## Output columns
 
 The 24 original columns keep their exact names and order, so existing sheet
