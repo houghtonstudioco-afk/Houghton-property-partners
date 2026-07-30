@@ -9,6 +9,7 @@ Run with:  python -m pytest tests/ -q      (or: python tests/test_pipeline.py)
 from __future__ import annotations
 
 import csv
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -741,6 +742,176 @@ class TestWebDevClassification(unittest.TestCase):
         self.assertEqual((total, confirmed), (4, 3))
         import shutil
         shutil.rmtree(tmp.parent, ignore_errors=True)
+
+
+class TestOutreachRanking(unittest.TestCase):
+    def row(self, **kw):
+        base = {"Company Name": "X", "Industry": "", "Services": "",
+                "Phone Number": "0117 000 0000", "Location": "Bristol",
+                "Google Reviews (verified)": "", "Google Rating (verified)": ""}
+        base.update(kw)
+        return blank_row(**base)
+
+    def test_phone_kind(self):
+        from leadgen.outreach import phone_kind
+        self.assertEqual(phone_kind("07830 448127"), "mobile")
+        self.assertEqual(phone_kind("+447830448127"), "mobile")
+        self.assertEqual(phone_kind("0117 964 0078"), "landline")
+        self.assertEqual(phone_kind("01224 651250"), "landline")
+        self.assertEqual(phone_kind("0800 069 9404"), "non-geographic")
+        self.assertEqual(phone_kind("0845 456 0639"), "non-geographic")
+
+    def test_segments(self):
+        from leadgen import outreach
+        cases = [
+            ("Oil & Gas Exploration/Production", "", outreach.ENERGY_MAJOR),
+            ("Offshore Engineering", "", outreach.ENERGY_MAJOR),
+            ("Commercial Gas Engineering", "", outreach.COMMERCIAL),
+            ("Oil Distribution", "Domestic heating oil", outreach.DOMESTIC),
+            ("Precision Engineering", "CNC machining", outreach.INDUSTRIAL),
+            ("Industrial Pipe Fabrication", "", outreach.INDUSTRIAL),
+            ("Gas Engineering", "Boiler installation", outreach.DOMESTIC),
+        ]
+        for industry, services, expected in cases:
+            got = outreach.segment_of(self.row(Industry=industry, Services=services))
+            self.assertEqual(got, expected, f"{industry} / {services}")
+
+    def test_consumer_trade_beats_pipe_keyword(self):
+        # "gas pipe replacement" must not read as pipe fabrication.
+        from leadgen import outreach
+        row = self.row(Industry="Gas & Pipework Engineering",
+                       Services="Gas line install, boiler fitting, pipework",
+                       **{"Phone Number": "07869 837241",
+                          "Google Reviews (verified)": "409"})
+        self.assertEqual(outreach.segment_of(row), outreach.DOMESTIC)
+
+    def test_review_evidence_overrides_industry_label(self):
+        from leadgen import outreach
+        row = self.row(Industry="Oil Infrastructure Services",
+                       Services="Oil tank replacement and decommissioning",
+                       **{"Phone Number": "07875 639214",
+                          "Google Reviews (verified)": "180"})
+        self.assertEqual(outreach.segment_of(row), outreach.DOMESTIC)
+
+    def test_low_review_industrial_stays_industrial(self):
+        # A pipe fabricator with 3 reviews is not a weak business, and must not
+        # be reclassified as consumer-facing either.
+        from leadgen import outreach
+        row = self.row(Industry="Industrial Pipe Fabrication",
+                       **{"Phone Number": "0114 000 0000",
+                          "Google Reviews (verified)": "3"})
+        self.assertEqual(outreach.segment_of(row), outreach.INDUSTRIAL)
+
+    def test_demand_is_percentile_within_segment_not_absolute(self):
+        """The core property: a 4-review industrial firm at the top of its
+        segment must beat a 4-review industrial firm at the bottom, and low
+        absolute reviews must not doom an industrial lead."""
+        from leadgen import outreach
+        rows = [
+            self.row(Company_Name="IndTop", Industry="Precision Engineering",
+                     **{"Company Name": "IndTop",
+                        "Google Reviews (verified)": "20"}),
+            self.row(**{"Company Name": "IndLow", "Industry": "Precision Engineering",
+                        "Google Reviews (verified)": "1"}),
+            self.row(**{"Company Name": "DomLow", "Industry": "Gas Engineering",
+                        "Services": "Boiler repair",
+                        "Google Reviews (verified)": "20"}),
+        ]
+        outreach.rank(rows)
+        by = {r["Company Name"]: r for r in rows}
+        self.assertGreater(int(by["IndTop"]["Outreach Score /100"]),
+                           int(by["IndLow"]["Outreach Score /100"]))
+
+        # The property that matters: the SAME review count lands at a different
+        # demand percentile depending on the segment it is compared against.
+        # 20 reviews is top-of-pack among these industrial firms (75th, mid-rank
+        # convention) but merely median among the domestic ones (50th).
+        self.assertIn("75% of b2b industrial", by["IndTop"]["Outreach Breakdown"])
+        self.assertIn("50% of domestic trade", by["DomLow"]["Outreach Breakdown"])
+
+        def demand(row):
+            return int(re.search(r"demand=(\d+)/30", row["Outreach Breakdown"]).group(1))
+
+        self.assertNotEqual(demand(by["IndTop"]), demand(by["DomLow"]),
+                            "identical review counts must not score identically "
+                            "across segments")
+
+    def test_energy_major_is_deprioritised_and_told_not_to_cold_call(self):
+        from leadgen import outreach
+        rows = [self.row(**{"Company Name": "Ithaca",
+                            "Industry": "Oil & Gas Exploration/Production",
+                            "Phone Number": "01224 460100",
+                            "Google Reviews (verified)": "3"})]
+        outreach.rank(rows)
+        self.assertEqual(rows[0]["Segment"], outreach.ENERGY_MAJOR)
+        self.assertIn("do not cold call", rows[0]["Contact Channel"].lower())
+        self.assertIn("LinkedIn", rows[0]["Contact Approach"])
+
+    def test_mobile_domestic_gets_direct_call_and_out_of_hours_timing(self):
+        from leadgen import outreach
+        rows = [self.row(**{"Company Name": "Solo Gas",
+                            "Industry": "Gas Engineering",
+                            "Services": "Boiler installation",
+                            "Phone Number": "07830 448127",
+                            "Google Reviews (verified)": "259",
+                            "Google Rating (verified)": "5.0"})]
+        outreach.rank(rows)
+        r = rows[0]
+        self.assertIn("mobile", r["Contact Channel"].lower())
+        self.assertIn("07:30", r["Best Time To Call"])
+        self.assertIn("259 Google reviews", r["Contact Approach"])
+
+    def test_non_geographic_number_routes_away_from_phone(self):
+        from leadgen import outreach
+        rows = [self.row(**{"Company Name": "Switchboard Ltd",
+                            "Industry": "Pipeline Contracting",
+                            "Phone Number": "0800 069 9404"})]
+        outreach.rank(rows)
+        self.assertIn("not the phone", rows[0]["Contact Channel"])
+
+    def test_industrial_approach_avoids_review_talk(self):
+        from leadgen import outreach
+        rows = [self.row(**{"Company Name": "Fab Co",
+                            "Industry": "Industrial Pipe Fabrication",
+                            "Phone Number": "0114 000 0000",
+                            "Google Reviews (verified)": "3"})]
+        outreach.rank(rows)
+        self.assertIn("does not collect", rows[0]["Contact Approach"])
+
+    def test_ranks_are_dense_and_ordered(self):
+        from leadgen import outreach
+        rows = [
+            self.row(**{"Company Name": "A", "Industry": "Gas Engineering",
+                        "Services": "Boiler repair", "Phone Number": "07000 000000",
+                        "Google Reviews (verified)": "500",
+                        "Google Rating (verified)": "4.9"}),
+            self.row(**{"Company Name": "B",
+                        "Industry": "Oil & Gas Exploration/Production",
+                        "Phone Number": "01224 000000",
+                        "Google Reviews (verified)": "1"}),
+        ]
+        ordered = outreach.rank(rows)
+        self.assertEqual([r["Company Name"] for r in ordered], ["A", "B"])
+        self.assertEqual([r["Outreach Rank"] for r in ordered], ["1", "2"])
+        self.assertGreater(int(ordered[0]["Outreach Score /100"]),
+                           int(ordered[1]["Outreach Score /100"]))
+
+    def test_missing_review_data_does_not_crash_or_zero_out(self):
+        from leadgen import outreach
+        rows = [self.row(**{"Company Name": "NoData",
+                            "Industry": "Offshore Engineering"})]
+        outreach.rank(rows)
+        self.assertTrue(rows[0]["Outreach Score /100"].isdigit())
+        self.assertIn("no review data", rows[0]["Outreach Breakdown"])
+
+    def test_score_bounded(self):
+        from leadgen import outreach
+        rows = [self.row(**{"Company Name": "Max", "Industry": "Gas Engineering",
+                            "Services": "Boiler", "Phone Number": "07000 000000",
+                            "Google Reviews (verified)": "9999",
+                            "Google Rating (verified)": "5.0"})]
+        outreach.rank(rows)
+        self.assertLessEqual(int(rows[0]["Outreach Score /100"]), 100)
 
 
 class TestStore(TempMixin, unittest.TestCase):

@@ -132,6 +132,15 @@ def export_webdev(rows: list[dict[str, str]], path: Path) -> tuple[int, int]:
     return len(candidates), confirmed
 
 
+def export_outreach(rows: list[dict[str, str]], path: Path) -> int:
+    """Rank every row best-to-weakest and write the contact playbook."""
+    from leadgen import outreach
+
+    ordered = outreach.rank(rows)
+    write_rows_atomic(path, ordered, outreach.EXPORT_COLUMNS)
+    return len(ordered)
+
+
 def print_report(rows: list[dict[str, str]]) -> None:
     total = len(rows)
 
@@ -241,6 +250,13 @@ def main(argv: list[str] | None = None) -> int:
                         help="start from the input CSV, ignoring existing output")
     parser.add_argument("--report", action="store_true",
                         help="print a summary of the current output CSV and exit")
+    parser.add_argument("--export-outreach", type=Path, nargs="?",
+                        const=config.REPO_ROOT / "outreach_ranked.csv",
+                        default=None, metavar="PATH",
+                        help="write a best-to-weakest outreach list with a "
+                             "contact plan per company (default: "
+                             "outreach_ranked.csv). Uses only verified columns, "
+                             "so it works before any web enrichment.")
     parser.add_argument("--export-webdev", type=Path, nargs="?",
                         const=config.REPO_ROOT / "web_dev_prospects.csv",
                         default=None, metavar="PATH",
@@ -262,6 +278,9 @@ def main(argv: list[str] | None = None) -> int:
             total, confirmed = export_webdev(report_rows, args.export_webdev)
             print(f"  wrote {args.export_webdev} "
                   f"({total} rows, {confirmed} with a confirmed priority)\n")
+        if args.export_outreach:
+            n = export_outreach(report_rows, args.export_outreach)
+            print(f"  wrote {args.export_outreach} ({n} rows ranked)\n")
         return 0
 
     if args.input.resolve() == args.output.resolve():
@@ -359,6 +378,10 @@ def main(argv: list[str] | None = None) -> int:
         cache.close()
 
     print_report(rows)
+
+    if args.export_outreach:
+        n = export_outreach(rows, args.export_outreach)
+        log.info("outreach list: %s (%d rows ranked)", args.export_outreach, n)
 
     if args.export_webdev:
         total, confirmed = export_webdev(rows, args.export_webdev)
