@@ -316,6 +316,130 @@ def rank(rows: list[dict[str, str]]) -> list[dict[str, str]]:
     return ordered
 
 
+# ------------------------------------------------------------ pitch sheet ----
+
+def what_they_do(row: dict[str, str]) -> str:
+    """One short phrase: what this business actually does."""
+    services = (row.get("Services") or "").strip()
+    industry = (row.get("Industry") or "").strip()
+    if services:
+        # Services is concrete ("Boiler installation, gas servicing"); trim to
+        # the first two items so the column stays scannable.
+        parts = [p.strip() for p in services.split(",") if p.strip()]
+        return ", ".join(parts[:2])
+    return industry or "unknown"
+
+
+def website_cell(row: dict[str, str]) -> str:
+    """What to show in the website column, without ever implying we checked."""
+    site = (row.get("Website") or "").strip()
+    if site:
+        health = (row.get("Site Health") or "").strip()
+        if health in ("broken", "unreachable"):
+            return f"{site}  (DEAD)"
+        if health == "insecure":
+            return f"{site}  (no valid HTTPS)"
+        if health == "placeholder":
+            return f"{site}  (placeholder)"
+        return site
+    opportunity = (row.get("Web Dev Opportunity") or "").strip()
+    if opportunity.startswith("no website"):
+        return "NONE FOUND - needs a site"
+    return "not checked yet"
+
+
+def pitch_for(row: dict[str, str], segment: str, kind: str,
+              reviews: int | None) -> str:
+    """The single most sellable gap, phrased as something you can open with.
+
+    Deliberately one specific idea per company rather than a list - a pitch
+    that names three products is a pitch with no point of entry.
+    """
+    site = (row.get("Website") or "").strip()
+    health = (row.get("Site Health") or "").strip()
+    opportunity = (row.get("Web Dev Opportunity") or "").strip()
+
+    # A confirmed site problem outranks everything: it is concrete, visible to
+    # them, and easy to open on.
+    if opportunity.startswith("no website"):
+        return "Website build - no site at all, invisible outside Google"
+    if health in ("broken", "unreachable"):
+        return "Urgent rebuild - their site is down right now"
+    if health == "placeholder":
+        return "Real website - currently just a placeholder page"
+    if health == "insecure":
+        return "HTTPS fix + rebuild - browsers flag them as 'not secure'"
+
+    outdated = str(row.get("Website Outdated Score (unverified)", "") or "").strip()
+    if outdated.isdigit() and int(outdated) >= 8:
+        return "Redesign - site looks a decade old, no mobile layout"
+
+    has_chat = bool((row.get("Live Chat Vendor") or "").strip())
+    has_booking = bool((row.get("Online Booking Vendor") or "").strip())
+
+    if segment == ENERGY_MAJOR:
+        return "Skip - procurement-gated, almost certainly has an agency"
+
+    if segment == INDUSTRIAL:
+        return "Quote turnaround - enquiries sit in an inbox between jobs"
+
+    if segment == DISTRIBUTION:
+        return "Order taking + delivery scheduling - winter phone peaks"
+
+    if segment == COMMERCIAL:
+        if not has_chat:
+            return "Out-of-hours cover - a missed call is a lost contract"
+        return "Service-contract scheduling and renewals"
+
+    # Domestic trade - the strongest segment, so be specific about why.
+    # Keep the wording trade-neutral: this segment also holds structural
+    # engineers and tank fitters, who are not "under a boiler".
+    if kind == MOBILE and reviews and reviews >= 150:
+        return (f"Call answering - {reviews} reviews of inbound landing on one "
+                f"mobile while they are out on jobs")
+    if kind == MOBILE:
+        return "Call answering - owner misses enquiries while out on site"
+    if reviews and reviews >= 150 and not has_booking:
+        return (f"Online booking + enquiry handling - {reviews} reviews of "
+                f"demand, all funnelled through the office phone")
+    if not site:
+        return "Website + call answering - check what they have first"
+    return "Online booking - stop the diary going through the phone"
+
+
+PITCH_COLUMNS = [
+    "Rank",
+    "Company",
+    "Score",
+    "What They Do",
+    "Phone",
+    "Website",
+    "What To Pitch",
+]
+
+
+def pitch_sheet(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    """Slimmed, scannable view. Assumes rank() has already run."""
+    sheet = []
+    for row in rows:
+        reviews = str(row.get("Google Reviews (verified)", "") or "").strip()
+        sheet.append({
+            "Rank": row.get("Outreach Rank", ""),
+            "Company": row.get("Company Name", ""),
+            "Score": row.get("Outreach Score /100", ""),
+            "What They Do": what_they_do(row),
+            "Phone": row.get("Phone Number", ""),
+            "Website": website_cell(row),
+            "What To Pitch": pitch_for(
+                row,
+                row.get("Segment", ""),
+                row.get("Phone Type", ""),
+                int(reviews) if reviews.isdigit() else None,
+            ),
+        })
+    return sheet
+
+
 EXPORT_COLUMNS = [
     "Outreach Rank",
     "Outreach Score /100",

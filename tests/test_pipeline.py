@@ -904,6 +904,59 @@ class TestOutreachRanking(unittest.TestCase):
         self.assertTrue(rows[0]["Outreach Score /100"].isdigit())
         self.assertIn("no review data", rows[0]["Outreach Breakdown"])
 
+    def test_pitch_copy_stays_trade_neutral(self):
+        # The domestic segment also holds structural engineers and tank
+        # fitters; boiler-specific copy must not leak onto them.
+        from leadgen import outreach
+        rows = [self.row(**{"Company Name": "Peter Foster Engineering",
+                            "Industry": "Structural Engineering",
+                            "Services": "Structural calculations and design",
+                            "Phone Number": "07725 986933",
+                            "Google Reviews (verified)": "95"})]
+        outreach.rank(rows)
+        pitch = outreach.pitch_sheet(rows)[0]["What To Pitch"]
+        self.assertNotIn("boiler", pitch.lower())
+
+    def test_pitch_leads_with_confirmed_site_problem(self):
+        from leadgen import outreach
+        cases = [
+            ({"Web Dev Opportunity": "no website - needs one built"}, "Website build"),
+            ({"Website": "https://x.co.uk", "Site Health": "broken"}, "Urgent rebuild"),
+            ({"Website": "https://x.co.uk", "Site Health": "placeholder"}, "Real website"),
+            ({"Website": "https://x.co.uk", "Site Health": "insecure"}, "HTTPS fix"),
+        ]
+        for extra, expected in cases:
+            row = self.row(Industry="Gas Engineering", Services="Boiler repair",
+                           **{"Phone Number": "07000 000000", **extra})
+            outreach.rank([row])
+            pitch = outreach.pitch_sheet([row])[0]["What To Pitch"]
+            self.assertIn(expected, pitch, extra)
+
+    def test_website_cell_never_implies_an_unchecked_site_is_absent(self):
+        from leadgen import outreach
+        row = self.row()
+        self.assertEqual(outreach.website_cell(row), "not checked yet")
+        row["Web Dev Opportunity"] = "no website - needs one built"
+        self.assertIn("NONE FOUND", outreach.website_cell(row))
+        row2 = self.row(**{"Website": "https://x.co.uk", "Site Health": "broken"})
+        self.assertIn("DEAD", outreach.website_cell(row2))
+
+    def test_pitch_sheet_has_the_six_requested_columns(self):
+        from leadgen import outreach
+        rows = [self.row(Industry="Gas Engineering", Services="Boiler repair",
+                         **{"Company Name": "A", "Phone Number": "07000 000000"})]
+        outreach.rank(rows)
+        sheet = outreach.pitch_sheet(rows)
+        self.assertEqual(list(sheet[0].keys()), outreach.PITCH_COLUMNS)
+        for field in ("Company", "Score", "What They Do", "Phone", "Website",
+                      "What To Pitch"):
+            self.assertTrue(str(sheet[0][field]).strip(), field)
+
+    def test_what_they_do_is_short(self):
+        from leadgen import outreach
+        row = self.row(Services="Boiler install, AC, heating systems, more, extra")
+        self.assertEqual(outreach.what_they_do(row), "Boiler install, AC")
+
     def test_score_bounded(self):
         from leadgen import outreach
         rows = [self.row(**{"Company Name": "Max", "Industry": "Gas Engineering",

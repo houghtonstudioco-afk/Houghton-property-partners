@@ -133,11 +133,20 @@ def export_webdev(rows: list[dict[str, str]], path: Path) -> tuple[int, int]:
 
 
 def export_outreach(rows: list[dict[str, str]], path: Path) -> int:
-    """Rank every row best-to-weakest and write the contact playbook."""
+    """Rank every row best-to-weakest and write the contact playbook.
+
+    Also writes a slimmed pitch sheet alongside it (same stem + '_pitch'),
+    since the full playbook is too wide to scan while on the phone.
+    """
     from leadgen import outreach
 
     ordered = outreach.rank(rows)
     write_rows_atomic(path, ordered, outreach.EXPORT_COLUMNS)
+
+    pitch_path = path.with_name(path.stem + "_pitch" + path.suffix)
+    write_rows_atomic(pitch_path, outreach.pitch_sheet(ordered),
+                      outreach.PITCH_COLUMNS)
+    log.info("pitch sheet: %s", pitch_path)
     return len(ordered)
 
 
