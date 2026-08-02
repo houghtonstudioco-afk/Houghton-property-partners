@@ -15,6 +15,7 @@ from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
 
 from leadgen import pricing
+from leadgen.outreach import phone_kind, segment_of
 
 REPO = Path(__file__).resolve().parent
 
@@ -79,20 +80,21 @@ BORDER = Border(left=THIN, right=THIN, top=THIN, bottom=THIN)
 COLUMNS = [
     ("#", 5),
     ("Company", 32),
+    ("Size Tier", 22),
+    ("Verdict", 40),
     ("Phone", 15),
     ("Call At", 18),
-    ("Website", 32),
+    ("Website", 30),
     ("SELL THEM", 19),
-    ("Setup", 11),
-    ("Monthly", 11),
-    ("Website Extra", 26),
-    ("Year 1", 12),
-    ("Why / What To Say", 58),
-    ("Then Upsell", 19),
-    ("What They Do", 28),
+    ("Setup", 15),
+    ("Monthly", 15),
+    ("Website Build", 14),
+    ("Year 1 (low)", 13),
+    ("Year 1 (high)", 13),
+    ("Sales Cycle", 24),
+    ("Why / What To Say", 54),
     ("Location", 20),
     ("Reviews", 9),
-    ("Rating", 8),
     ("Called?", 11),
     ("Outcome", 24),
 ]
@@ -161,33 +163,30 @@ def build() -> Path:
             say = row["Opening Line"]
 
         reviews = int(row["Reviews"]) if row["Reviews"].strip().isdigit() else None
-        quote = pricing.quote_for(product, reviews,
-                                  SITE_STATUS.get(company, "unknown"))
-        if quote.needs_website:
-            web_cell = (f"+\u00a3{round(quote.website_setup * 0.8):,} build "
-                        f"+\u00a3{quote.website_monthly}/mo")
-        elif SITE_STATUS.get(company) == "ok":
-            web_cell = "not needed - site is fine"
-        else:
-            web_cell = "check site first"
+        quote = pricing.quote_for(
+            company, phone_kind(row["Phone"]), reviews,
+            segment_of({"Industry": row.get("What They Do", ""),
+                        "Services": row.get("What They Do", "")}),
+            SITE_STATUS.get(company, "unknown"))
 
         values = [
             offset + 1,
             company,
+            quote.tier,
+            quote.verdict,
             row["Phone"],
             row["Best Time"],
             website,
             product,
-            quote.total_setup,
-            quote.total_monthly,
-            web_cell,
-            quote.year_one,
+            quote.setup_range,
+            quote.monthly_range,
+            quote.website_build if quote.website_build else "-",
+            quote.year_one_low,
+            quote.year_one_high,
+            quote.sales_cycle,
             say,
-            PRODUCT_SHORT.get(row["Upsell Later"], row["Upsell Later"]),
-            row["What They Do"],
             row["Location"],
             reviews if reviews is not None else "",
-            float(row["Rating"]) if row["Rating"].strip() else "",
             "",
             "",
         ]
@@ -196,7 +195,7 @@ def build() -> Path:
         for idx, value in enumerate(values, start=1):
             cell = ws.cell(row=r, column=idx, value=value)
             cell.font = Font(name=FONT, size=10, color=INK)
-            cell.alignment = Alignment(vertical="top", wrap_text=(idx in (2, 9, 11, 13)))
+            cell.alignment = Alignment(vertical="top", wrap_text=(idx in (2, 4, 15)))
             cell.border = BORDER
             cell.fill = PatternFill("solid", fgColor=banded)
 
@@ -205,7 +204,7 @@ def build() -> Path:
         ws.cell(row=r, column=2).font = Font(name=FONT, size=10, bold=True, color=INK)
         ws.cell(row=r, column=3).font = Font(name=FONT, size=11, bold=True, color=INK)
 
-        product_cell = ws.cell(row=r, column=6)
+        product_cell = ws.cell(row=r, column=8)
         product_cell.font = Font(name=FONT, size=10, bold=True, color=INK)
         product_cell.fill = PatternFill("solid", fgColor=PRODUCT_FILL.get(product, banded))
 
@@ -224,21 +223,34 @@ def build() -> Path:
                 f"{website}  ({site_note})" if website != "NO SITE FOUND" else site_note)
 
         if company in ADVERTISES_247:
-            ws.cell(row=r, column=11).font = Font(name=FONT, size=10, bold=True, color=ACCENT)
+            ws.cell(row=r, column=15).font = Font(name=FONT, size=10, bold=True, color=ACCENT)
 
-        for col in (15, 16):
-            ws.cell(row=r, column=col).alignment = Alignment(
-                horizontal="center", vertical="top")
-        ws.cell(row=r, column=16).number_format = "0.0"
-        for col in (7, 8, 10):
+        ws.cell(row=r, column=17).alignment = Alignment(
+            horizontal="center", vertical="top")
+        for col in (11, 12, 13):
             c = ws.cell(row=r, column=col)
-            c.number_format = "\u00a3#,##0"
+            if isinstance(c.value, int):
+                c.number_format = "\u00a3#,##0"
             c.alignment = Alignment(horizontal="right", vertical="top")
-            c.font = Font(name=FONT, size=10, bold=(col == 10), color=INK)
-        ws.cell(row=r, column=10).fill = PatternFill("solid", fgColor="FFF2CC")
-        if quote.needs_website:
-            ws.cell(row=r, column=9).font = Font(
-                name=FONT, size=10, bold=True, color="B45309")
+            c.font = Font(name=FONT, size=10, bold=(col in (12, 13)), color=INK)
+        for col in (12, 13):
+            ws.cell(row=r, column=col).fill = PatternFill("solid", fgColor="FFF2CC")
+        for col in (9, 10):
+            ws.cell(row=r, column=col).font = Font(
+                name=FONT, size=10, bold=True, color=INK)
+            ws.cell(row=r, column=col).alignment = Alignment(
+                horizontal="right", vertical="top")
+        # Tier drives everything, so colour it.
+        tier_fill = {"Mid-market trade": "C6E0B4", "Industrial / commercial": "FFE699",
+                     "Sole trader": "F2F2F2", "Corporate / energy major": "F8CBAD"}
+        ws.cell(row=r, column=3).fill = PatternFill(
+            "solid", fgColor=tier_fill.get(quote.tier, banded))
+        ws.cell(row=r, column=3).font = Font(name=FONT, size=10, bold=True, color=INK)
+        if quote.tier == "Mid-market trade":
+            ws.cell(row=r, column=4).font = Font(
+                name=FONT, size=10, bold=True, color="2E7D32")
+        elif quote.tier == "Corporate / energy major":
+            ws.cell(row=r, column=4).font = Font(name=FONT, size=10, color=ACCENT)
         ws.row_dimensions[r].height = 46
 
     last = HEADER_ROW + len(rows)
@@ -247,10 +259,10 @@ def build() -> Path:
     dv = DataValidation(type="list", formula1='"Yes,No answer,Call back,Not interested"',
                         allow_blank=True)
     ws.add_data_validation(dv)
-    dv.add(f"Q{HEADER_ROW + 1}:Q{last}")
+    dv.add(f"R{HEADER_ROW + 1}:R{last}")
 
     ws.freeze_panes = f"A{HEADER_ROW + 1}"
-    ws.auto_filter.ref = f"A{HEADER_ROW}:R{last}"
+    ws.auto_filter.ref = f"A{HEADER_ROW}:S{last}"
     ws.sheet_view.showGridLines = False
 
     # ---- summary sheet ----
@@ -259,21 +271,24 @@ def build() -> Path:
     s["A1"] = "What To Sell - Breakdown"
     s["A1"].font = Font(name=FONT, size=14, bold=True, color=HEADER_BG)
 
-    s["A3"] = "Product"
+    s["A3"] = "Size Tier"
     s["B3"] = "Leads"
     for c in ("A3", "B3"):
         s[c].font = Font(name=FONT, size=10, bold=True, color="FFFFFF")
         s[c].fill = PatternFill("solid", fgColor=HEADER_BG)
         s[c].border = BORDER
 
-    products = ["AI Receptionist", "Speed-to-Lead", "Booking + Reminders", "Enquiry Triage"]
+    products = ["Mid-market trade", "Industrial / commercial", "Sole trader",
+                "Corporate / energy major"]
     for i, product in enumerate(products):
         r = 4 + i
         s.cell(row=r, column=1, value=product).font = Font(name=FONT, size=10, color=INK)
-        s.cell(row=r, column=1).fill = PatternFill(
-            "solid", fgColor=PRODUCT_FILL.get(product, "FFFFFF"))
+        s.cell(row=r, column=1).fill = PatternFill("solid", fgColor={
+            "Mid-market trade": "C6E0B4", "Industrial / commercial": "FFE699",
+            "Sole trader": "F2F2F2", "Corporate / energy major": "F8CBAD",
+        }.get(product, "FFFFFF"))
         s.cell(row=r, column=2,
-               value=f"=COUNTIF('Call Sheet'!$F${HEADER_ROW + 1}:$F${last},A{r})")
+               value=f"=COUNTIF('Call Sheet'!$C${HEADER_ROW + 1}:$C${last},A{r})")
         for col in (1, 2):
             s.cell(row=r, column=col).border = BORDER
             s.cell(row=r, column=col).font = Font(name=FONT, size=10, color=INK)
@@ -288,11 +303,11 @@ def build() -> Path:
     s["A11"] = "Progress"
     s["A11"].font = Font(name=FONT, size=14, bold=True, color=HEADER_BG)
     progress = [
-        ("Called", f"=COUNTIF('Call Sheet'!$Q${HEADER_ROW + 1}:$Q${last},\"Yes\")"),
-        ("No answer", f"=COUNTIF('Call Sheet'!$Q${HEADER_ROW + 1}:$Q${last},\"No answer\")"),
-        ("Call back", f"=COUNTIF('Call Sheet'!$Q${HEADER_ROW + 1}:$Q${last},\"Call back\")"),
-        ("Not interested", f"=COUNTIF('Call Sheet'!$Q${HEADER_ROW + 1}:$Q${last},\"Not interested\")"),
-        ("Still to call", f"=COUNTBLANK('Call Sheet'!$Q${HEADER_ROW + 1}:$Q${last})"),
+        ("Called", f"=COUNTIF('Call Sheet'!$R${HEADER_ROW + 1}:$R${last},\"Yes\")"),
+        ("No answer", f"=COUNTIF('Call Sheet'!$R${HEADER_ROW + 1}:$R${last},\"No answer\")"),
+        ("Call back", f"=COUNTIF('Call Sheet'!$R${HEADER_ROW + 1}:$R${last},\"Call back\")"),
+        ("Not interested", f"=COUNTIF('Call Sheet'!$R${HEADER_ROW + 1}:$R${last},\"Not interested\")"),
+        ("Still to call", f"=COUNTBLANK('Call Sheet'!$R${HEADER_ROW + 1}:$R${last})"),
     ]
     for i, (label, formula) in enumerate(progress):
         r = 12 + i
@@ -302,57 +317,50 @@ def build() -> Path:
             s.cell(row=r, column=col).border = BORDER
 
     # ---- pipeline value ----
-    s["D3"] = "Pipeline Value"
+    # Setup and Monthly are quoted as ranges, so only the Year 1 low/high
+    # columns are summable.
+    s["D3"] = "Pipeline - Year 1 Value"
     s["D3"].font = Font(name=FONT, size=14, bold=True, color=HEADER_BG)
 
-    pipe = [
-        ("Setup fees", f"=SUM('Call Sheet'!$G${HEADER_ROW + 1}:$G${last})", "\u00a3#,##0"),
-        ("Monthly recurring", f"=SUM('Call Sheet'!$H${HEADER_ROW + 1}:$H${last})", "\u00a3#,##0"),
-        ("Year 1 total", f"=SUM('Call Sheet'!$J${HEADER_ROW + 1}:$J${last})", "\u00a3#,##0"),
-    ]
-    for i, (label, formula, fmt) in enumerate(pipe):
-        r = 5 + i
-        s.cell(row=r, column=4, value=label).font = Font(name=FONT, size=10, color=INK)
-        c = s.cell(row=r, column=5, value=formula)
-        c.font = Font(name=FONT, size=10, bold=True, color=INK)
-        c.number_format = fmt
+    s.cell(row=5, column=4, value="If every lead closed (low end)")
+    c = s.cell(row=5, column=5, value=f"=SUM('Call Sheet'!$L${HEADER_ROW + 1}:$L${last})")
+    c.number_format = "\u00a3#,##0"
+    s.cell(row=6, column=4, value="If every lead closed (high end)")
+    c2 = s.cell(row=6, column=5, value=f"=SUM('Call Sheet'!$M${HEADER_ROW + 1}:$M${last})")
+    c2.number_format = "\u00a3#,##0"
+    for r in (5, 6):
+        s.cell(row=r, column=4).font = Font(name=FONT, size=10, color=INK)
+        s.cell(row=r, column=5).font = Font(name=FONT, size=10, bold=True, color=INK)
         for col in (4, 5):
             s.cell(row=r, column=col).border = BORDER
 
-    s["D9"] = ("Above assumes every one of the 66 says yes. It is a ceiling, "
-               "not a forecast.")
-    s["D9"].font = Font(name=FONT, size=9, italic=True, color=ACCENT)
-    s.merge_cells(start_row=9, start_column=4, end_row=9, end_column=8)
+    s["D8"] = ("A ceiling, not a forecast - it assumes all 66 say yes. "
+               "Realistic outcomes below.")
+    s["D8"].font = Font(name=FONT, size=9, italic=True, color=ACCENT)
+    s.merge_cells(start_row=8, start_column=4, end_row=8, end_column=8)
 
-    s["D11"] = "Realistic outcomes"
-    s["D11"].font = Font(name=FONT, size=12, bold=True, color=HEADER_BG)
-    s["D12"] = "Close rate"
-    s["E12"] = "Deals"
-    s["F12"] = "Setup"
-    s["G12"] = "MRR"
-    s["H12"] = "Year 1"
-    for col in range(4, 9):
-        c = s.cell(row=12, column=col)
+    s["D10"] = "Realistic outcomes (low-end pricing)"
+    s["D10"].font = Font(name=FONT, size=12, bold=True, color=HEADER_BG)
+    for i, label in enumerate(("Close rate", "Deals", "Year 1")):
+        c = s.cell(row=11, column=4 + i, value=label)
         c.font = Font(name=FONT, size=10, bold=True, color="FFFFFF")
         c.fill = PatternFill("solid", fgColor=HEADER_BG)
         c.border = BORDER
-
     for i, rate in enumerate((0.05, 0.10, 0.20)):
-        r = 13 + i
+        r = 12 + i
         s.cell(row=r, column=4, value=rate).number_format = "0%"
         s.cell(row=r, column=5, value=f"=ROUND($B$8*D{r},0)")
-        s.cell(row=r, column=6, value=f"=ROUND($E$5*D{r},0)").number_format = "\u00a3#,##0"
-        s.cell(row=r, column=7, value=f"=ROUND($E$6*D{r},0)").number_format = "\u00a3#,##0"
-        s.cell(row=r, column=8, value=f"=ROUND($E$7*D{r},0)").number_format = "\u00a3#,##0"
-        for col in range(4, 9):
+        cc = s.cell(row=r, column=6, value=f"=ROUND($E$5*D{r},0)")
+        cc.number_format = "\u00a3#,##0"
+        for col in (4, 5, 6):
             s.cell(row=r, column=col).border = BORDER
             s.cell(row=r, column=col).font = Font(
                 name=FONT, size=10, bold=(rate == 0.10), color=INK)
 
-    s["D17"] = ("10% is a fair working assumption for cold B2B calls into a "
-                "warm, well-matched list.")
-    s["D17"].font = Font(name=FONT, size=9, italic=True, color=MUTED)
-    s.merge_cells(start_row=17, start_column=4, end_row=17, end_column=8)
+    s["D16"] = ("Mid-market is the tier to work: it can pay agency rates and the "
+                "owner still decides. Corporates pay more but take months.")
+    s["D16"].font = Font(name=FONT, size=9, italic=True, color=MUTED)
+    s.merge_cells(start_row=16, start_column=4, end_row=16, end_column=8)
 
     s["A19"] = "Notes"
     s["A19"].font = Font(name=FONT, size=14, bold=True, color=HEADER_BG)
@@ -388,7 +396,7 @@ def build() -> Path:
         s.merge_cells(start_row=r, start_column=1, end_row=r, end_column=6)
         s.row_dimensions[r].height = 30
 
-    s.column_dimensions["A"].width = 30
+    s.column_dimensions["A"].width = 32
     s.column_dimensions["B"].width = 12
     for col in "CDEF":
         s.column_dimensions[col].width = 18
