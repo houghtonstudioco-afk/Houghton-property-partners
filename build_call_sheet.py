@@ -14,6 +14,8 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
 
+from leadgen import pricing
+
 REPO = Path(__file__).resolve().parent
 
 # Websites confirmed by hand on 2 Aug 2026. Everything else is unverified,
@@ -49,6 +51,15 @@ PRODUCT_SHORT = {
     "Enquiry triage + out-of-hours cover": "Enquiry Triage",
 }
 
+# Website status per company: 'none', 'weak', 'ok', 'unknown'.
+SITE_STATUS = {
+    "HydroGreen Heating and Gas Engineering": "weak",
+    "Pipe Guys (Bham) Ltd": "ok",
+    "Blaymires Plumbing & Heating": "weak",
+    "Secure Gas 247": "ok",
+    "The Gas Pro": "none",
+}
+
 PRODUCT_FILL = {
     "AI Receptionist": "FFE8D9",      # warm
     "Speed-to-Lead": "DEEAF6",        # blue
@@ -67,19 +78,23 @@ BORDER = Border(left=THIN, right=THIN, top=THIN, bottom=THIN)
 
 COLUMNS = [
     ("#", 5),
-    ("Company", 34),
+    ("Company", 32),
     ("Phone", 15),
-    ("Call At", 19),
-    ("Website", 34),
-    ("What They Do", 30),
+    ("Call At", 18),
+    ("Website", 32),
     ("SELL THEM", 19),
-    ("Why / What To Say", 62),
+    ("Setup", 11),
+    ("Monthly", 11),
+    ("Website Extra", 26),
+    ("Year 1", 12),
+    ("Why / What To Say", 58),
     ("Then Upsell", 19),
-    ("Location", 22),
+    ("What They Do", 28),
+    ("Location", 20),
     ("Reviews", 9),
     ("Rating", 8),
-    ("Called?", 10),
-    ("Outcome", 26),
+    ("Called?", 11),
+    ("Outcome", 24),
 ]
 
 
@@ -145,18 +160,33 @@ def build() -> Path:
         else:
             say = row["Opening Line"]
 
+        reviews = int(row["Reviews"]) if row["Reviews"].strip().isdigit() else None
+        quote = pricing.quote_for(product, reviews,
+                                  SITE_STATUS.get(company, "unknown"))
+        if quote.needs_website:
+            web_cell = (f"+\u00a3{round(quote.website_setup * 0.8):,} build "
+                        f"+\u00a3{quote.website_monthly}/mo")
+        elif SITE_STATUS.get(company) == "ok":
+            web_cell = "not needed - site is fine"
+        else:
+            web_cell = "check site first"
+
         values = [
             offset + 1,
             company,
             row["Phone"],
             row["Best Time"],
             website,
-            row["What They Do"],
             product,
+            quote.total_setup,
+            quote.total_monthly,
+            web_cell,
+            quote.year_one,
             say,
             PRODUCT_SHORT.get(row["Upsell Later"], row["Upsell Later"]),
+            row["What They Do"],
             row["Location"],
-            int(row["Reviews"]) if row["Reviews"].strip().isdigit() else "",
+            reviews if reviews is not None else "",
             float(row["Rating"]) if row["Rating"].strip() else "",
             "",
             "",
@@ -166,7 +196,7 @@ def build() -> Path:
         for idx, value in enumerate(values, start=1):
             cell = ws.cell(row=r, column=idx, value=value)
             cell.font = Font(name=FONT, size=10, color=INK)
-            cell.alignment = Alignment(vertical="top", wrap_text=(idx in (2, 6, 8)))
+            cell.alignment = Alignment(vertical="top", wrap_text=(idx in (2, 9, 11, 13)))
             cell.border = BORDER
             cell.fill = PatternFill("solid", fgColor=banded)
 
@@ -175,7 +205,7 @@ def build() -> Path:
         ws.cell(row=r, column=2).font = Font(name=FONT, size=10, bold=True, color=INK)
         ws.cell(row=r, column=3).font = Font(name=FONT, size=11, bold=True, color=INK)
 
-        product_cell = ws.cell(row=r, column=7)
+        product_cell = ws.cell(row=r, column=6)
         product_cell.font = Font(name=FONT, size=10, bold=True, color=INK)
         product_cell.fill = PatternFill("solid", fgColor=PRODUCT_FILL.get(product, banded))
 
@@ -194,12 +224,21 @@ def build() -> Path:
                 f"{website}  ({site_note})" if website != "NO SITE FOUND" else site_note)
 
         if company in ADVERTISES_247:
-            ws.cell(row=r, column=8).font = Font(name=FONT, size=10, bold=True, color=ACCENT)
+            ws.cell(row=r, column=11).font = Font(name=FONT, size=10, bold=True, color=ACCENT)
 
-        for col in (11, 12):
+        for col in (15, 16):
             ws.cell(row=r, column=col).alignment = Alignment(
                 horizontal="center", vertical="top")
-        ws.cell(row=r, column=12).number_format = "0.0"
+        ws.cell(row=r, column=16).number_format = "0.0"
+        for col in (7, 8, 10):
+            c = ws.cell(row=r, column=col)
+            c.number_format = "\u00a3#,##0"
+            c.alignment = Alignment(horizontal="right", vertical="top")
+            c.font = Font(name=FONT, size=10, bold=(col == 10), color=INK)
+        ws.cell(row=r, column=10).fill = PatternFill("solid", fgColor="FFF2CC")
+        if quote.needs_website:
+            ws.cell(row=r, column=9).font = Font(
+                name=FONT, size=10, bold=True, color="B45309")
         ws.row_dimensions[r].height = 46
 
     last = HEADER_ROW + len(rows)
@@ -208,10 +247,10 @@ def build() -> Path:
     dv = DataValidation(type="list", formula1='"Yes,No answer,Call back,Not interested"',
                         allow_blank=True)
     ws.add_data_validation(dv)
-    dv.add(f"M{HEADER_ROW + 1}:M{last}")
+    dv.add(f"Q{HEADER_ROW + 1}:Q{last}")
 
     ws.freeze_panes = f"A{HEADER_ROW + 1}"
-    ws.auto_filter.ref = f"A{HEADER_ROW}:N{last}"
+    ws.auto_filter.ref = f"A{HEADER_ROW}:R{last}"
     ws.sheet_view.showGridLines = False
 
     # ---- summary sheet ----
@@ -234,7 +273,7 @@ def build() -> Path:
         s.cell(row=r, column=1).fill = PatternFill(
             "solid", fgColor=PRODUCT_FILL.get(product, "FFFFFF"))
         s.cell(row=r, column=2,
-               value=f"=COUNTIF('Call Sheet'!$G${HEADER_ROW + 1}:$G${last},A{r})")
+               value=f"=COUNTIF('Call Sheet'!$F${HEADER_ROW + 1}:$F${last},A{r})")
         for col in (1, 2):
             s.cell(row=r, column=col).border = BORDER
             s.cell(row=r, column=col).font = Font(name=FONT, size=10, color=INK)
@@ -249,11 +288,11 @@ def build() -> Path:
     s["A11"] = "Progress"
     s["A11"].font = Font(name=FONT, size=14, bold=True, color=HEADER_BG)
     progress = [
-        ("Called", f"=COUNTIF('Call Sheet'!$M${HEADER_ROW + 1}:$M${last},\"Yes\")"),
-        ("No answer", f"=COUNTIF('Call Sheet'!$M${HEADER_ROW + 1}:$M${last},\"No answer\")"),
-        ("Call back", f"=COUNTIF('Call Sheet'!$M${HEADER_ROW + 1}:$M${last},\"Call back\")"),
-        ("Not interested", f"=COUNTIF('Call Sheet'!$M${HEADER_ROW + 1}:$M${last},\"Not interested\")"),
-        ("Still to call", f"=COUNTBLANK('Call Sheet'!$M${HEADER_ROW + 1}:$M${last})"),
+        ("Called", f"=COUNTIF('Call Sheet'!$Q${HEADER_ROW + 1}:$Q${last},\"Yes\")"),
+        ("No answer", f"=COUNTIF('Call Sheet'!$Q${HEADER_ROW + 1}:$Q${last},\"No answer\")"),
+        ("Call back", f"=COUNTIF('Call Sheet'!$Q${HEADER_ROW + 1}:$Q${last},\"Call back\")"),
+        ("Not interested", f"=COUNTIF('Call Sheet'!$Q${HEADER_ROW + 1}:$Q${last},\"Not interested\")"),
+        ("Still to call", f"=COUNTBLANK('Call Sheet'!$Q${HEADER_ROW + 1}:$Q${last})"),
     ]
     for i, (label, formula) in enumerate(progress):
         r = 12 + i
@@ -262,9 +301,72 @@ def build() -> Path:
         for col in (1, 2):
             s.cell(row=r, column=col).border = BORDER
 
+    # ---- pipeline value ----
+    s["D3"] = "Pipeline Value"
+    s["D3"].font = Font(name=FONT, size=14, bold=True, color=HEADER_BG)
+
+    pipe = [
+        ("Setup fees", f"=SUM('Call Sheet'!$G${HEADER_ROW + 1}:$G${last})", "\u00a3#,##0"),
+        ("Monthly recurring", f"=SUM('Call Sheet'!$H${HEADER_ROW + 1}:$H${last})", "\u00a3#,##0"),
+        ("Year 1 total", f"=SUM('Call Sheet'!$J${HEADER_ROW + 1}:$J${last})", "\u00a3#,##0"),
+    ]
+    for i, (label, formula, fmt) in enumerate(pipe):
+        r = 5 + i
+        s.cell(row=r, column=4, value=label).font = Font(name=FONT, size=10, color=INK)
+        c = s.cell(row=r, column=5, value=formula)
+        c.font = Font(name=FONT, size=10, bold=True, color=INK)
+        c.number_format = fmt
+        for col in (4, 5):
+            s.cell(row=r, column=col).border = BORDER
+
+    s["D9"] = ("Above assumes every one of the 66 says yes. It is a ceiling, "
+               "not a forecast.")
+    s["D9"].font = Font(name=FONT, size=9, italic=True, color=ACCENT)
+    s.merge_cells(start_row=9, start_column=4, end_row=9, end_column=8)
+
+    s["D11"] = "Realistic outcomes"
+    s["D11"].font = Font(name=FONT, size=12, bold=True, color=HEADER_BG)
+    s["D12"] = "Close rate"
+    s["E12"] = "Deals"
+    s["F12"] = "Setup"
+    s["G12"] = "MRR"
+    s["H12"] = "Year 1"
+    for col in range(4, 9):
+        c = s.cell(row=12, column=col)
+        c.font = Font(name=FONT, size=10, bold=True, color="FFFFFF")
+        c.fill = PatternFill("solid", fgColor=HEADER_BG)
+        c.border = BORDER
+
+    for i, rate in enumerate((0.05, 0.10, 0.20)):
+        r = 13 + i
+        s.cell(row=r, column=4, value=rate).number_format = "0%"
+        s.cell(row=r, column=5, value=f"=ROUND($B$8*D{r},0)")
+        s.cell(row=r, column=6, value=f"=ROUND($E$5*D{r},0)").number_format = "\u00a3#,##0"
+        s.cell(row=r, column=7, value=f"=ROUND($E$6*D{r},0)").number_format = "\u00a3#,##0"
+        s.cell(row=r, column=8, value=f"=ROUND($E$7*D{r},0)").number_format = "\u00a3#,##0"
+        for col in range(4, 9):
+            s.cell(row=r, column=col).border = BORDER
+            s.cell(row=r, column=col).font = Font(
+                name=FONT, size=10, bold=(rate == 0.10), color=INK)
+
+    s["D17"] = ("10% is a fair working assumption for cold B2B calls into a "
+                "warm, well-matched list.")
+    s["D17"].font = Font(name=FONT, size=9, italic=True, color=MUTED)
+    s.merge_cells(start_row=17, start_column=4, end_row=17, end_column=8)
+
     s["A19"] = "Notes"
     s["A19"].font = Font(name=FONT, size=14, bold=True, color=HEADER_BG)
     notes = [
+        "Prices are anchored to UK market rates researched 2 Aug 2026: AI receptionists "
+        "for trades sell at \u00a345-99/mo self-serve, human answering at \u00a3100-400/mo, "
+        "basic trade websites \u00a3349-499 and multi-page \u00a3800-2,000. Setup fees are what "
+        "done-for-you buys you above the \u00a345 self-serve tier.",
+        "Tiers by Google reviews as a proxy for call volume and ability to pay: "
+        "High volume 200+, Established 60-199, Growing under 60.",
+        "A website is only quoted where the site is missing or on a free subdomain. "
+        "Never pitch a rebuild to someone whose site is fine - it ends the call.",
+        "Bundle discount: 20% off the website build when sold with a service. The "
+        "discount comes off setup, never off the monthly.",
         "Websites: only 5 companies were checked by hand (2 Aug 2026). Every other row "
         "reads 'not checked' - the automated crawl has never had network access.",
         "Amber website text = free site-builder subdomain, so a website sale sits "
