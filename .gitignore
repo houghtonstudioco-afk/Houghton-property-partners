@@ -24,3 +24,7 @@ __pycache__/
 .venv/
 venv/
 .pytest_cache/
+QUALIFIED_LEADS.csv
+TOP20_MONDAY.csv
+outreach_ranked.csv
+outreach_ranked_pitch.csv
