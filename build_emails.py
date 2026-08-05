@@ -37,10 +37,34 @@ VERIFIED_EMAILS: dict[str, tuple[str, str]] = {
     "Milburys": ("mil_thornburysales@milburys.co.uk", "allAgents Thornbury branch listing"),
     "Cobb Farr": ("bath@cobbfarr.com", "cobbfarr.com contact page"),
     "Reside Bath": ("info@residebath.co.uk", "Cylex Bath listing"),
+    "Bristol Property Centre": ("info@bristolpropertycentre.co.uk",
+                                "bristolpropertycentre.co.uk contact page"),
+    "Bundy and Bond": ("info@bundyandbond.co.uk",
+                       "bundyandbond.co.uk contact page (lettings@ also published)"),
+    "Holbrook Moran": ("fishponds@holbrookmoran.co.uk",
+                       "holbrookmoran.co.uk Fishponds office (redfield@ also published)"),
+    "Bonds of Thornbury": ("enquiries@bondsofthornbury.co.uk",
+                           "bondsofthornbury.co.uk contact page"),
+    "Edison Ford Property": ("enquiries@edisonfordproperty.co.uk",
+                             "edisonfordproperty.co.uk listing"),
+    "Michael Nicholas Estate Agents": ("michaelnicholas@btconnect.com",
+                                       "Cylex / thomsonlocal Downend listing"),
+    "Brunt & Fussell": ("info@bruntandfussell.co.uk",
+                        "bruntandfussell.co.uk contact page"),
+    # Several unrelated agencies trade as Wentworth; this is the Bath branch.
+    "Wentworth Estate Agents": ("bath@wentworthea.com",
+                                "wentworthestateagents.com Bath branch - VERIFY, "
+                                "multiple unrelated Wentworth agencies exist"),
 }
 
-# Checked and no published address found - do not invent one.
-NO_EMAIL_FOUND = {"Crisp Cowley"}
+# Checked, nothing published or the address is deliberately obfuscated against
+# scrapers. Left blank rather than guessed.
+NO_EMAIL_FOUND = {
+    "Crisp Cowley",              # no address on site or directories
+    "Hensons",                   # spambot-protected on hbe.co.uk
+    "Boardwalk Property Co",     # directory shows a redacted placeholder
+    "Country Property",          # directory shows a redacted placeholder
+}
 
 AGENCIES = [
     "CJ Hole", "Howard Independent Estate Agents", "Garrett & Bradly",
