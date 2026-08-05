@@ -1,11 +1,69 @@
 # Outreach emails — ready to copy and paste
 
-Signature included in every draft. No address here is guessed — blanks are genuine gaps.
+Signature included in every draft. No address is guessed — blanks are genuine gaps.
 
 
 ---
 
-# Estate agents — 14 of 30 have a verified address
+# Estate agents — 19 of 30 sendable
+
+
+## Abode Property Management
+
+**To:** `steve@yourabode.co.uk`  
+
+**Source:** RocketReach/Prospeo aggregator - LOWER CONFIDENCE, may be pattern-inferred, verify before sending  
+
+**Subject:** `Quick question about Abode Property Management's enquiry handling`  
+
+**Legal:** Check if sole trader before emailing
+
+
+```
+Hi there,
+
+I came across Abode Property Management while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on a real enquiry so you can see exactly how it would handle one of your own. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+## Bath Stone Property
+
+**To:** `lettings@bathstoneproperty.com`  
+
+**Source:** bathstoneproperty.com contact page (sales@ also published)  
+
+**Subject:** `Quick question about Bath Stone Property's enquiry handling`  
+
+**Legal:** Check if sole trader before emailing
+
+
+```
+Hi there,
+
+I came across Bath Stone Property while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on a real enquiry so you can see exactly how it would handle one of your own. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
 
 
 ## Bonds of Thornbury
@@ -269,6 +327,64 @@ houghtonautomations.co.uk
 ```
 
 
+## Howard Independent Estate Agents
+
+**To:** `hello@howard-homes.co.uk`  
+
+**Source:** howard-homes.co.uk  
+
+**Subject:** `Quick question about Howard Independent Estate Agents' enquiry handling`  
+
+**Legal:** Check if sole trader before emailing
+
+
+```
+Hi there,
+
+I came across Howard Independent Estate Agents while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on a real enquiry so you can see exactly how it would handle one of your own. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+## M. Coleman Estate Agents
+
+**To:** `downend@mcoleman.co.uk`  
+
+**Source:** mcoleman.co.uk Downend office listing  
+
+**Subject:** `Quick question about M. Coleman Estate Agents' enquiry handling`  
+
+**Legal:** Check if sole trader before emailing
+
+
+```
+Hi there,
+
+I came across M. Coleman Estate Agents while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on a real enquiry so you can see exactly how it would handle one of your own. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
 ## Michael Nicholas Estate Agents
 
 **To:** `michaelnicholas@btconnect.com`  
@@ -356,6 +472,35 @@ houghtonautomations.co.uk
 ```
 
 
+## React Property Management
+
+**To:** `info@reactproperty.co.uk`  
+
+**Source:** reactproperty.co.uk  
+
+**Subject:** `Quick question about React Property Management's enquiry handling`  
+
+**Legal:** Check if sole trader before emailing
+
+
+```
+Hi there,
+
+I came across React Property Management while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on a real enquiry so you can see exactly how it would handle one of your own. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
 ## Reside Bath
 
 **To:** `info@residebath.co.uk`  
@@ -400,33 +545,6 @@ houghtonautomations.co.uk
 Hi there,
 
 I came across Wentworth Estate Agents while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
-
-Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
-
-Would you have ten minutes for a call this week or next? I can walk you through it on a real enquiry so you can see exactly how it would handle one of your own. What day suits you?
-
-Best,
-
-Benjamin Houghton
-07444577053
-Ben@Houghtonautomations.co.uk
-houghtonautomations.co.uk
-```
-
-
-## Abode Property Management
-
-**To:** `*** EMAIL NEEDED ***`  
-
-**Subject:** `Quick question about Abode Property Management's enquiry handling`  
-
-**Legal:** Check if sole trader before emailing
-
-
-```
-Hi there,
-
-I came across Abode Property Management while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -508,33 +626,6 @@ houghtonautomations.co.uk
 Hi there,
 
 I came across Assured Property Rentals while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
-
-Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
-
-Would you have ten minutes for a call this week or next? I can walk you through it on a real enquiry so you can see exactly how it would handle one of your own. What day suits you?
-
-Best,
-
-Benjamin Houghton
-07444577053
-Ben@Houghtonautomations.co.uk
-houghtonautomations.co.uk
-```
-
-
-## Bath Stone Property
-
-**To:** `*** EMAIL NEEDED ***`  
-
-**Subject:** `Quick question about Bath Stone Property's enquiry handling`  
-
-**Legal:** Check if sole trader before emailing
-
-
-```
-Hi there,
-
-I came across Bath Stone Property while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -711,87 +802,6 @@ houghtonautomations.co.uk
 ```
 
 
-## Howard Independent Estate Agents
-
-**To:** `*** EMAIL NEEDED ***`  
-
-**Subject:** `Quick question about Howard Independent Estate Agents' enquiry handling`  
-
-**Legal:** Check if sole trader before emailing
-
-
-```
-Hi there,
-
-I came across Howard Independent Estate Agents while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
-
-Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
-
-Would you have ten minutes for a call this week or next? I can walk you through it on a real enquiry so you can see exactly how it would handle one of your own. What day suits you?
-
-Best,
-
-Benjamin Houghton
-07444577053
-Ben@Houghtonautomations.co.uk
-houghtonautomations.co.uk
-```
-
-
-## M. Coleman Estate Agents
-
-**To:** `*** EMAIL NEEDED ***`  
-
-**Subject:** `Quick question about M. Coleman Estate Agents' enquiry handling`  
-
-**Legal:** Check if sole trader before emailing
-
-
-```
-Hi there,
-
-I came across M. Coleman Estate Agents while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
-
-Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
-
-Would you have ten minutes for a call this week or next? I can walk you through it on a real enquiry so you can see exactly how it would handle one of your own. What day suits you?
-
-Best,
-
-Benjamin Houghton
-07444577053
-Ben@Houghtonautomations.co.uk
-houghtonautomations.co.uk
-```
-
-
-## React Property Management
-
-**To:** `*** EMAIL NEEDED ***`  
-
-**Subject:** `Quick question about React Property Management's enquiry handling`  
-
-**Legal:** Check if sole trader before emailing
-
-
-```
-Hi there,
-
-I came across React Property Management while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
-
-Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
-
-Would you have ten minutes for a call this week or next? I can walk you through it on a real enquiry so you can see exactly how it would handle one of your own. What day suits you?
-
-Best,
-
-Benjamin Houghton
-07444577053
-Ben@Houghtonautomations.co.uk
-houghtonautomations.co.uk
-```
-
-
 ## TLS Estate Agents
 
 **To:** `*** EMAIL NEEDED ***`  
@@ -848,12 +858,14 @@ houghtonautomations.co.uk
 
 ---
 
-# Gas & heating — 0 of 66 have a verified address
+# Gas & heating — 3 of 66 sendable
 
 
 ## 2nd City Gas Plumbing & Heating Ltd
 
-**To:** `*** EMAIL NEEDED ***`  
+**To:** `office@2ndcitygasplumbingandheating.co.uk`  
+
+**Source:** 2ndcitygasplumbingandheating.co.uk contact page  
 
 **Subject:** `Quick question about 2nd City Gas Plumbing & Heating Ltd's call handling`  
 
@@ -864,6 +876,68 @@ houghtonautomations.co.uk
 Hi there,
 
 You've got 162 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
+
+I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+
+The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
+
+Would you have ten minutes for a call this week or next? Early morning or after five suits most engineers I speak to. What works for you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+## Osprey Engineering Solutions Ltd
+
+**To:** `info@osprey-engineering.co.uk`  
+
+**Source:** osprey-engineering.co.uk contact page  
+
+**Subject:** `Quick question about Osprey Engineering Solutions Ltd's call handling`  
+
+**Legal:** Ltd - B2B cold email permitted under PECR
+
+
+```
+Hi there,
+
+You've got 306 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
+
+I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
+
+Would you have ten minutes for a call this week or next? Early morning or after five suits most engineers I speak to. What works for you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+## Pipe Guys (Bham) Ltd
+
+**To:** `info@pipeguys.co.uk`  
+
+**Source:** pipeguys.co.uk contact page  
+
+**Subject:** `Pipe Guys (Bham) Ltd - who answers at 2am?`  
+
+**Legal:** Ltd - B2B cold email permitted under PECR
+
+
+```
+Hi there,
+
+Your website says you're available 24/7, and with 409 Google reviews I don't doubt the demand is there. What I wondered is who actually picks up at 2am, or when you're under a boiler at 3pm.
 
 I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
 
@@ -2272,35 +2346,6 @@ houghtonautomations.co.uk
 ```
 
 
-## Osprey Engineering Solutions Ltd
-
-**To:** `*** EMAIL NEEDED ***`  
-
-**Subject:** `Quick question about Osprey Engineering Solutions Ltd's call handling`  
-
-**Legal:** Ltd - B2B cold email permitted under PECR
-
-
-```
-Hi there,
-
-You've got 306 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
-
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
-
-The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
-
-Would you have ten minutes for a call this week or next? Early morning or after five suits most engineers I speak to. What works for you?
-
-Best,
-
-Benjamin Houghton
-07444577053
-Ben@Houghtonautomations.co.uk
-houghtonautomations.co.uk
-```
-
-
 ## Peter Foster Engineering Ltd
 
 **To:** `*** EMAIL NEEDED ***`  
@@ -2343,35 +2388,6 @@ houghtonautomations.co.uk
 Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
-
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
-
-The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
-
-Would you have ten minutes for a call this week or next? Early morning or after five suits most engineers I speak to. What works for you?
-
-Best,
-
-Benjamin Houghton
-07444577053
-Ben@Houghtonautomations.co.uk
-houghtonautomations.co.uk
-```
-
-
-## Pipe Guys (Bham) Ltd
-
-**To:** `*** EMAIL NEEDED ***`  
-
-**Subject:** `Pipe Guys (Bham) Ltd - who answers at 2am?`  
-
-**Legal:** Ltd - B2B cold email permitted under PECR
-
-
-```
-Hi there,
-
-Your website says you're available 24/7, and with 409 Google reviews I don't doubt the demand is there. What I wondered is who actually picks up at 2am, or when you're under a boiler at 3pm.
 
 I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
 

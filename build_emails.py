@@ -55,6 +55,28 @@ VERIFIED_EMAILS: dict[str, tuple[str, str]] = {
     "Wentworth Estate Agents": ("bath@wentworthea.com",
                                 "wentworthestateagents.com Bath branch - VERIFY, "
                                 "multiple unrelated Wentworth agencies exist"),
+    "Howard Independent Estate Agents": ("hello@howard-homes.co.uk",
+                                         "howard-homes.co.uk"),
+    "M. Coleman Estate Agents": ("downend@mcoleman.co.uk",
+                                 "mcoleman.co.uk Downend office listing"),
+    "React Property Management": ("info@reactproperty.co.uk",
+                                  "reactproperty.co.uk"),
+    "Bath Stone Property": ("lettings@bathstoneproperty.com",
+                            "bathstoneproperty.com contact page (sales@ also published)"),
+    # Lower confidence: this came from a scraped contact aggregator that also
+    # publishes a first-name email "format", so it may be pattern-inferred
+    # rather than published. Worth a check before sending.
+    "Abode Property Management": ("steve@yourabode.co.uk",
+                                  "RocketReach/Prospeo aggregator - LOWER CONFIDENCE, "
+                                  "may be pattern-inferred, verify before sending"),
+
+    # --- gas & heating: incorporated only, since sole traders need consent ---
+    "Pipe Guys (Bham) Ltd": ("info@pipeguys.co.uk", "pipeguys.co.uk contact page"),
+    "2nd City Gas Plumbing & Heating Ltd": (
+        "office@2ndcitygasplumbingandheating.co.uk",
+        "2ndcitygasplumbingandheating.co.uk contact page"),
+    "Osprey Engineering Solutions Ltd": (
+        "info@osprey-engineering.co.uk", "osprey-engineering.co.uk contact page"),
 }
 
 # Checked, nothing published or the address is deliberately obfuscated against
@@ -64,6 +86,10 @@ NO_EMAIL_FOUND = {
     "Hensons",                   # spambot-protected on hbe.co.uk
     "Boardwalk Property Co",     # directory shows a redacted placeholder
     "Country Property",          # directory shows a redacted placeholder
+    "Garrett & Bradly",          # contact form only
+    "Aquarius Homes",            # contact form only
+    "Vibe Properties",           # contact form only
+    "Oil Tank Replacements Ltd", # phone and web form only
 }
 
 AGENCIES = [
@@ -256,12 +282,15 @@ def build() -> list[dict]:
             company = row["Company"]
             subject, paras = gas_email(row)
             incorporated = bool(INCORPORATED.search(company))
+            email, source = VERIFIED_EMAILS.get(company, ("", ""))
             out.append({
                 "list": "Gas & heating",
                 "company": company,
-                "email": "",
-                "email_source": "",
-                "email_status": "NOT LOOKED UP YET",
+                "email": email,
+                "email_source": source,
+                "email_status": ("verified" if email
+                                 else "checked - none published"
+                                 if company in NO_EMAIL_FOUND else "NOT LOOKED UP YET"),
                 "legal": ("Ltd - B2B cold email permitted under PECR"
                           if incorporated
                           else "LIKELY SOLE TRADER - needs consent, do not cold email"),
