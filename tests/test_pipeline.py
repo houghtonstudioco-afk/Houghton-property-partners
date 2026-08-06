@@ -299,6 +299,48 @@ class TestContactMethod(unittest.TestCase):
         self.assertEqual(method, "form")
 
 
+class TestEmailExtraction(unittest.TestCase):
+    HTML = ('<a href="mailto:info@clinic.co.uk">Email</a>'
+            '<p>reception@clinic.co.uk careers@clinic.co.uk</p>'
+            '<p>Dr Smith: j.smith@clinic.co.uk</p>'
+            '<footer>Site by <a href="mailto:hello@webagency.com">Agency</a> '
+            'noreply@clinic.co.uk logo@2x.png</footer>')
+
+    def test_extracts_and_ranks_role_addresses_first(self):
+        got = stage2_audit.extract_emails(self.HTML, "clinic.co.uk")
+        self.assertEqual(got[0], "info@clinic.co.uk")
+        self.assertIn("reception@clinic.co.uk", got)
+
+    def test_excludes_other_domains(self):
+        # The web designer's footer address is the commonest false positive,
+        # and emailing a company's agency is worse than finding nothing.
+        got = stage2_audit.extract_emails(self.HTML, "clinic.co.uk")
+        self.assertNotIn("hello@webagency.com", got)
+
+    def test_excludes_noreply_and_image_filenames(self):
+        got = stage2_audit.extract_emails(self.HTML, "clinic.co.uk")
+        self.assertNotIn("noreply@clinic.co.uk", got)
+        self.assertNotIn("logo@2x.png", got)
+
+    def test_careers_ranked_last_but_kept(self):
+        got = stage2_audit.extract_emails(self.HTML, "clinic.co.uk")
+        self.assertIn("careers@clinic.co.uk", got)
+        self.assertEqual(got[-1], "careers@clinic.co.uk")
+
+    def test_subdomain_of_site_is_accepted(self):
+        html = '<a href="mailto:info@mail.clinic.co.uk">x</a>'
+        self.assertIn("info@mail.clinic.co.uk",
+                      stage2_audit.extract_emails(html, "clinic.co.uk"))
+
+    def test_no_emails_returns_empty(self):
+        self.assertEqual(stage2_audit.extract_emails("<p>call us</p>", "x.co.uk"), [])
+
+    def test_deduplicates(self):
+        html = "info@a.co.uk INFO@a.co.uk <a href='mailto:info@a.co.uk'>x</a>"
+        self.assertEqual(stage2_audit.extract_emails(html, "a.co.uk"),
+                         ["info@a.co.uk"])
+
+
 class TestClassify(unittest.TestCase):
     def make(self, **kw):
         return CachedResponse(url="https://x.co.uk/", **kw)

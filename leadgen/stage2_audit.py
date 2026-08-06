@@ -215,6 +215,74 @@ _EMBEDDED_FORM = _pat(
 )
 
 
+# ------------------------------------------------------- email harvesting ----
+
+_EMAIL_RE = re.compile(
+    r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}", re.I)
+
+# Addresses that are never a usable contact, or belong to someone else.
+_EMAIL_JUNK = re.compile(
+    r"(^|@)(no-?reply|donotreply|postmaster|abuse|sentry|wixpress|"
+    r"example|test|your-?email|email@|name@|user@|domain\.com|"
+    r"sentry\.io|\.png|\.jpg|\.gif|\.webp|\.svg|@2x|@3x)", re.I)
+
+# Role addresses worth having, best first. A general enquiries address beats a
+# careers or privacy one, which are dead ends for this kind of outreach.
+_EMAIL_PREFERENCE = [
+    "info", "enquiries", "enquiry", "hello", "contact", "reception",
+    "admin", "office", "mail", "practice", "care", "team", "sales",
+    "newpatients", "appointments", "advice",
+]
+
+_EMAIL_AVOID = re.compile(
+    r"^(careers?|jobs?|recruit|privacy|dpo|gdpr|legal|complaints?|"
+    r"unsubscribe|press|media|invoices?|accounts?payable|billing|"
+    r"webmaster|hosting|support@wix|marketing@)", re.I)
+
+
+def extract_emails(html: str, site_host: str = "") -> list[str]:
+    """Pull usable contact addresses out of a page, best first.
+
+    Two filters do the real work. Junk patterns remove no-reply addresses and
+    image filenames that look like addresses. The domain check removes the web
+    designer's address from the footer, which is otherwise the single most
+    common false positive - and emailing a company's agency instead of the
+    company is worse than finding nothing.
+    """
+    found: dict[str, int] = {}
+    site_domain = (site_host or "").lower().removeprefix("www.")
+
+    candidates = list(_MAILTO.findall(html or ""))
+    candidates += _EMAIL_RE.findall(_TAG_STRIP.sub(" ", html or ""))
+
+    for raw in candidates:
+        addr = raw.strip().strip(".,;:()<>[]'\"").lower()
+        if not addr or "@" not in addr or _EMAIL_JUNK.search(addr):
+            continue
+        local, _, domain = addr.partition("@")
+        if not local or "." not in domain:
+            continue
+
+        # An address on a different domain is usually the web agency, a
+        # partner, or a person quoted on the page. Only trust the site's own.
+        if site_domain and not (domain == site_domain
+                                or domain.endswith("." + site_domain)
+                                or site_domain.endswith("." + domain)):
+            continue
+
+        if _EMAIL_AVOID.match(local):
+            score = 90                      # keep, but rank last
+        elif local in _EMAIL_PREFERENCE:
+            score = _EMAIL_PREFERENCE.index(local)
+        elif any(local.startswith(p) for p in _EMAIL_PREFERENCE):
+            score = 40
+        else:
+            score = 60                      # a named individual
+        found[addr] = min(found.get(addr, 99), score)
+
+    return [a for a, _ in sorted(found.items(), key=lambda kv: (kv[1], kv[0]))]
+
+
 def detect_contact_method(html: str) -> tuple[str, list[str]]:
     """Return (primary_method, all_channels_found).
 
@@ -259,6 +327,7 @@ class Audit:
     crm_vendors: list[str] = field(default_factory=list)
     contact_method: str = ""
     contact_channels: list[str] = field(default_factory=list)
+    emails: list[str] = field(default_factory=list)
     outdated_score: int | None = None
     outdated_signals: list[str] = field(default_factory=list)
     error: str = ""
@@ -345,6 +414,8 @@ def audit_site(url: str, fetcher: Fetcher, check_contact_page: bool = True) -> A
         audit.booking_vendors = ["own booking route"]
     audit.crm_vendors = _find(CRM_SIGNATURES, combined)
     audit.contact_method, audit.contact_channels = detect_contact_method(combined)
+    audit.emails = extract_emails(
+        combined, registrable_host(audit.final_url or audit.url))
     audit.outdated_score, audit.outdated_signals = score_outdated(
         html, audit.final_url or audit.url, resp.ssl_status
     )
@@ -395,6 +466,11 @@ def run(rows: list[dict[str, str]], fetcher: Fetcher, failures: FailureLog,
         row["Online Booking Vendor"] = ", ".join(audit.booking_vendors)
         row["CRM Vendor"] = ", ".join(audit.crm_vendors)
         row["Contact Method"] = audit.contact_method
+        if audit.emails:
+            # Email Address is one of the blank original columns, so filling it
+            # is allowed; the rest are kept alongside for manual choice.
+            set_if_blank(row, "Email Address", audit.emails[0])
+            row["All Emails Found"] = ", ".join(audit.emails[:5])
         row["Outdated Signals"] = "; ".join(audit.outdated_signals)
         row["Site Checked At"] = time.strftime("%Y-%m-%d")
 

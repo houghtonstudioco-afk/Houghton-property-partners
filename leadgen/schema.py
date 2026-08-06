@@ -52,6 +52,7 @@ STAGE2_COLUMNS = [
     "CRM Vendor",
     "Contact Method",              # form | mailto | phone | none
     "Outdated Signals",            # which rules fired, semicolon separated
+    "All Emails Found",            # every usable address on the site, best first
     "Site Checked At",
 ]
 
