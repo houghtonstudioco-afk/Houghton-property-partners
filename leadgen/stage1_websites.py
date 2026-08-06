@@ -14,7 +14,7 @@ from dataclasses import dataclass
 from urllib.parse import parse_qs, quote_plus, unquote, urlparse
 
 from . import config
-from .fetcher import Fetcher, base_url, normalise_url, registrable_host
+from .fetcher import EgressBlocked, Fetcher, base_url, normalise_url, registrable_host
 from .store import FailureLog, set_if_blank
 from .textutil import (
     compact,
@@ -102,6 +102,8 @@ class SerperProvider(SearchProvider):
                 cached = resp.json()
                 fetcher.cache.put_json("search:serper", query, cached)
                 fetcher.request_count += 1
+            except EgressBlocked:
+                raise
             except Exception as exc:  # noqa: BLE001
                 return [], f"{type(exc).__name__}: {exc}"
         results = (cached or {}).get("organic") or []
@@ -494,6 +496,10 @@ def run(rows: list[dict[str, str]], fetcher: Fetcher, failures: FailureLog,
         log.info("[stage1 %d/%d] %s", n, len(todo), company)
         try:
             verdict = discover_website(row, providers, fetcher, failures, row_num)
+        except EgressBlocked:
+            # A run-level abort, not a row-level failure. Swallowing it here
+            # defeats the circuit breaker entirely.
+            raise
         except Exception as exc:  # noqa: BLE001 - one bad row must not kill the run
             failures.record("stage1", row_num, company, "unhandled_exception",
                             f"{type(exc).__name__}: {exc}")

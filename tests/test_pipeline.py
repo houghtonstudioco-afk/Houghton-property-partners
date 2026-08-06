@@ -299,6 +299,49 @@ class TestContactMethod(unittest.TestCase):
         self.assertEqual(method, "form")
 
 
+class TestCircuitBreakerPropagates(TempMixin, unittest.TestCase):
+    """The breaker is useless if a per-row handler swallows it.
+
+    This is a regression test for a real failure: a 51-row run kept going
+    through all 51 rows and 61 requests after the breaker had fired, because
+    stage 1's 'one bad row must not kill the run' handler caught EgressBlocked
+    along with everything else and logged it as an ordinary row failure.
+    """
+
+    def _blocked_fetcher(self):
+        from requests.exceptions import ProxyError
+        f = Fetcher(self.cache, offline=False, respect_robots=False)
+        f._sleep = lambda host: None
+
+        def boom(*a, **kw):
+            raise ProxyError("CONNECT tunnel failed, response 403")
+
+        f.session.get = boom
+        f.session.post = boom
+        return f
+
+    def test_stage1_run_aborts_rather_than_logging_every_row(self):
+        from leadgen.fetcher import EgressBlocked
+        rows = [blank_row(**{"Company Name": f"Co {i}", "Location": "Bristol",
+                             "Phone Number": "0117 000 0000"})
+                for i in range(40)]
+        fetcher = self._blocked_fetcher()
+        with self.assertRaises(EgressBlocked):
+            stage1_websites.run(rows, fetcher, self.failures, lambda: None)
+        # Must not have written a per-row failure for every company.
+        self.assertNotIn("unhandled_exception", self.failures.counts)
+
+    def test_stage2_run_aborts(self):
+        from leadgen.fetcher import EgressBlocked
+        rows = [blank_row(**{"Company Name": f"Co {i}",
+                             "Website": f"https://co{i}.co.uk"})
+                for i in range(40)]
+        fetcher = self._blocked_fetcher()
+        with self.assertRaises(EgressBlocked):
+            stage2_audit.run(rows, fetcher, self.failures, lambda: None)
+        self.assertNotIn("unhandled_exception", self.failures.counts)
+
+
 class TestEmailExtraction(unittest.TestCase):
     HTML = ('<a href="mailto:info@clinic.co.uk">Email</a>'
             '<p>reception@clinic.co.uk careers@clinic.co.uk</p>'

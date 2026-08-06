@@ -16,7 +16,7 @@ import logging
 from urllib.parse import quote_plus
 
 from . import config
-from .fetcher import Fetcher
+from .fetcher import EgressBlocked, Fetcher
 from .store import FailureLog, set_if_blank
 from .textutil import name_similarity, name_tokens, town_matches
 
@@ -203,6 +203,8 @@ def run(rows: list[dict[str, str]], fetcher: Fetcher, failures: FailureLog,
             failures.record("stage3", row_num, company, "ch_auth_failed",
                             "aborted remaining rows")
             break
+        except EgressBlocked:
+            raise                      # run-level abort, not a row-level failure
         except Exception as exc:  # noqa: BLE001
             failures.record("stage3", row_num, company, "unhandled_exception",
                             f"{type(exc).__name__}: {exc}")

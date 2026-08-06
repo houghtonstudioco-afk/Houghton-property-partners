@@ -14,7 +14,7 @@ import re
 import time
 from dataclasses import dataclass, field
 
-from .fetcher import Fetcher, base_url, normalise_url, registrable_host
+from .fetcher import EgressBlocked, Fetcher, base_url, normalise_url, registrable_host
 from .store import CachedResponse, FailureLog, set_if_blank
 
 log = logging.getLogger("leadgen")
@@ -450,6 +450,8 @@ def run(rows: list[dict[str, str]], fetcher: Fetcher, failures: FailureLog,
         log.info("[stage2 %d/%d] %s -> %s", n, len(todo), company, website)
         try:
             audit = audit_site(website, fetcher)
+        except EgressBlocked:
+            raise                      # run-level abort, not a row-level failure
         except Exception as exc:  # noqa: BLE001
             failures.record("stage2", row_num, company, "unhandled_exception",
                             f"{type(exc).__name__}: {exc}")
