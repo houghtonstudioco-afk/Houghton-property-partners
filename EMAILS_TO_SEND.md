@@ -1,6 +1,7 @@
 # Outreach emails — ready to copy and paste
 
-Signature included in every draft. No address is guessed — blanks are genuine gaps.
+Each leads with one specific automation, then names the wider range in a single line.
+Signature included. No address is guessed — blanks are genuine gaps.
 
 
 ---
@@ -22,7 +23,9 @@ Signature included in every draft. No address is guessed — blanks are genuine 
 ```
 Hi there,
 
-I came across Abode Property Management while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Abode Property Management while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -51,7 +54,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Bath Stone Property while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Bath Stone Property while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -80,7 +85,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Bonds of Thornbury while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Bonds of Thornbury while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -109,7 +116,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Bristol Property Centre while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Bristol Property Centre while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -138,7 +147,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Brunt & Fussell while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Brunt & Fussell while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -167,7 +178,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Bundy and Bond while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Bundy and Bond while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -196,7 +209,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across CJ Hole while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across CJ Hole while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -225,7 +240,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Cobb Farr while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Cobb Farr while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -254,7 +271,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Edison Ford Property while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Edison Ford Property while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -283,7 +302,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Hobbs Property Agents while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Hobbs Property Agents while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -312,7 +333,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Holbrook Moran while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Holbrook Moran while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -341,7 +364,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Howard Independent Estate Agents while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Howard Independent Estate Agents while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -370,7 +395,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across M. Coleman Estate Agents while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across M. Coleman Estate Agents while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -399,7 +426,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Michael Nicholas Estate Agents while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Michael Nicholas Estate Agents while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -428,7 +457,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Milburys while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Milburys while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -457,7 +488,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Ocean Estate Agents while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Ocean Estate Agents while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -486,7 +519,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across React Property Management while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across React Property Management while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -515,7 +550,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Reside Bath while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Reside Bath while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -544,7 +581,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Wentworth Estate Agents while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Wentworth Estate Agents while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -571,7 +610,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Airsat Real Estate while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Airsat Real Estate while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -598,7 +639,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Aquarius Homes while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Aquarius Homes while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -625,7 +668,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Assured Property Rentals while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Assured Property Rentals while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -652,7 +697,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Boardwalk Property Co while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Boardwalk Property Co while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -679,7 +726,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Country Property while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Country Property while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -706,7 +755,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Crisp Cowley while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Crisp Cowley while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -733,7 +784,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across DSB Estate Agents while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across DSB Estate Agents while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -760,7 +813,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Garrett & Bradly while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Garrett & Bradly while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -787,7 +842,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Hensons while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Hensons while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -814,7 +871,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across TLS Estate Agents while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across TLS Estate Agents while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -841,7 +900,9 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-I came across Vibe Properties while looking at agents around Bristol and Bath. I build AI receptionists for estate and letting agents — they answer new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+I came across Vibe Properties while looking at agents around Bristol and Bath. I build AI automations for estate and letting agents — the one most start with is a receptionist that answers new enquiries, viewing requests and tenant maintenance calls instantly, including evenings and weekends, so nothing sits in a voicemail box until Monday.
+
+That tends to be the starting point, but it's part of a wider set — I also build applicant qualification and follow-up, tenant document and referencing chasers, and screeners that sift negotiator applications before they reach your desk.
 
 Most agents I speak to aren't losing applicants on price. They're losing them because someone else replied first.
 
@@ -877,7 +938,9 @@ Hi there,
 
 You've got 162 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -898,7 +961,7 @@ houghtonautomations.co.uk
 
 **Source:** osprey-engineering.co.uk contact page  
 
-**Subject:** `Quick question about Osprey Engineering Solutions Ltd's call handling`  
+**Subject:** `Sifting applications at Osprey Engineering Solutions Ltd`  
 
 **Legal:** Ltd - B2B cold email permitted under PECR
 
@@ -906,13 +969,13 @@ houghtonautomations.co.uk
 ```
 Hi there,
 
-You've got 306 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
+You're placing engineers rather than fixing boilers, so I'll skip the call-answering pitch.
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for engineering firms, and the one that fits a recruitment desk is a screener: it reads inbound applications and CVs, checks them against the spec, asks the qualifying questions by text or email, and puts a shortlist in front of you instead of a full inbox.
 
-The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
+Alongside that I build candidate follow-up sequences, interview scheduling, and client-side enquiry handling for out of hours.
 
-Would you have ten minutes for a call this week or next? Early morning or after five suits most engineers I speak to. What works for you?
+Would you have ten minutes for a call this week or next? I can run it against one of your live vacancies so you can see what the shortlist looks like. What day suits you?
 
 Best,
 
@@ -939,7 +1002,9 @@ Hi there,
 
 Your website says you're available 24/7, and with 409 Google reviews I don't doubt the demand is there. What I wondered is who actually picks up at 2am, or when you're under a boiler at 3pm.
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -968,7 +1033,9 @@ Hi there,
 
 You've got 1581 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -997,7 +1064,9 @@ Hi there,
 
 You've got 165 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1026,7 +1095,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1055,7 +1126,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1084,7 +1157,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1113,7 +1188,9 @@ Hi there,
 
 Your website says you're available 24/7, and with 267 Google reviews I don't doubt the demand is there. What I wondered is who actually picks up at 2am, or when you're under a boiler at 3pm.
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 I also noticed you're on a UENI page rather than your own domain, which for a business your size is leaving money on the table. Worth covering off at the same time.
 
@@ -1142,7 +1219,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1171,7 +1250,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1200,7 +1281,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1229,7 +1312,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1258,7 +1343,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1287,7 +1374,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1316,7 +1405,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1345,7 +1436,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1374,7 +1467,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1403,7 +1498,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1432,7 +1529,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1461,7 +1560,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1490,7 +1591,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1519,7 +1622,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1548,7 +1653,9 @@ Hi there,
 
 You've got 313 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1577,7 +1684,9 @@ Hi there,
 
 You've got 168 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1606,7 +1715,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1635,7 +1746,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1664,7 +1777,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1693,7 +1808,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1722,7 +1839,9 @@ Hi there,
 
 You've got 154 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1751,7 +1870,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1780,7 +1901,9 @@ Hi there,
 
 You've got 340 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1809,7 +1932,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1838,7 +1963,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1867,7 +1994,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1896,7 +2025,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1925,7 +2056,9 @@ Hi there,
 
 Your website says you're available 24/7, and with 543 Google reviews I don't doubt the demand is there. What I wondered is who actually picks up at 2am, or when you're under a boiler at 3pm.
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 I also noticed you're on a free Wix page rather than your own domain, which for a business your size is leaving money on the table. Worth covering off at the same time.
 
@@ -1954,7 +2087,9 @@ Hi there,
 
 You've got 187 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -1983,7 +2118,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2012,7 +2149,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2041,7 +2180,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2070,7 +2211,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2099,7 +2242,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2128,7 +2273,9 @@ Hi there,
 
 You've got 467 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2157,7 +2304,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2186,7 +2335,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2215,7 +2366,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2244,7 +2397,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2273,7 +2428,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2302,7 +2459,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2331,7 +2490,9 @@ Hi there,
 
 You've got 180 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2360,7 +2521,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2389,7 +2552,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2418,7 +2583,9 @@ Hi there,
 
 You've got 286 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2447,7 +2614,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2476,7 +2645,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2505,7 +2676,9 @@ Hi there,
 
 You've got 153 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2534,7 +2707,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2563,7 +2738,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2592,7 +2769,9 @@ Hi there,
 
 Your website says you're available 24/7, and with 198 Google reviews I don't doubt the demand is there. What I wondered is who actually picks up at 2am, or when you're under a boiler at 3pm.
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2621,7 +2800,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2650,7 +2831,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that answer the phone around the clock, take the job details properly, and text them straight through to you. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+I build AI automations for gas and heating firms. The one most start with answers the phone around the clock, takes the job details properly, and texts them straight through. It doesn't replace you on the phone, it replaces the voicemail people currently get.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2679,7 +2862,9 @@ Hi there,
 
 You've got 259 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2708,7 +2893,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2737,7 +2924,9 @@ Hi there,
 
 When a call comes in while you're on a job, what happens to it at the moment?
 
-I build AI systems for gas and heating firms that get quotes back out the same hour instead of the same week. When someone's collecting three quotes, whoever replies first usually wins the job.
+I build AI automations for gas and heating firms. The one that would suit you gets quotes back out the same hour instead of the same week — when someone's collecting three quotes, whoever replies first usually wins the job.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 
@@ -2766,7 +2955,9 @@ Hi there,
 
 You've got 486 Google reviews, so you're clearly busy. That usually means calls come in while you're mid-job and go to voicemail.
 
-I build AI systems for gas and heating firms that chase service and safety certificate renewals automatically, and let customers book themselves in. Your past customers are a renewal list most engineers never work.
+I build AI automations for gas and heating firms. The one that would suit you chases service and safety certificate renewals automatically and lets customers book themselves in — your past customers are a renewal list most engineers never work.
+
+That tends to be the starting point, but it's part of a wider set — I also build quote follow-up, annual service and certificate reminders, job costing and invoice reconciliation, and screeners for sifting engineer applications.
 
 The reason I'm getting in touch now rather than in November is that you've got about eight weeks before the heating season starts and the phone stops ringing off the hook. Far easier to have this running before October than to set it up in the middle of it.
 

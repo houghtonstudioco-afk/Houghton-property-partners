@@ -148,7 +148,28 @@ def to_html(paras: list[str]) -> str:
             'line-height:1.6;color:#222222">' + body + signature_html() + "</div>")
 
 
-# ------------------------------------------------------------ estate agents --
+# ------------------------------------------------------------- service range -
+# The pitch leads with one specific automation, because a menu gives a cold
+# reader nothing to react to. The range gets one line afterwards, naming three
+# at most, so the door is open without burying the hook.
+
+ESTATE_RANGE = (
+    "That tends to be the starting point, but it's part of a wider set — "
+    "I also build applicant qualification and follow-up, tenant document and "
+    "referencing chasers, and screeners that sift negotiator applications "
+    "before they reach your desk."
+)
+
+GAS_RANGE = (
+    "That tends to be the starting point, but it's part of a wider set — I also "
+    "build quote follow-up, annual service and certificate "
+    "reminders, job costing and invoice reconciliation, and screeners for "
+    "sifting engineer applications."
+)
+
+# Firms whose own trade makes a different automation the obvious opener.
+RECRUITMENT_LED = {"Osprey Engineering Solutions Ltd"}
+
 
 def possessive(name: str) -> str:
     """Milburys -> Milburys', Cobb Farr -> Cobb Farr's.
@@ -166,10 +187,11 @@ def estate_email(company: str) -> tuple[str, list[str]]:
     paras = [
         "Hi there,",
         f"I came across {company} while looking at agents around Bristol and "
-        f"Bath. I build AI receptionists for estate and letting agents — they "
-        f"answer new enquiries, viewing requests and tenant maintenance calls "
-        f"instantly, including evenings and weekends, so nothing sits in a "
-        f"voicemail box until Monday.",
+        f"Bath. I build AI automations for estate and letting agents — the one "
+        f"most start with is a receptionist that answers new enquiries, viewing "
+        f"requests and tenant maintenance calls instantly, including evenings "
+        f"and weekends, so nothing sits in a voicemail box until Monday.",
+        ESTATE_RANGE,
         "Most agents I speak to aren't losing applicants on price. They're "
         "losing them because someone else replied first.",
         "Would you have ten minutes for a call this week or next? I can walk "
@@ -210,24 +232,24 @@ def gas_email(row: dict[str, str]) -> tuple[str, list[str]]:
         )
 
     second = (
-        "I build AI systems for gas and heating firms that answer the phone "
-        "around the clock, take the job details properly, and text them "
-        "straight through to you. It doesn't replace you on the phone, it "
-        "replaces the voicemail people currently get."
+        "I build AI automations for gas and heating firms. The one most start "
+        "with answers the phone around the clock, takes the job details "
+        "properly, and texts them straight through. It doesn't replace you on "
+        "the phone, it replaces the voicemail people currently get."
     )
     if product.startswith("Speed-to-Lead"):
         second = (
-            "I build AI systems for gas and heating firms that get quotes back "
-            "out the same hour instead of the same week. When someone's "
-            "collecting three quotes, whoever replies first usually wins the "
-            "job."
+            "I build AI automations for gas and heating firms. The one that "
+            "would suit you gets quotes back out the same hour instead of the "
+            "same week — when someone's collecting three quotes, whoever "
+            "replies first usually wins the job."
         )
     elif product.startswith("Online Booking"):
         second = (
-            "I build AI systems for gas and heating firms that chase service and "
-            "safety certificate renewals automatically, and let customers book "
-            "themselves in. Your past customers are a renewal list most "
-            "engineers never work."
+            "I build AI automations for gas and heating firms. The one that "
+            "would suit you chases service and safety certificate renewals "
+            "automatically and lets customers book themselves in — your past "
+            "customers are a renewal list most engineers never work."
         )
 
     third = (
@@ -249,7 +271,31 @@ def gas_email(row: dict[str, str]) -> tuple[str, list[str]]:
         "or after five suits most engineers I speak to. What works for you?"
     )
 
-    return subject, ["Hi there,", opener, second, third, fourth]
+    if company in RECRUITMENT_LED:
+        subject = f"Sifting applications at {company}"
+        opener = (
+            "You're placing engineers rather than fixing boilers, so I'll skip "
+            "the call-answering pitch."
+        )
+        second = (
+            "I build AI automations for engineering firms, and the one that fits "
+            "a recruitment desk is a screener: it reads inbound applications and "
+            "CVs, checks them against the spec, asks the qualifying questions by "
+            "text or email, and puts a shortlist in front of you instead of a "
+            "full inbox."
+        )
+        third = (
+            "Alongside that I build candidate follow-up sequences, interview "
+            "scheduling, and client-side enquiry handling for out of hours."
+        )
+        recruit_close = (
+            "Would you have ten minutes for a call this week or next? I can run "
+            "it against one of your live vacancies so you can see what the "
+            "shortlist looks like. What day suits you?"
+        )
+        return subject, ["Hi there,", opener, second, third, recruit_close]
+
+    return subject, ["Hi there,", opener, second, GAS_RANGE, third, fourth]
 
 
 # -------------------------------------------------------------------- build --
