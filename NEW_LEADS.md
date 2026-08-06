@@ -1,6 +1,6 @@
 # New-industry leads — verified emails, drafted outreach
 
-12 leads, every address read from a real source.
+14 leads, every address read from a real source.
 
 
 ---
@@ -378,6 +378,76 @@ Hi there,
 How many CVs does a consultant read before finding one worth a call?
 
 I build AI automations for recruitment agencies. The one that would suit you is a screener that reads inbound CVs against the spec, asks the qualifying questions, and hands over a shortlist.
+
+Alongside that I build candidate follow-up sequences, interview scheduling, and out-of-hours client enquiry handling.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your live vacancies so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## Somerset Bridge Group  ·  Insurance broking
+
+**To:** `Enquiries@sbgl.co.uk`  
+
+**Source:** somersetbridgegroup.com contact page  
+
+**Subject:** `Quick question about Somerset Bridge Group's enquiry handling`  
+
+**Price band:** £6,000-12,000 setup + £1,500-2,500/mo  
+
+**Why they fit:** Brokers lose 29-39 hours a week to admin, 8-10 of that on email alone. Their revenue is commission and renewals, so every hour reclaimed converts directly.
+
+
+```
+Hi there,
+
+How many hours a week does your team lose to policy requests and renewal admin?
+
+I build AI automations for insurance brokers. The one that would suit you is renewal and servicing automation, so policy requests and renewal notices stop eating producer time.
+
+Alongside that I build out-of-hours new-business capture, quote chasing, and client document collection.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## Pamela Neave  ·  Recruitment
+
+**To:** `enquiries@pamela-neave.co.uk`  
+
+**Source:** pamela-neave.co.uk  
+
+**Subject:** `Sifting CVs at Pamela Neave`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** Independent consultancy where the founder is still fee-earning. Screening time comes straight out of billing time.
+
+
+```
+Hi there,
+
+How many CVs land for a role before you find one worth calling?
+
+I build AI automations for recruitment agencies. The one that would suit you is a screener that reads inbound CVs against the spec and hands back a shortlist.
 
 Alongside that I build candidate follow-up sequences, interview scheduling, and out-of-hours client enquiry handling.
 

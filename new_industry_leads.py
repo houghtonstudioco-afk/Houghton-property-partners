@@ -48,6 +48,7 @@ SECTOR_PHRASE = {
     "Law - conveyancing": "conveyancing firms",
     "Accountancy": "accountancy practices",
     "Recruitment": "recruitment agencies",
+    "Insurance broking": "insurance brokers",
 }
 
 
@@ -196,6 +197,31 @@ LEADS: list[Lead] = [
          "qualifying questions, and hands over a shortlist",
          RECRUIT_ALSO,
          "How many CVs does a consultant read before finding one worth a call?",
+         tags=["high fee value", "clear use case"]),
+
+    # ------------------------------------------------------ insurance broking --
+    Lead("Somerset Bridge Group", "Insurance broking", "Enquiries@sbgl.co.uk",
+         "somersetbridgegroup.com contact page", BAND_UPPER,
+         "Brokers lose 29-39 hours a week to admin, 8-10 of that on email "
+         "alone. Their revenue is commission and renewals, so every hour "
+         "reclaimed converts directly.",
+         "renewal and servicing automation, so policy requests and renewal "
+         "notices stop eating producer time",
+         "Alongside that I build out-of-hours new-business capture, quote "
+         "chasing, and client document collection.",
+         "How many hours a week does your team lose to policy requests and "
+         "renewal admin?",
+         tags=["admin drain", "recurring revenue"]),
+
+    # ------------------------------------------------------------ recruitment --
+    Lead("Pamela Neave", "Recruitment", "enquiries@pamela-neave.co.uk",
+         "pamela-neave.co.uk", BAND_MID,
+         "Independent consultancy where the founder is still fee-earning. "
+         "Screening time comes straight out of billing time.",
+         "a screener that reads inbound CVs against the spec and hands back a "
+         "shortlist",
+         RECRUIT_ALSO,
+         "How many CVs land for a role before you find one worth calling?",
          tags=["high fee value", "clear use case"]),
 
     # ------------------------------------------------------------- marginal --
