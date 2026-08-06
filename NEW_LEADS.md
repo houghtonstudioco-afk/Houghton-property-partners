@@ -1,6 +1,6 @@
 # New-industry leads — verified emails, drafted outreach
 
-14 leads, every address read from a real source.
+25 leads, every address read from a real source.
 
 
 ---
@@ -452,6 +452,393 @@ I build AI automations for recruitment agencies. The one that would suit you is 
 Alongside that I build candidate follow-up sequences, interview scheduling, and out-of-hours client enquiry handling.
 
 Would you have ten minutes for a call this week or next? I can walk you through it on one of your live vacancies so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## Green Park Dental  ·  Private dentistry
+
+**To:** `reception@greenparkdental.co.uk`  
+
+**Source:** bathdentists.co.uk  
+
+**Subject:** `Green Park Dental - out-of-hours enquiries`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** Cosmetic and implant work from whitening through to veneers and implants - four-figure cases where the first reply usually wins.
+
+
+```
+Hi there,
+
+When someone rings about implants after you've closed, where does that call go?
+
+I build AI automations for private dental practices. The one that would suit you is a receptionist that answers implant and cosmetic enquiries out of hours and books the consultation.
+
+Alongside that I build treatment-plan follow-up, recall and hygiene reminders, and review requests that go out on their own.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## Bath Spa Dentistry  ·  Private dentistry
+
+**To:** `reception@bathspadentistry.com`  
+
+**Source:** bathspadentistry.com contact page  
+
+**Subject:** `Bath Spa Dentistry - out-of-hours enquiries`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** City-centre private practice; enquiries arrive while the chair is occupied.
+
+
+```
+Hi there,
+
+Who picks up when reception is with a patient?
+
+I build AI automations for private dental practices. The one that would suit you is an enquiry line that books consultations while the practice is busy.
+
+Alongside that I build treatment-plan follow-up, recall and hygiene reminders, and review requests that go out on their own.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## South Wales Specialist Oral Surgery  ·  Private dentistry
+
+**To:** `info@specialist.wales`  
+
+**Source:** specialist.wales contact page  
+
+**Subject:** `Quick question about South Wales Specialist Oral Surgery's enquiry handling`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** Specialist oral surgery and implant centre taking referrals as well as direct enquiries - two intake streams, both manual.
+
+
+```
+Hi there,
+
+How do referrals and direct enquiries reach you at the moment?
+
+I build AI automations for private dental practices. The one that would suit you is referral and enquiry intake that captures the detail properly first time.
+
+Alongside that I build treatment-plan follow-up, recall and hygiene reminders, and review requests that go out on their own.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## Park Place Dental  ·  Private dentistry
+
+**To:** `reception@parkplacedental.co.uk`  
+
+**Source:** parkplacedental.co.uk  
+
+**Subject:** `Park Place Dental - out-of-hours enquiries`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** Implant-led Cardiff practice. Implant cases are four and five figures, so a missed enquiry is an expensive one.
+
+
+```
+Hi there,
+
+What happens to implant enquiries that come in overnight?
+
+I build AI automations for private dental practices. The one that would suit you is a receptionist that answers implant enquiries out of hours and books the consultation.
+
+Alongside that I build treatment-plan follow-up, recall and hygiene reminders, and review requests that go out on their own.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## Contemporary Dental  ·  Private dentistry
+
+**To:** `care@contemporarydental.co.uk`  
+
+**Source:** contemporarydental.co.uk  
+
+**Subject:** `Quick question about Contemporary Dental's enquiry handling`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** Private practice in Devon with a wide catchment - patients travel, so a slow reply loses them to somewhere closer.
+
+
+```
+Hi there,
+
+How quickly does someone hear back after enquiring?
+
+I build AI automations for private dental practices. The one that would suit you is instant enquiry response and consultation booking.
+
+Alongside that I build treatment-plan follow-up, recall and hygiene reminders, and review requests that go out on their own.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## Meliora Dental  ·  Private dentistry
+
+**To:** `reception@melioradental.co.uk`  
+
+**Source:** melioradental.co.uk  
+
+**Subject:** `Meliora Dental - out-of-hours enquiries`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** Implant-focused Leeds practice; the same four-figure-case logic applies.
+
+
+```
+Hi there,
+
+When an implant enquiry comes in on a Sunday, what happens to it?
+
+I build AI automations for private dental practices. The one that would suit you is a receptionist that answers implant enquiries out of hours and books the consultation.
+
+Alongside that I build treatment-plan follow-up, recall and hygiene reminders, and review requests that go out on their own.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## Infinity Dental Clinic  ·  Private dentistry
+
+**To:** `info@infinitydentalclinic.co.uk`  
+
+**Source:** infinitydentalclinic.co.uk  
+
+**Subject:** `Quick question about Infinity Dental Clinic's enquiry handling`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** Cosmetic-led Leeds clinic where treatment plans need chasing to convert.
+
+
+```
+Hi there,
+
+How do you follow up treatment plans that patients have not booked yet?
+
+I build AI automations for private dental practices. The one that would suit you is treatment-plan follow-up, so quoted work does not quietly go cold.
+
+Alongside that I build treatment-plan follow-up, recall and hygiene reminders, and review requests that go out on their own.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## UKSKIN  ·  Cosmetic surgery
+
+**To:** `info@ukskin.co.uk`  
+
+**Source:** ukskin.co.uk contact page  
+
+**Subject:** `Quick question about UKSKIN's enquiry handling`  
+
+**Price band:** £6,000-12,000 setup + £1,500-2,500/mo  
+
+**Why they fit:** Surgery hubs in Birmingham, London and Manchester. Multi-site enquiry routing done by hand is where paid-for leads get lost.
+  
+**Note:** Multi-site - may involve more than one decision maker.
+
+
+```
+Hi there,
+
+With hubs in three cities, how are enquiries routed and chased?
+
+I build AI automations for cosmetic surgery clinics. The one that would suit you is enquiry triage and routing across your surgery hubs.
+
+Alongside that I build consultation follow-up, pre-op document chasing, and reminders that cut no-shows.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## My Cosmetics Clinic  ·  Cosmetic surgery
+
+**To:** `contact@mccsurgery.com`  
+
+**Source:** mycosmeticclinics.com contact page  
+
+**Subject:** `Quick question about My Cosmetics Clinic's enquiry handling`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** Manchester surgical clinic; consultations are the bottleneck and enquirers shop around while they wait.
+
+
+```
+Hi there,
+
+How long does an enquirer wait before someone gets back to them?
+
+I build AI automations for cosmetic surgery clinics. The one that would suit you is instant enquiry response and consultation booking.
+
+Alongside that I build consultation follow-up, pre-op document chasing, and reminders that cut no-shows.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## Charlton Baker  ·  Accountancy
+
+**To:** `info@charltonbaker.co.uk`  
+
+**Source:** charltonbaker.co.uk  
+
+**Subject:** `Charlton Baker - chasing records before January`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** Nine offices across the South West and Thames Valley. Records chasing multiplies with every location.
+
+
+```
+Hi there,
+
+Across nine offices, how much of January goes on chasing clients for records?
+
+I build AI automations for accountancy practices. The one that would suit you is automated records chasing across offices, so January stops depending on manual nagging.
+
+Alongside that I build client onboarding, deadline and filing reminders, and enquiry handling for new business.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on a real client record chase so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## Avenue Veterinary Centre  ·  Veterinary
+
+**To:** `enquiries@avenue-vets.com`  
+
+**Source:** avenue-vets.com  
+
+**Subject:** `Quick question about Avenue Veterinary Centre's enquiry handling`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** Independent practice - increasingly rare, as most UK vets are now group-owned with central procurement. Independent means the owner can still decide.
+
+
+```
+Hi there,
+
+How often do clients give up because the phone was engaged?
+
+I build AI automations for independent veterinary practices. The one that would suit you is an enquiry and booking line that answers when the phones are swamped, and chases vaccination and check-up recalls.
+
+Alongside that I build recall reminders, post-op follow-up, and out-of-hours triage routing.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
 
 Best,
 

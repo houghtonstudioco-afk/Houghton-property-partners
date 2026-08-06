@@ -49,6 +49,7 @@ SECTOR_PHRASE = {
     "Accountancy": "accountancy practices",
     "Recruitment": "recruitment agencies",
     "Insurance broking": "insurance brokers",
+    "Veterinary": "independent veterinary practices",
 }
 
 
@@ -223,6 +224,120 @@ LEADS: list[Lead] = [
          RECRUIT_ALSO,
          "How many CVs land for a role before you find one worth calling?",
          tags=["high fee value", "clear use case"]),
+
+    # ------------------------------------- dentistry, wider catchment ---------
+    Lead("Green Park Dental", "Private dentistry", "reception@greenparkdental.co.uk",
+         "bathdentists.co.uk", BAND_MID,
+         "Cosmetic and implant work from whitening through to veneers and "
+         "implants - four-figure cases where the first reply usually wins.",
+         "a receptionist that answers implant and cosmetic enquiries out of "
+         "hours and books the consultation",
+         DENTAL_ALSO,
+         "When someone rings about implants after you've closed, where does "
+         "that call go?",
+         tags=["high job value", "24/7 gap"]),
+
+    Lead("Bath Spa Dentistry", "Private dentistry", "reception@bathspadentistry.com",
+         "bathspadentistry.com contact page", BAND_MID,
+         "City-centre private practice; enquiries arrive while the chair is "
+         "occupied.",
+         "an enquiry line that books consultations while the practice is busy",
+         DENTAL_ALSO,
+         "Who picks up when reception is with a patient?",
+         tags=["24/7 gap"]),
+
+    Lead("South Wales Specialist Oral Surgery", "Private dentistry",
+         "info@specialist.wales", "specialist.wales contact page", BAND_MID,
+         "Specialist oral surgery and implant centre taking referrals as well "
+         "as direct enquiries - two intake streams, both manual.",
+         "referral and enquiry intake that captures the detail properly first "
+         "time",
+         DENTAL_ALSO,
+         "How do referrals and direct enquiries reach you at the moment?",
+         tags=["high job value", "referral intake"]),
+
+    Lead("Park Place Dental", "Private dentistry", "reception@parkplacedental.co.uk",
+         "parkplacedental.co.uk", BAND_MID,
+         "Implant-led Cardiff practice. Implant cases are four and five "
+         "figures, so a missed enquiry is an expensive one.",
+         "a receptionist that answers implant enquiries out of hours and books "
+         "the consultation",
+         DENTAL_ALSO,
+         "What happens to implant enquiries that come in overnight?",
+         tags=["high job value", "24/7 gap"]),
+
+    Lead("Contemporary Dental", "Private dentistry", "care@contemporarydental.co.uk",
+         "contemporarydental.co.uk", BAND_MID,
+         "Private practice in Devon with a wide catchment - patients travel, "
+         "so a slow reply loses them to somewhere closer.",
+         "instant enquiry response and consultation booking",
+         DENTAL_ALSO,
+         "How quickly does someone hear back after enquiring?",
+         tags=["speed to lead"]),
+
+    Lead("Meliora Dental", "Private dentistry", "reception@melioradental.co.uk",
+         "melioradental.co.uk", BAND_MID,
+         "Implant-focused Leeds practice; the same four-figure-case logic "
+         "applies.",
+         "a receptionist that answers implant enquiries out of hours and books "
+         "the consultation",
+         DENTAL_ALSO,
+         "When an implant enquiry comes in on a Sunday, what happens to it?",
+         tags=["high job value", "24/7 gap"]),
+
+    Lead("Infinity Dental Clinic", "Private dentistry",
+         "info@infinitydentalclinic.co.uk", "infinitydentalclinic.co.uk", BAND_MID,
+         "Cosmetic-led Leeds clinic where treatment plans need chasing to "
+         "convert.",
+         "treatment-plan follow-up, so quoted work does not quietly go cold",
+         DENTAL_ALSO,
+         "How do you follow up treatment plans that patients have not booked "
+         "yet?",
+         tags=["conversion gap"]),
+
+    # ------------------------------------ cosmetic surgery, wider catchment ---
+    Lead("UKSKIN", "Cosmetic surgery", "info@ukskin.co.uk",
+         "ukskin.co.uk contact page", BAND_UPPER,
+         "Surgery hubs in Birmingham, London and Manchester. Multi-site "
+         "enquiry routing done by hand is where paid-for leads get lost.",
+         "enquiry triage and routing across your surgery hubs",
+         CLINIC_ALSO,
+         "With hubs in three cities, how are enquiries routed and chased?",
+         note="Multi-site - may involve more than one decision maker.",
+         tags=["multi-site", "ad spend"]),
+
+    Lead("My Cosmetics Clinic", "Cosmetic surgery", "contact@mccsurgery.com",
+         "mycosmeticclinics.com contact page", BAND_MID,
+         "Manchester surgical clinic; consultations are the bottleneck and "
+         "enquirers shop around while they wait.",
+         "instant enquiry response and consultation booking",
+         CLINIC_ALSO,
+         "How long does an enquirer wait before someone gets back to them?",
+         tags=["speed to lead"]),
+
+    # -------------------------------------------------- accountancy, vets -----
+    Lead("Charlton Baker", "Accountancy", "info@charltonbaker.co.uk",
+         "charltonbaker.co.uk", BAND_MID,
+         "Nine offices across the South West and Thames Valley. Records "
+         "chasing multiplies with every location.",
+         "automated records chasing across offices, so January stops "
+         "depending on manual nagging",
+         ACCOUNTING_ALSO,
+         "Across nine offices, how much of January goes on chasing clients for "
+         "records?",
+         tags=["multi-office", "seasonal crunch"]),
+
+    Lead("Avenue Veterinary Centre", "Veterinary", "enquiries@avenue-vets.com",
+         "avenue-vets.com", BAND_MID,
+         "Independent practice - increasingly rare, as most UK vets are now "
+         "group-owned with central procurement. Independent means the owner "
+         "can still decide.",
+         "an enquiry and booking line that answers when the phones are "
+         "swamped, and chases vaccination and check-up recalls",
+         "Alongside that I build recall reminders, post-op follow-up, and "
+         "out-of-hours triage routing.",
+         "How often do clients give up because the phone was engaged?",
+         tags=["independent owner", "recall revenue"]),
 
     # ------------------------------------------------------------- marginal --
     Lead("KW Bristol Beauty & Aesthetics", "Aesthetics",
