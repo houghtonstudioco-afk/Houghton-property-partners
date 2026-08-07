@@ -1,6 +1,6 @@
 # New-industry leads — verified emails, drafted outreach
 
-25 leads, every address read from a real source.
+30 leads, every address read from a real source.
 
 
 ---
@@ -153,7 +153,7 @@ houghtonautomations.co.uk
 
 **Source:** paulwilsonaesthetics.co.uk contact page  
 
-**Subject:** `Quick question about Paul Wilson Aesthetics's enquiry handling`  
+**Subject:** `Quick question about Paul Wilson Aesthetics' enquiry handling`  
 
 **Price band:** £3,000-6,000 setup + £750-1,500/mo  
 
@@ -188,7 +188,7 @@ houghtonautomations.co.uk
 
 **Source:** skinjoints.co.uk  
 
-**Subject:** `Quick question about Skin & Joints's enquiry handling`  
+**Subject:** `Quick question about Skin & Joints' enquiry handling`  
 
 **Price band:** £3,000-6,000 setup + £750-1,500/mo  
 
@@ -223,7 +223,7 @@ houghtonautomations.co.uk
 
 **Source:** bristolaesthetics.org.uk  
 
-**Subject:** `Quick question about Bristol Aesthetics's enquiry handling`  
+**Subject:** `Quick question about Bristol Aesthetics' enquiry handling`  
 
 **Price band:** £3,000-6,000 setup + £750-1,500/mo  
 
@@ -258,7 +258,7 @@ houghtonautomations.co.uk
 
 **Source:** watkinssolicitors.co.uk contact page  
 
-**Subject:** `Quick question about Watkins Solicitors's enquiry handling`  
+**Subject:** `Quick question about Watkins Solicitors' enquiry handling`  
 
 **Price band:** £3,000-6,000 setup + £750-1,500/mo  
 
@@ -293,7 +293,7 @@ houghtonautomations.co.uk
 
 **Source:** amdsolicitors.com contact page  
 
-**Subject:** `Quick question about AMD Solicitors's enquiry handling`  
+**Subject:** `Quick question about AMD Solicitors' enquiry handling`  
 
 **Price band:** £3,000-6,000 setup + £750-1,500/mo  
 
@@ -851,13 +851,190 @@ houghtonautomations.co.uk
 
 ---
 
+## The Campbell Clinic  ·  Private dentistry
+
+**To:** `info@campbell-clinic.co.uk`  
+
+**Source:** campbell-clinic.co.uk contact page  
+
+**Subject:** `The Campbell Clinic - out-of-hours enquiries`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** Specialist practice with implant surgeons, orthodontists and periodontists in six surgeries, and three implant pricing tiers. Implant and Invisalign cases are four and five figures.
+
+
+```
+Hi there,
+
+With three implant pricing levels and Invisalign on the list, how do enquiries get handled when the practice is closed?
+
+I build AI automations for private dental practices. The one that would suit you is a receptionist that answers implant and Invisalign enquiries out of hours and books the consultation while they are still interested.
+
+Alongside that I build treatment-plan follow-up, recall and hygiene reminders, and review requests that go out on their own.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## Quinn Clinics  ·  Aesthetics
+
+**To:** `info@quinnclinics.co.uk`  
+
+**Source:** quinnclinics.co.uk contact page  
+
+**Subject:** `Quick question about Quinn Clinics' enquiry handling`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** CQC-registered and running since 2006, so an established book of repeat patients that depends on rebooking.
+
+
+```
+Hi there,
+
+Who picks up the phone when you're mid-treatment?
+
+I build AI automations for aesthetics clinics. The one that would suit you is an enquiry line that books while you are treating, plus automated rebooking for repeat courses.
+
+Alongside that I build consultation follow-up, pre-op document chasing, and reminders that cut no-shows.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## Azthetics Clinic  ·  Aesthetics
+
+**To:** `info@aztheticsclinic.co.uk`  
+
+**Source:** aztheticsclinic.co.uk contact page  
+
+**Subject:** `Quick question about Azthetics Clinic's enquiry handling`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** Doctor-led across three sites in Bristol, Taunton and Weston. Enquiries arriving for the wrong site get lost in the handover.
+
+
+```
+Hi there,
+
+With three clinics, how do enquiries get routed to the right one?
+
+I build AI automations for aesthetics clinics. The one that would suit you is enquiry routing across your three clinics, so nothing gets lost between sites.
+
+Alongside that I build consultation follow-up, pre-op document chasing, and reminders that cut no-shows.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## Fernlea Vets  ·  Veterinary
+
+**To:** `robin@fernleavets.co.uk`  
+
+**Source:** fernleavets.co.uk - named contact  
+
+**Subject:** `Quick question about Fernlea Vets' enquiry handling`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** Independent since 1986 across two Bristol sites - increasingly rare, as most UK practices are now group-owned with central procurement.
+  
+**Note:** Named contact rather than a general inbox - address him directly.
+
+
+```
+Hi Robin,
+
+How often do clients give up because the phone was engaged?
+
+I build AI automations for independent veterinary practices. The one that would suit you is an enquiry and booking line for when the phones are swamped, plus automated vaccination and check-up recalls.
+
+Alongside that I build post-op follow-up, out-of-hours triage routing, and reminders that bring lapsed clients back.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
+## Motts Insurance Brokers  ·  Insurance broking
+
+**To:** `info@mottsinsurance.com`  
+
+**Source:** mottsinsurance.com contact page  
+
+**Subject:** `Quick question about Motts Insurance Brokers' enquiry handling`  
+
+**Price band:** £3,000-6,000 setup + £750-1,500/mo  
+
+**Why they fit:** Independent commercial broker. Brokers lose 29-39 hours a week to admin, and their revenue is commission and renewals, so every hour reclaimed converts directly.
+
+
+```
+Hi there,
+
+How many hours a week go on policy requests and renewal admin?
+
+I build AI automations for insurance brokers. The one that would suit you is renewal and servicing automation, so policy requests stop eating producer time.
+
+Alongside that I build out-of-hours new-business capture, quote chasing, and client document collection.
+
+Would you have ten minutes for a call this week or next? I can walk you through it on one of your own enquiries so you can see exactly what it does. What day suits you?
+
+Best,
+
+Benjamin Houghton
+07444577053
+Ben@Houghtonautomations.co.uk
+houghtonautomations.co.uk
+```
+
+
+---
+
 ## KW Bristol Beauty & Aesthetics  ·  Aesthetics
 
 **To:** `kwbeautyandaesthetic@hotmail.com`  
 
 **Source:** kwbeautyaesthetics.com  
 
-**Subject:** `Quick question about KW Bristol Beauty & Aesthetics's enquiry handling`  
+**Subject:** `Quick question about KW Bristol Beauty & Aesthetics' enquiry handling`  
 
 **Price band:** £500-1,500 setup + £199-399/mo  
 

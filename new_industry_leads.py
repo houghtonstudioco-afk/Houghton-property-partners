@@ -53,6 +53,19 @@ SECTOR_PHRASE = {
 }
 
 
+def possessive(name: str) -> str:
+    """Fernlea Vets -> Fernlea Vets', Quinn Clinic -> Quinn Clinic's."""
+    return name + ("'" if name.rstrip().endswith(("s", "S")) else "'s")
+
+
+# Where the verified address belongs to a named person rather than a general
+# inbox, greet them by name - it is the single cheapest personalisation there
+# is, and "Hi there" to a named address reads as a mailmerge.
+FIRST_NAMES = {
+    "Fernlea Vets": "Robin",
+}
+
+
 @dataclass
 class Lead:
     company: str
@@ -339,6 +352,63 @@ LEADS: list[Lead] = [
          "How often do clients give up because the phone was engaged?",
          tags=["independent owner", "recall revenue"]),
 
+    # ------------------------------------------- batch 3: not yet contacted ---
+    Lead("The Campbell Clinic", "Private dentistry", "info@campbell-clinic.co.uk",
+         "campbell-clinic.co.uk contact page", BAND_MID,
+         "Specialist practice with implant surgeons, orthodontists and "
+         "periodontists in six surgeries, and three implant pricing tiers. "
+         "Implant and Invisalign cases are four and five figures.",
+         "a receptionist that answers implant and Invisalign enquiries out of "
+         "hours and books the consultation while they are still interested",
+         DENTAL_ALSO,
+         "With three implant pricing levels and Invisalign on the list, how do "
+         "enquiries get handled when the practice is closed?",
+         tags=["high job value", "24/7 gap", "not yet contacted"]),
+
+    Lead("Quinn Clinics", "Aesthetics", "info@quinnclinics.co.uk",
+         "quinnclinics.co.uk contact page", BAND_MID,
+         "CQC-registered and running since 2006, so an established book of "
+         "repeat patients that depends on rebooking.",
+         "an enquiry line that books while you are treating, plus automated "
+         "rebooking for repeat courses",
+         CLINIC_ALSO,
+         "Who picks up the phone when you're mid-treatment?",
+         tags=["owner is the bottleneck", "not yet contacted"]),
+
+    Lead("Azthetics Clinic", "Aesthetics", "info@aztheticsclinic.co.uk",
+         "aztheticsclinic.co.uk contact page", BAND_MID,
+         "Doctor-led across three sites in Bristol, Taunton and Weston. "
+         "Enquiries arriving for the wrong site get lost in the handover.",
+         "enquiry routing across your three clinics, so nothing gets lost "
+         "between sites",
+         CLINIC_ALSO,
+         "With three clinics, how do enquiries get routed to the right one?",
+         tags=["multi-site", "not yet contacted"]),
+
+    Lead("Fernlea Vets", "Veterinary", "robin@fernleavets.co.uk",
+         "fernleavets.co.uk - named contact", BAND_MID,
+         "Independent since 1986 across two Bristol sites - increasingly rare, "
+         "as most UK practices are now group-owned with central procurement.",
+         "an enquiry and booking line for when the phones are swamped, plus "
+         "automated vaccination and check-up recalls",
+         "Alongside that I build post-op follow-up, out-of-hours triage "
+         "routing, and reminders that bring lapsed clients back.",
+         "How often do clients give up because the phone was engaged?",
+         note="Named contact rather than a general inbox - address him directly.",
+         tags=["independent owner", "not yet contacted"]),
+
+    Lead("Motts Insurance Brokers", "Insurance broking", "info@mottsinsurance.com",
+         "mottsinsurance.com contact page", BAND_MID,
+         "Independent commercial broker. Brokers lose 29-39 hours a week to "
+         "admin, and their revenue is commission and renewals, so every hour "
+         "reclaimed converts directly.",
+         "renewal and servicing automation, so policy requests stop eating "
+         "producer time",
+         "Alongside that I build out-of-hours new-business capture, quote "
+         "chasing, and client document collection.",
+         "How many hours a week go on policy requests and renewal admin?",
+         tags=["admin drain", "not yet contacted"]),
+
     # ------------------------------------------------------------- marginal --
     Lead("KW Bristol Beauty & Aesthetics", "Aesthetics",
          "kwbeautyandaesthetic@hotmail.com", "kwbeautyaesthetics.com", BAND_SMALL,
@@ -354,7 +424,7 @@ LEADS: list[Lead] = [
 
 
 def build_email(lead: Lead) -> tuple[str, list[str]]:
-    subject = f"Quick question about {lead.company}'s enquiry handling"
+    subject = f"Quick question about {possessive(lead.company)} enquiry handling"
     if "24/7 gap" in lead.tags:
         subject = f"{lead.company} - out-of-hours enquiries"
     elif "seasonal crunch" in lead.tags:
@@ -362,8 +432,9 @@ def build_email(lead: Lead) -> tuple[str, list[str]]:
     elif "clear use case" in lead.tags:
         subject = f"Sifting CVs at {lead.company}"
 
+    greeting = FIRST_NAMES.get(lead.company)
     paras = [
-        "Hi there,",
+        f"Hi {greeting}," if greeting else "Hi there,",
         lead.hook,
         f"I build AI automations for "
         f"{SECTOR_PHRASE.get(lead.sector, lead.sector.lower())}. The one that "
