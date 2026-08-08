@@ -223,6 +223,60 @@ NEW: list[L] = [
       "Multi-site enquiry routing",
       "Three clinics - how are enquiries routed and chased?", BAND_MID, 62,
       note="Phone only.", tags=["phone only"]),
+
+    # ------------------------------------- batch 4: Scotland, Midlands, North --
+    L("Morgan Reach", "Accountancy", "info@morganreach.com",
+      "0161 521 6222", "Records chasing + client onboarding across offices",
+      "Three offices - how much of December and January goes on chasing "
+      "clients for records?", BAND_UPPER, 90,
+      note="MD is Kamran Shaikh - ask for him by name. Also 0121 236 0777 "
+           "for Birmingham.",
+      tags=["email+phone", "3 offices", "named decision maker", "seasonal"]),
+
+    L("Glasgow Smile Clinic", "Private dentistry", "info@glasgowsmileclinic.com",
+      "0141 204 4080", "AI Receptionist + treatment-plan follow-up",
+      "When an implant enquiry comes in overnight, where does it go?",
+      BAND_MID, 89, tags=["email+phone", "high case value"]),
+
+    L("Dental Implant Centre Glasgow", "Private dentistry",
+      "hello@dentalimplantcentreglasgow.com", "0141 673 8888",
+      "AI Receptionist + treatment-plan follow-up",
+      "A dedicated implant centre - what happens to enquiries after you close?",
+      BAND_MID, 88, tags=["email+phone", "implant-only", "high case value"]),
+
+    L("ATD General", "Insurance broking", "enquiries@atdgen.co.uk",
+      "0161 236 3636", "Renewal and servicing automation",
+      "How many hours a week go on policy requests and renewal admin?",
+      BAND_MID, 81, tags=["email+phone"]),
+
+    L("MCM Insurance", "Insurance broking", "", "0161 786 3150",
+      "Renewal and servicing automation",
+      "Trading since 1977 across Manchester and Birmingham - how much of the "
+      "week goes on renewal admin?", BAND_MID, 76,
+      note="Phone only. MD is Allan Broomhead - ask for him.",
+      tags=["phone only", "named decision maker", "multi-site"]),
+
+    L("Lucy Walker Recruitment", "Recruitment", "", "0113 367 2880",
+      "CV screener + candidate follow-up",
+      "How many CVs does a consultant read before one is worth a call?",
+      BAND_MID, 75, note="Phone only. Leeds and Manchester.",
+      tags=["phone only", "multi-site"]),
+
+    L("Potential Recruitment", "Recruitment", "", "0161 241 9660",
+      "CV screener + candidate follow-up",
+      "How many CVs does a consultant read before one is worth a call?",
+      BAND_MID, 73, note="Phone only. Independent generalist agency.",
+      tags=["phone only", "independent"]),
+
+    L("Glasgow Dental Cosmetic & Implant Centre", "Private dentistry", "",
+      "0141 636 5588", "AI Receptionist + treatment-plan follow-up",
+      "What happens to implant enquiries that arrive after you close?",
+      BAND_MID, 70, note="Phone only.", tags=["phone only"]),
+
+    L("Advanced Dentistry Scotland", "Private dentistry", "", "0141 339 7579",
+      "AI Receptionist + multi-site enquiry routing",
+      "Glasgow and Inverness - how do enquiries reach the right clinic?",
+      BAND_MID, 69, note="Phone only.", tags=["phone only", "multi-site"]),
 ]
 
 # ------------------------------------------------------ follow-up callbacks ---
@@ -346,7 +400,7 @@ def main() -> None:
     ws1 = wb.active
     ws1.title = "New Outreach"
     n1 = write_sheet(
-        ws1, NEW, "New Outreach — never contacted",
+        ws1, NEW, "New Outreach — never contacted, ranked best first",
         f"{len(NEW)} leads, best first. Green company name = email AND phone. "
         "Email first, then call 2-3 days later. Orange cell = that channel "
         "is missing.")
@@ -399,7 +453,7 @@ def main() -> None:
     for col in "BCDEFG":
         s.column_dimensions[col].width = 16
 
-    out = REPO / "FRANCE_OUTREACH_PACK.xlsx"
+    out = REPO / "MASTER_LEAD_LIST.xlsx"
     wb.save(out)
     print(f"wrote {out.name}")
     print(f"  New Outreach   : {len(NEW)} leads")
