@@ -1,0 +1,994 @@
+<title>US Outreach Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+  :root{
+    --paper:#F7F8FA;
+    --surface:#FFFFFF;
+    --sunken:#EDF0F4;
+    --ink:#14181F;
+    --ink-2:#4B5563;
+    --ink-3:#828C9A;
+    --rule:#DFE3E8;
+    --rule-strong:#C4CBD4;
+    --accent:#1B3A5C;
+    --accent-soft:#E8EEF5;
+    --sent:#2F6B4F;
+    --warn:#8A5A00;
+    --warn-soft:#FDF3D8;
+    --on-accent:#FFFFFF;
+    --shadow:0 1px 2px rgba(20,24,31,.05),0 8px 24px rgba(20,24,31,.05);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#0F1217;
+      --surface:#171B22;
+      --sunken:#1E232C;
+      --ink:#E9ECF1;
+      --ink-2:#A8B1BD;
+      --ink-3:#6F7986;
+      --rule:#272D37;
+      --rule-strong:#39414D;
+      --accent:#8FB4DA;
+      --accent-soft:#16222E;
+      --sent:#6FBF95;
+      --warn:#E8C367;
+      --warn-soft:#2B2413;
+      --on-accent:#0C1620;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0F1217;
+    --surface:#171B22;
+    --sunken:#1E232C;
+    --ink:#E9ECF1;
+    --ink-2:#A8B1BD;
+    --ink-3:#6F7986;
+    --rule:#272D37;
+    --rule-strong:#39414D;
+    --accent:#8FB4DA;
+    --accent-soft:#16222E;
+    --sent:#6FBF95;
+    --warn:#E8C367;
+    --warn-soft:#2B2413;
+    --on-accent:#0C1620;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--paper);color:var(--ink);
+    font-family:'Archivo',system-ui,-apple-system,sans-serif;
+    font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+
+  header{
+    border-bottom:1px solid var(--rule-strong);background:var(--surface);
+    padding:22px 28px;display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;
+    position:sticky;top:0;z-index:20;
+  }
+  header h1{font-size:17px;font-weight:700;letter-spacing:-.015em}
+  header .sub{font-size:12px;color:var(--ink-3);letter-spacing:.04em;text-transform:uppercase}
+  header .tally{margin-left:auto;font-size:12px;color:var(--ink-2)}
+  header .tally b{color:var(--accent);font-weight:600}
+
+  .shell{display:grid;grid-template-columns:236px 1fr;align-items:start}
+  @media (max-width:900px){.shell{grid-template-columns:1fr}.rail{display:none}}
+
+  .rail{
+    position:sticky;top:66px;border-right:1px solid var(--rule);background:var(--surface);
+    height:calc(100vh - 66px);overflow-y:auto;padding:16px 0 40px;
+  }
+  .rail h2{
+    font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-3);padding:14px 20px 8px;font-weight:600;
+  }
+  .rail h2:first-child{padding-top:0}
+  .rail a{
+    display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:baseline;
+    padding:7px 20px;text-decoration:none;color:var(--ink-2);font-size:13px;
+  }
+  .rail a:hover{background:var(--sunken);color:var(--ink)}
+  .rail a .n{font-size:11px;color:var(--ink-3)}
+  .rail a.done{color:var(--ink-3);text-decoration:line-through}
+  .rail a.done .n{color:var(--sent)}
+  .rail a:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+
+  main{padding:32px 28px 96px;max-width:860px}
+  .intro{
+    border-left:2px solid var(--accent);padding:2px 0 2px 16px;
+    margin-bottom:22px;font-size:14px;color:var(--ink-2);max-width:64ch;
+  }
+  .intro strong{color:var(--ink);font-weight:600}
+  .intro p+p{margin-top:8px}
+
+  .setup{
+    border:1px solid var(--rule-strong);border-radius:6px;background:var(--surface);
+    padding:18px 20px;margin-bottom:30px;box-shadow:var(--shadow);
+  }
+  .setup.missing{border-color:var(--warn);background:var(--warn-soft)}
+  .setup h3{font-size:13px;font-weight:700;margin-bottom:6px}
+  .setup p{font-size:13px;color:var(--ink-2);margin-bottom:12px;max-width:66ch}
+  .setup label{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-3);font-weight:600;margin-bottom:5px}
+  .setup input{
+    width:100%;font:inherit;font-size:13px;padding:9px 11px;border-radius:4px;
+    border:1px solid var(--rule-strong);background:var(--paper);color:var(--ink);
+  }
+  .setup input:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .setup .state{font-size:12px;margin-top:9px;font-weight:600}
+  .setup .state.ok{color:var(--sent)}
+  .setup .state.bad{color:var(--warn)}
+
+  .batch{
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+    color:var(--ink-3);border-bottom:1px solid var(--rule);
+    padding-bottom:8px;margin:36px 0 20px;
+  }
+  .batch:first-child{margin-top:0}
+  .callintro{
+    font-size:13px;color:var(--ink-2);max-width:66ch;margin:-6px 0 22px;
+  }
+  .card.call .rank.tel{color:var(--sent);background:transparent;border:1px solid var(--sent)}
+  .card.call .email{font-style:italic}
+
+  .card{
+    background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+    margin-bottom:26px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:80px;
+  }
+  .card.done{opacity:.55}
+  .card-head{
+    padding:18px 22px 14px;border-bottom:1px solid var(--rule);
+    display:grid;grid-template-columns:38px 1fr;gap:14px;align-items:start;
+  }
+  .rank{
+    font-size:13px;font-weight:600;color:var(--accent);background:var(--accent-soft);
+    border-radius:4px;text-align:center;padding:5px 0;
+  }
+  .who h3{font-size:16px;font-weight:600;letter-spacing:-.01em;text-wrap:balance}
+  .who .meta{font-size:12px;color:var(--ink-3);margin-top:3px}
+  .who .meta span+span::before{content:"\00B7";margin:0 7px;color:var(--rule-strong)}
+
+  .fields{padding:14px 22px;background:var(--sunken);border-bottom:1px solid var(--rule);
+    display:flex;flex-direction:column;gap:9px}
+  .field{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center}
+  .field .lab{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+  .field .val{font-size:13px;word-break:break-all}
+
+  .body-wrap{padding:24px 22px}
+  .email{
+    font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:#222222;
+    background:#ffffff;border:1px solid var(--rule);border-radius:4px;padding:22px;
+  }
+  .email p{margin:0 0 14px;color:#222222}
+  .email .sig{border-top:1px solid #dddddd;padding-top:12px;margin-top:4px;font-size:13px;line-height:1.5;color:#444444}
+  .email .sig div{color:#444444}
+  .email .sig .nm{font-weight:bold;color:#222222}
+  .email .sig a{color:#1E3A5F;text-decoration:none}
+  .email .legal{margin-top:12px;font-size:11px;line-height:1.5;color:#888888}
+  .email .legal .gap{color:#B00020;font-weight:bold}
+  .email.picked{outline:2px solid var(--accent);outline-offset:2px}
+
+  .actions{padding:0 22px 20px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  button{
+    font:inherit;font-size:13px;font-weight:500;cursor:pointer;padding:8px 14px;
+    border-radius:4px;border:1px solid var(--rule-strong);
+    background:var(--surface);color:var(--ink);
+    transition:background .12s ease,border-color .12s ease;
+  }
+  button:hover{background:var(--sunken);border-color:var(--ink-3)}
+  button.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+  button.primary:hover{filter:brightness(1.12)}
+  button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  button.mark[aria-pressed="true"]{color:var(--sent);border-color:var(--sent)}
+
+  .note{
+    margin:0 22px 20px;padding:10px 14px;background:var(--accent-soft);
+    border-radius:4px;font-size:12.5px;color:var(--ink-2);
+  }
+  .note b{color:var(--accent);font-weight:600}
+
+  .toast{
+    position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(10px);
+    background:var(--ink);color:var(--paper);font-size:13px;padding:10px 18px;
+    border-radius:4px;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;
+    z-index:50;max-width:min(92vw,470px);text-align:center;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<header>
+  <h1>US Outreach Deck</h1>
+  <span class="sub mono">40 emails &middot; 15 calls</span>
+  <span class="tally mono"><b id="tally">0</b> sent</span>
+</header>
+
+<div class="shell">
+  <nav class="rail" aria-label="Leads"><div id="railList"></div></nav>
+
+  <main>
+    <div class="intro">
+      <p><strong>Copy email</strong> puts the formatted version on your clipboard. Paste straight into Zoho and the signature comes with it, already styled. If a copy ever fails the button selects the email on the page instead and says so.</p>
+      <p>These are US recipients, so the footer is not optional. Fill in the box below before you send anything. The last fifteen cards are phone calls, not emails, because no address was published for them.</p>
+    </div>
+
+    <div class="setup" id="setup">
+      <h3>Your postal address, required by law here</h3>
+      <p>CAN-SPAM requires a real physical mailing address in every commercial email, and separately a working opt-out. The opt-out line is already written into each message. The address is the one thing I cannot fill in for you. Type it once and it goes into every signature automatically, stored only in this browser.</p>
+      <label for="addr">Registered company address, one line</label>
+      <input id="addr" type="text" autocomplete="off" spellcheck="false"
+             placeholder="Houghton Automations Ltd, 00 Example Street, Bristol BS0 0AA, United Kingdom">
+      <div class="state bad" id="addrState">Not set. Emails will copy with a visible red placeholder until you fill this in.</div>
+    </div>
+
+    <div id="cards"></div>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const SIG = {
+  name:"Benjamin Houghton",
+  phone:"+44 7444 577053",
+  email:"Ben@Houghtonautomations.co.uk",
+  site:"houghtonautomations.co.uk"
+};
+const OPTOUT = "If you would rather not hear from me again, reply with “no thanks” and I will not contact you a second time.";
+
+const LEADS = [
+ {n:1,co:"Charleston Trident Association of REALTORS",sec:"REALTOR association",loc:"Charleston, SC",
+  to:"ryan@charlestonrealtors.com",
+  subj:"Member calls at Charleston Trident",
+  note:"Ryan Castle, CEO. Roughly 7,000 members, one of the larger boards in the South. Alt contact: meghan@charlestonrealtors.com, VP of Operations.",
+  p:["Hi Ryan,",
+     "Seven thousand members and one member services desk. What happens to the calls that come in while your team is running a class?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:2,co:"Greater Nashville REALTORS",sec:"REALTOR association",loc:"Nashville, TN",
+  to:"jarron@greaternashvillerealtors.org",
+  subj:"Member calls at Greater Nashville REALTORS",
+  note:"Jarron Springer, CEO. One of the fastest-growing real estate markets in the country, which means member growth and support volume growing with it.",
+  p:["Hi Jarron,",
+     "Nashville has been adding members faster than most markets in the country. Has the member services desk grown at the same rate?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:3,co:"Tucson Association of REALTORS",sec:"REALTOR association",loc:"Tucson, AZ",
+  to:"romeo@tucsonrealtors.org",
+  subj:"Member calls at Tucson REALTORS",
+  note:"Romeo Arrieta, CEO. Runs MLSSAZ alongside the association, so support volume covers both. Alt contact: LisaN@tucsonrealtors.org, Director of Member Services.",
+  p:["Hi Romeo,",
+     "You run the MLS alongside the association, so your team fields two kinds of support call rather than one. How much of the week goes on questions they have already answered a hundred times?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and routes anything genuinely unusual to a person.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:4,co:"Home Builders Association of Michigan",sec:"Trade association",loc:"Lansing, MI",
+  to:"bob@hbaofmichigan.com",
+  subj:"Member questions across the Michigan HBAs",
+  note:"Bob Filka, CEO. State body sitting over a network of local HBAs, so a win here is a reference into every one of them.",
+  p:["Hi Bob,",
+     "You coordinate a network of local HBAs from one office. How much of that is answering the same question in three different places?",
+     "I build AI automations for membership organizations. The one that would suit you is a member enquiry line that answers routine membership, code and event questions immediately, day or night, and passes anything that needs judgment to your team with the context already gathered.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, event and outing registration, and government affairs alert distribution.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:5,co:"Ohio Home Builders Association",sec:"Trade association",loc:"Columbus, OH",
+  to:"vsquillace@ohiohba.com",
+  subj:"Member questions across the Ohio HBAs",
+  note:"Vincent Squillace, Executive Vice President. Long-serving, so he has seen every vendor pitch there is. Be specific and short. General inbox build@ohiohba.com also published.",
+  p:["Hi Vincent,",
+     "You coordinate local HBAs across the state from one office in Columbus. How much of that is answering the same question in three different places?",
+     "I build AI automations for membership organizations. The one that would suit you is a member enquiry line that answers routine membership, code and event questions immediately, day or night, and passes anything that needs judgment to your team with the context already gathered.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, event and outing registration, and government affairs alert distribution.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:6,co:"Home Builders Association of Metro Denver",sec:"Trade association",loc:"Denver, CO",
+  to:"tleighty@hbadenver.com",
+  subj:"Member questions at HBA Denver",
+  note:"Ted Leighty, Executive Officer. One of the larger metro HBAs. Small staff running a lot of events, which is the angle.",
+  p:["Hi Ted,",
+     "A metro HBA runs a heavy events calendar on a small staff. Who is answering the membership questions while everyone is setting up for the next one?",
+     "I build AI automations for membership organizations. The one that would suit you is a member enquiry line that answers routine membership and event questions immediately, day or night, and handles registration without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and post-event follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:7,co:"Greater Chattanooga REALTORS",sec:"REALTOR association",loc:"Chattanooga, TN",
+  to:"carol@gcar.net",
+  subj:"Member calls at Greater Chattanooga REALTORS",
+  note:"Carol Seal, CEO, with a published direct address. This is the ideal shape for the sector: one named person who can decide alone.",
+  p:["Hi Carol,",
+     "When a member calls about dues or a CE class after five o'clock, where does that call go?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:8,co:"Northern Virginia Association of REALTORS",sec:"REALTOR association",loc:"Fairfax, VA",
+  to:"joliver@nvar.com",
+  subj:"Fifteen minutes with Ryan McLaughlin",
+  note:"This goes to Jillian Oliver, executive assistant to CEO Ryan McLaughlin. NVAR is one of the largest local boards in the country. Emailing the EA to ask for the meeting is the right route here, not a workaround, so be straightforward about it.",
+  p:["Hi Jillian,",
+     "I am hoping you can point me in the right direction. I would like fifteen minutes with Ryan, or with whoever owns member services if that is a better fit.",
+     "I build AI automations for membership organizations. For an association the size of NVAR the relevant one is a member service line that answers dues, MLS access and education questions the moment they arrive, including evenings and weekends, and books people into classes without staff rekeying anything.",
+     "Alongside that I build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Is Ryan the right person, or should I be speaking to someone else? I am in the UK, so I can take a call at whatever time works on your side. Happy to send more detail first if that is easier."]},
+
+ {n:9,co:"Osceola County Association of REALTORS",sec:"REALTOR association",loc:"Kissimmee, FL",
+  to:"tlizasuain@osceola-realtors.com",
+  subj:"Member calls at Osceola County REALTORS",
+  note:"Twis Lizasuain, CEO. Large bilingual membership in Central Florida, which is a real differentiator you can offer. Source listing was a few years old, so confirm she is still CEO first.",
+  p:["Hi Twis,",
+     "Central Florida membership has grown quickly, and a good part of yours would rather do business in Spanish. How is the member services desk handling both at once?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, in English or Spanish, including evenings and weekends.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:10,co:"Texas Society of Association Executives",sec:"Association of associations",loc:"Austin, TX",
+  to:"steven@tsae.org",
+  subj:"A question you are better placed to answer than most",
+  note:"The most strategically valuable lead in the batch. Every TSAE member is an association executive, so one happy customer here is a room full of prospects. Price it low deliberately and take the case study. Alt: brandon@tsae.org, membership.",
+  p:["Hi Steven,",
+     "I build AI automations for membership organizations, which puts you in an unusual position: you are both a prospect and the best possible judge of whether the thing is any good.",
+     "What I build for associations is a member service line that answers routine dues, event and education questions the moment they arrive, including out of hours, plus dues renewal chasing and event registration follow-up.",
+     "I would rather get this right for one Texas association and be judged on it than pitch a hundred cold. If TSAE would be willing to be that one, I will price it accordingly and you can be as blunt as you like about what does not work.",
+     "Would you have fifteen minutes in the next week or two? I am in the UK, so your morning is my afternoon and any time works on my side."]},
+
+ {n:11,co:"East Tennessee Realtors",sec:"REALTOR association",loc:"Knoxville, TN",
+  to:"teresa@kaarmls.com",
+  subj:"Membership application questions",
+  note:"Teresa Tillery, Membership Director, so pitch the membership workflow rather than the whole association. CEO is Lyle Irish, no published address found for him.",
+  p:["Hi Teresa,",
+     "How much of the membership team's day goes on people asking where their application has got to?",
+     "I build AI automations for membership organizations. The one that would suit you is automated application status updates, so applicants get told where they are before they feel the need to call, plus a line that answers routine dues and access questions out of hours.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and education registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:12,co:"Georgia Society of Association Executives",sec:"Association of associations",loc:"Atlanta, GA",
+  to:"wendy@gsae.org",
+  subj:"A question you are better placed to answer than most",
+  note:"Same strategic logic as TSAE. The address came from a 2019 directory, so confirm Wendy is still President before sending. Alt: janeanne@gsae.org.",
+  p:["Hi Wendy,",
+     "I build AI automations for membership organizations, which puts you in an unusual position: you are both a prospect and the best possible judge of whether the thing is any good.",
+     "What I build for associations is a member service line that answers routine dues, event and education questions the moment they arrive, including out of hours, plus dues renewal chasing and event registration follow-up.",
+     "I would rather get this right for one Georgia association and be judged on it than pitch a hundred cold. If GSAE would be willing to be that one, I will price it accordingly and you can be as blunt as you like about what does not work.",
+     "Would you have fifteen minutes in the next week or two? I am in the UK, so your morning is my afternoon and any time works on my side."]},
+
+ {n:13,co:"Alabama Association of REALTORS",sec:"REALTOR association",loc:"Montgomery, AL",
+  to:"jeremy@alabamarealtors.com",
+  subj:"Member questions coming up from the local boards",
+  note:"State-level body. Only a first name was published for the Executive Director, so this opens on the first name alone. If that feels thin, open with 'Hi there' instead.",
+  p:["Hi Jeremy,",
+     "How many of the questions reaching the state office are ones a local board has already tried to answer?",
+     "I build AI automations for membership organizations. The one that would suit you is a member enquiry line that answers routine licensing, education and membership questions immediately, day or night, and hands anything that needs a person to your team with the context already gathered.",
+     "That tends to be the starting point, but it is part of a wider set. I also build local board coordination workflows, education registration, and event follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:14,co:"Spokane REALTORS",sec:"REALTOR association",loc:"Spokane, WA",
+  to:"lisa@spokanerealtors.com",
+  subj:"Membership questions at Spokane REALTORS",
+  note:"Lisa handles membership. Published as the membership contact, so she reads it directly. General inbox sar@spokanerealtors.com also published.",
+  p:["Hi Lisa,",
+     "How much of your week goes on membership questions that have the same four or five answers?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, application status and education questions the moment they arrive, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:15,co:"Birmingham Association of REALTORS",sec:"REALTOR association",loc:"Birmingham, AL",
+  to:"membership@birminghamrealtors.com",
+  subj:"Membership questions at Birmingham REALTORS",
+  note:"Role inbox rather than a named person, so this opens generically. Ask who owns member services and use the reply to get a name for the follow-up.",
+  p:["Hi there,",
+     "How much of the membership team's week goes on questions that have the same four or five answers?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, application status and education questions the moment they arrive, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two, or could you point me to whoever owns member services? I am in the UK, so I can take a call at whatever time works on your side."]},
+
+ {n:16,co:"Northern Colorado Home Builders Association",sec:"Trade association",loc:"Fort Collins, CO",
+  to:"victoria@nocohba.com",
+  subj:"Member questions at Northern Colorado HBA",
+  note:"Victoria Hall, Executive Officer. A local HBA EO is usually a staff of two or three doing everything, which is exactly why this lands.",
+  p:["Hi Victoria,",
+     "An Executive Officer at a local HBA is running membership, events and government affairs at once. Which of those is currently losing to the phone?",
+     "I build AI automations for membership organizations. The one that would suit you is a member enquiry line that answers routine membership and event questions immediately, day or night, and handles registration without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and post-event follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:17,co:"Immigration Law Group LLC",sec:"Immigration law",loc:"Portland, OR",
+  to:"info@emsylaw.com",
+  subj:"How fast does a consultation request get answered?",
+  note:"Immigration is the best legal niche for this: high enquiry volume, heavy document chasing, clients in every time zone, and no HIPAA. Keep the build to email and web chat, not SMS, until consent capture is in place.",
+  p:["Hi there,",
+     "How quickly does someone hear back after they ask about a consultation?",
+     "I build AI automations for immigration firms. The one that would suit you is instant enquiry response and consultation booking, so the first reply is yours rather than the firm the person contacted next.",
+     "That tends to be the starting point, but it is part of a wider set. I also build document and evidence chasing, which is where most of the fee-earner time goes, plus appointment reminders and case status updates that stop clients calling to ask.",
+     "Would you have fifteen minutes for a call in the next week or two? I can walk you through it using one of your own enquiries. I am in the UK, so I can take a call at whatever time works on your side."]},
+
+ {n:18,co:"Sky USA Law",sec:"Immigration law",loc:"Los Angeles and New York",
+  to:"info@skyusalaw.com",
+  subj:"Enquiries arriving outside Pacific hours",
+  note:"Serves clients globally, so the out-of-hours argument makes itself. Being UK-based is an advantage on this one, not a handicap.",
+  p:["Hi there,",
+     "Your clients are all over the world, which means a good share of your enquiries arrive at three in the morning Pacific. Who answers those?",
+     "I build AI automations for immigration firms. The one that would suit you is an enquiry line that responds the moment someone gets in touch, in any time zone, answers the first round of questions and books the consultation.",
+     "That tends to be the starting point, but it is part of a wider set. I also build document and evidence chasing, which is where most of the fee-earner time goes, plus appointment reminders and case status updates.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, which is part of why the overnight problem is one I can actually cover. What day works?"]},
+
+ {n:19,co:"West Tennessee Home Builders Association",sec:"Trade association",loc:"Memphis, TN",
+  to:"kscroggs@westtnhba.com",
+  subj:"Member questions at West Tennessee HBA",
+  note:"Ken Scroggs, Executive Officer. Smaller association, so pitch the lower tier and keep the scope tight.",
+  p:["Hi Ken,",
+     "An Executive Officer at a local HBA is running membership, events and government affairs at once. Which of those is currently losing to the phone?",
+     "I build AI automations for membership organizations. The one that would suit you is a member enquiry line that answers routine membership and event questions immediately, day or night, and handles registration without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and post-event follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:20,co:"Home Builders Association of Western Colorado",sec:"Trade association",loc:"Grand Junction, CO",
+  to:"shayna@hbawesternco.com",
+  subj:"Member questions at HBA Western Colorado",
+  note:"Shayna Heiney, Executive Officer. Small association, lower tier. A quick reply here is more likely than from the metro boards.",
+  p:["Hi Shayna,",
+     "An Executive Officer at a local HBA is running membership, events and government affairs at once. Which of those is currently losing to the phone?",
+     "I build AI automations for membership organizations. The one that would suit you is a member enquiry line that answers routine membership and event questions immediately, day or night, and handles registration without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and post-event follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:21,co:"Louisville REALTORS",sec:"REALTOR association",loc:"Louisville, KY",
+  to:"jlee@louisvillerealtors.com",
+  subj:"Member calls at Louisville REALTORS",
+  note:"Jakeeva Lee, CEO. Largest board in Kentucky, so the strongest lead in this batch.",
+  p:["Hi Jakeeva,",
+     "You run the largest board in the state. What happens to the member calls that come in while your team is running a class?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:22,co:"Home Building Association of Greater Portland",sec:"Trade association",loc:"Portland, OR",
+  to:"info@hbapdx.org",
+  subj:"Member questions at HBA Portland",
+  note:"Large metro HBA that runs the Portland home shows, so the events calendar is unusually heavy. Role inbox, so ask for the right name in the reply.",
+  p:["Hi there,",
+     "You run one of the bigger home show calendars in the country on an association staff. Who is answering the membership questions while everyone is setting up for the next one?",
+     "I build AI automations for membership organizations. The one that would suit you is a member enquiry line that answers routine membership and event questions immediately, day or night, and handles registration without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and post-event follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two, or could you point me to whoever owns membership? I am in the UK, so I can take a call at whatever time works on your side."]},
+
+ {n:23,co:"Greater Charlotte Apartment Association",sec:"Apartment association",loc:"Charlotte, NC",
+  to:"info@greatercaa.org",
+  subj:"Member questions and course registration",
+  note:"New sector for you. Apartment associations run heavy certification and CE calendars for property managers, which is the angle. Role inbox, so ask for a name.",
+  p:["Hi there,",
+     "Apartment associations run more certification and CE courses than almost any other kind of association. How much of the week goes on registration questions and course admin?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers course, dues and membership questions the moment they arrive, including out of hours, and handles registration without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and course reminder sequences that cut no-shows.",
+     "Would you have fifteen minutes for a call in the next week or two, or could you point me to whoever owns education and membership? I am in the UK, so I can take a call at whatever time works on your side."]},
+
+ {n:24,co:"Des Moines Area Association of REALTORS",sec:"REALTOR association",loc:"Des Moines, IA",
+  to:"Cindy@iowarealtors.com",
+  subj:"Member calls at Des Moines Area REALTORS",
+  note:"Cindy Warren, Executive Officer. Largest metro board in Iowa.",
+  p:["Hi Cindy,",
+     "When a member calls about dues or a CE class after five o'clock, where does that call go?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:25,co:"Northern Kentucky Association of REALTORS",sec:"REALTOR association",loc:"Northern Kentucky",
+  to:"jwilson@nkar.com",
+  subj:"Member calls at Northern Kentucky REALTORS",
+  note:"Janie Wilson, Executive Officer. Cincinnati metro on the Kentucky side, so a substantial membership.",
+  p:["Hi Janie,",
+     "When a member calls about dues or a CE class after five o'clock, where does that call go?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:26,co:"Home Builders Association of West Florida",sec:"Trade association",loc:"Pensacola, FL",
+  to:"dpeaden@hbawf.com",
+  subj:"Member questions at HBA West Florida",
+  note:"David Peaden, Executive Officer. Long-serving EO, so lead with the specific rather than the general.",
+  p:["Hi David,",
+     "An Executive Officer is running membership, events and government affairs at once. Which of those is currently losing to the phone?",
+     "I build AI automations for membership organizations. The one that would suit you is a member enquiry line that answers routine membership and event questions immediately, day or night, and handles registration without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and post-event follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:27,co:"Home Builders Association of Greater Little Rock",sec:"Trade association",loc:"Little Rock, AR",
+  to:"office@hbaglr.com",
+  subj:"Member questions at HBA Greater Little Rock",
+  note:"Role inbox rather than a named person. Ask who owns membership and use the reply to get a name for the follow-up.",
+  p:["Hi there,",
+     "A local HBA runs membership, events and government affairs on a very small staff. Which of those is currently losing to the phone?",
+     "I build AI automations for membership organizations. The one that would suit you is a member enquiry line that answers routine membership and event questions immediately, day or night, and handles registration without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and post-event follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two, or could you point me to whoever owns membership? I am in the UK, so I can take a call at whatever time works on your side."]},
+
+ {n:28,co:"Owensboro REALTORS",sec:"REALTOR association",loc:"Owensboro, KY",
+  to:"ceo@owensbororealtors.com",
+  subj:"Member calls at Owensboro REALTORS",
+  note:"Michelle Weisman, CEO. Role-based address that goes straight to her.",
+  p:["Hi Michelle,",
+     "In a board your size, who covers the phones when you are running a class?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:29,co:"Central Iowa Board of REALTORS",sec:"REALTOR association",loc:"Central Iowa",
+  to:"beth@centraliowamls.com",
+  subj:"Member calls at Central Iowa REALTORS",
+  note:"Beth Skluzacek, Executive Officer. Runs the MLS alongside the board, so support volume covers both.",
+  p:["Hi Beth,",
+     "You run the MLS alongside the board, so your desk fields two kinds of support call rather than one. How much of the week goes on questions you have already answered a hundred times?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and routes anything genuinely unusual to you.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:30,co:"Iowa City Area Association of REALTORS",sec:"REALTOR association",loc:"Iowa City, IA",
+  to:"megan@icaar.org",
+  subj:"Member calls at Iowa City Area REALTORS",
+  note:"Megan Flewellyn, Executive Officer.",
+  p:["Hi Megan,",
+     "In a board your size, who covers the phones when you are running a class?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:31,co:"DFW Immigration",sec:"Immigration law",loc:"Dallas, TX",
+  to:"info@dfw-immigration.com",
+  subj:"How fast does a consultation request get answered?",
+  note:"Free-consultation model means high enquiry volume and a low cost per missed one, so lead with speed rather than value.",
+  p:["Hi there,",
+     "You offer a free consultation, so the enquiries arrive in volume. How many of them get a reply the same hour?",
+     "I build AI automations for immigration firms. The one that would suit you is instant enquiry response and consultation booking, so the first reply is yours rather than the firm the person contacted next.",
+     "That tends to be the starting point, but it is part of a wider set. I also build document and evidence chasing, which is where most of the fee-earner time goes, plus appointment reminders and case status updates that stop clients calling to ask.",
+     "Would you have fifteen minutes for a call in the next week or two? I can walk you through it using one of your own enquiries. I am in the UK, so I can take a call at whatever time works on your side."]},
+
+ {n:32,co:"Greater Fort Smith Home Builders Association",sec:"Trade association",loc:"Fort Smith, AR",
+  to:"hba@fortsmithhomebuilders.com",
+  subj:"Member questions at Greater Fort Smith HBA",
+  note:"DeAnne Hankins, Executive Officer. Small staff, so the pitch is her own time back.",
+  p:["Hi DeAnne,",
+     "An Executive Officer is running membership, events and government affairs at once. Which of those is currently losing to the phone?",
+     "I build AI automations for membership organizations. The one that would suit you is a member enquiry line that answers routine membership and event questions immediately, day or night, and handles registration without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and post-event follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:33,co:"Heart of Kentucky Association of REALTORS",sec:"REALTOR association",loc:"Elizabethtown, KY",
+  to:"heartofky@hkar.com",
+  subj:"Member calls at Heart of Kentucky REALTORS",
+  note:"Amy Duvall, Executive Officer. Role-based address that goes to her.",
+  p:["Hi Amy,",
+     "In a board your size, who covers the phones when you are running a class?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:34,co:"REALTOR Association of Southern Kentucky",sec:"REALTOR association",loc:"Bowling Green, KY",
+  to:"steve@raskrealtors.com",
+  subj:"Member calls at RASK",
+  note:"Steve Denney, Executive Officer. Covers a wide rural territory from one office, which is the angle.",
+  p:["Hi Steve,",
+     "You cover a wide territory from one office, so a good share of your members are calling rather than dropping in. What happens to the ones that come in after five?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:35,co:"Hopkinsville Christian County Board of REALTORS",sec:"REALTOR association",loc:"Hopkinsville, KY",
+  to:"hccbor@hopkinsvillerealtors.com",
+  subj:"Member calls at Hopkinsville REALTORS",
+  note:"Amanda Cannon, Executive Officer. Small board, so pitch the lower tier and keep the scope tight.",
+  p:["Hi Amanda,",
+     "In a board your size, who covers the phones when you are running a class?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:36,co:"Home Builders Association of Marion and Polk Counties",sec:"Trade association",loc:"Salem, OR",
+  to:"info@homebuildersassociation.org",
+  subj:"Member questions at HBA Marion and Polk",
+  note:"Role inbox. Ask who owns membership and use the reply to get a name.",
+  p:["Hi there,",
+     "A local HBA runs membership, events and government affairs on a very small staff. Which of those is currently losing to the phone?",
+     "I build AI automations for membership organizations. The one that would suit you is a member enquiry line that answers routine membership and event questions immediately, day or night, and handles registration without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and post-event follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two, or could you point me to whoever owns membership? I am in the UK, so I can take a call at whatever time works on your side."]},
+
+ {n:37,co:"Cheyenne and Southeastern Colorado Home Builders Association",sec:"Trade association",loc:"Pueblo, CO",
+  to:"marla@cshba.com",
+  subj:"Member questions at Cheyenne and SE Colorado HBA",
+  note:"Marla Novak, Executive Officer. Small association, lower tier.",
+  p:["Hi Marla,",
+     "An Executive Officer is running membership, events and government affairs at once. Which of those is currently losing to the phone?",
+     "I build AI automations for membership organizations. The one that would suit you is a member enquiry line that answers routine membership and event questions immediately, day or night, and handles registration without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and post-event follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:38,co:"Green Valley Sahuarita Association of REALTORS",sec:"REALTOR association",loc:"Green Valley, AZ",
+  to:"Rebecca@gvsar.com",
+  subj:"Member calls at Green Valley Sahuarita REALTORS",
+  note:"Rebecca Brown, Association Executive. Small board, lower tier.",
+  p:["Hi Rebecca,",
+     "In a small office, who covers the phones when you are running a class?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:39,co:"Central Arizona Association of REALTORS",sec:"REALTOR association",loc:"Payson, AZ",
+  to:"jackie@caaraz.com",
+  subj:"Member calls at Central Arizona REALTORS",
+  note:"Jackie Rudder, Association Executive. Small board, lower tier.",
+  p:["Hi Jackie,",
+     "In a small office, who covers the phones when you are running a class?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]},
+
+ {n:40,co:"Bullhead City Mohave Valley Association of REALTORS",sec:"REALTOR association",loc:"Bullhead City, AZ",
+  to:"ae@bhcmvaor.org",
+  subj:"Member calls at Bullhead City Mohave Valley REALTORS",
+  note:"Dana Walter, Association Executive. Role-based address that goes straight to her. Small board, lower tier.",
+  p:["Hi Dana,",
+     "In a small office, who covers the phones when you are running a class?",
+     "I build AI automations for membership organizations. The one that would suit you is a member service line that answers dues, MLS access and education questions the moment they come in, including evenings and weekends, and books people into classes without anyone rekeying it.",
+     "That tends to be the starting point, but it is part of a wider set. I also build dues renewal chasing, new member onboarding, and event registration follow-up.",
+     "Would you have fifteen minutes for a call in the next week or two? I am in the UK, so your morning is my afternoon and I can work to whatever time suits. What day is best?"]}
+];
+
+/* No published address found for any of these. Named decision maker and a
+   direct dial, so they are calls rather than skips. Nothing here is guessed. */
+const CALLS = [
+ {co:"Kansas City Regional Association of REALTORS",loc:"Leawood, KS",who:"Kipp Cooper, CEO",
+  tel:"(913) 266-5909",
+  line:"Large regional board running Heartland MLS. Only an email pattern was published, never a real address.",
+  open:"You run Heartland MLS alongside the association, so your team fields two kinds of support call. I build systems that answer the routine ones out of hours. Is that worth fifteen minutes?"},
+ {co:"Texas Apartment Association",loc:"Austin, TX",who:"Chris Newton, Executive Vice President",
+  tel:"(512) 479-6252",
+  line:"State body over every local apartment association in Texas. A win here is a reference into all of them.",
+  open:"You sit over every local apartment association in the state. I build member service and course registration automation. Who owns that side at TAA?"},
+ {co:"Austin Apartment Association",loc:"Austin, TX",who:"Emily Blair, CAE, Chief Executive Officer",
+  tel:"(512) 323-0990",
+  line:"Heavy certification and CE calendar, which is the angle for every apartment association.",
+  open:"You run more certification courses than almost any other kind of association. I build registration and member service automation. Worth fifteen minutes?"},
+ {co:"Pennsylvania Apartment Association",loc:"Pennsylvania",who:"Carol Christner, MSA, CAE, Chief Executive Officer",
+  tel:"(717) 736-0500",
+  line:"State association with regional chapters, so enquiry routing is a genuine problem.",
+  open:"With chapters across the state, how do member questions reach the right one? That routing is the thing I build."},
+ {co:"Nevada State Apartment Association",loc:"Nevada",who:"Robin Crawford, Executive Director",
+  tel:"(702) 436-7662",
+  line:"Small staff covering a whole state.",
+  open:"A state association on a small staff. Which part of the week is losing to the phone?"},
+ {co:"Atlanta Apartment Association",loc:"Sandy Springs, GA",who:"Julie Anderson, President",
+  tel:"(770) 518-4248",
+  line:"One of the larger metro apartment associations, around thirteen staff.",
+  open:"You run a heavy course calendar for property managers. I build registration and member service automation. Worth fifteen minutes?"},
+ {co:"Florida Society of Association Executives",loc:"Tallahassee, FL",who:"President and CEO",
+  tel:"(850) 702-0944",
+  line:"Same strategic value as TSAE and GSAE. Every member is an association executive.",
+  open:"Your members are the people I would be selling to next. I would rather get it right for one Florida association and be judged on it."},
+ {co:"Michigan Society of Association Executives",loc:"Okemos, MI",who:"President and CEO",
+  tel:"(517) 225-3886 x800",
+  line:"As above. Ask for the President by role.",
+  open:"Your members are the people I would be selling to next. I would rather get it right for one Michigan association and be judged on it."},
+ {co:"Idaho Home Builders Association",loc:"Boise, ID",who:"Rose M Almanza, Executive Officer",
+  tel:"(208) 377-3550",
+  line:"State body over the local Idaho HBAs.",
+  open:"You coordinate the local HBAs from one office. How much of that is answering the same question in three places?"},
+ {co:"Colorado Restaurant Association",loc:"Denver, CO",who:"President and CEO",
+  tel:"(303) 830-2972",
+  line:"Restaurant associations run heavy member service and event operations.",
+  open:"Restaurant associations field a lot of routine member questions. I build the line that answers them out of hours."},
+ {co:"Tennessee Hospitality and Tourism Association",loc:"Nashville, TN",who:"President and CEO",
+  tel:"(615) 385-9970",
+  line:"As above.",
+  open:"Hospitality associations field a lot of routine member questions. I build the line that answers them out of hours."},
+ {co:"Western Ohio Home Builders Association",loc:"Sidney, OH",who:"Donna Cook, Executive Director",
+  tel:"(937) 339-7963",
+  line:"Local HBA, named director who answers her own phone.",
+  open:"An Executive Director doing membership, events and government affairs at once. Which is losing to the phone?"},
+ {co:"Aspire North REALTORS",loc:"Traverse City, MI",who:"Alan Jeffries, Association Executive",
+  tel:"(231) 947-2050",
+  line:"Northern Michigan board.",
+  open:"Who covers the phones when you are running a class? That is the gap I fill."},
+ {co:"Battle Creek Area Association of REALTORS",loc:"Battle Creek, MI",who:"Amanda Lankerd, Association Executive",
+  tel:"(269) 962-5193",
+  line:"Small board.",
+  open:"Who covers the phones when you are running a class? That is the gap I fill."},
+ {co:"Antrim Charlevoix Kalkaska Association of REALTORS",loc:"Michigan",who:"Kenneth Harris, Association Executive",
+  tel:"(231) 237-6394",
+  line:"Small board.",
+  open:"Who covers the phones when you are running a class? That is the gap I fill."}
+];
+
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+
+let postalAddr = "";
+try{ postalAddr = localStorage.getItem("hoUsAddr") || ""; }catch(e){ postalAddr = ""; }
+const ADDR_PLACEHOLDER = "[ ADD YOUR POSTAL ADDRESS BEFORE SENDING ]";
+const addrForEmail = () => postalAddr.trim() || ADDR_PLACEHOLDER;
+
+/* Every element carries its own inline colour. Zoho's composer does not reliably
+   inherit colour from a wrapper, which is what made pasted text come out white. */
+const P   = 'margin:0 0 14px 0;color:#222222;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6';
+const SD  = 'color:#444444;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.5';
+const LG  = 'color:#888888;font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.5';
+const LNK = 'color:#1E3A5F;text-decoration:none';
+
+function sigHTML(){
+  const a = addrForEmail();
+  const addrStyle = postalAddr.trim() ? LG : LG + ';color:#B00020;font-weight:bold';
+  return '<p style="'+P+'">Best,</p>'
+    + '<div style="border-top:1px solid #dddddd;padding-top:12px;margin-top:4px;'+SD+'">'
+    + '<div style="'+SD+';font-weight:bold;color:#222222">'+SIG.name+'</div>'
+    + '<div style="'+SD+'">'+SIG.phone+'</div>'
+    + '<div style="'+SD+'"><a href="mailto:'+SIG.email+'" style="'+LNK+'">'+SIG.email+'</a></div>'
+    + '<div style="'+SD+'"><a href="https://'+SIG.site+'" style="'+LNK+'">'+SIG.site+'</a></div>'
+    + '</div>'
+    + '<div style="margin-top:12px;'+addrStyle+'">'+esc(a)+'</div>'
+    + '<div style="margin-top:4px;'+LG+'">'+esc(OPTOUT)+'</div>';
+}
+function emailHTML(l){
+  return '<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;'
+    + 'color:#222222;background-color:#ffffff">'
+    + l.p.map(x=>'<p style="'+P+'">'+esc(x)+'</p>').join("")
+    + sigHTML() + '</div>';
+}
+function emailText(l){
+  return l.p.join("\n\n")+"\n\nBest,\n\n"+SIG.name+"\n"+SIG.phone+"\n"+SIG.email+"\n"+SIG.site
+    +"\n\n"+addrForEmail()+"\n"+OPTOUT;
+}
+
+let sent = {};
+try{ sent = JSON.parse(localStorage.getItem("hoUsDeckSent")||"{}"); }catch(e){ sent = {}; }
+function persist(){ try{ localStorage.setItem("hoUsDeckSent",JSON.stringify(sent)); }catch(e){} }
+
+function toast(msg){
+  const t=document.getElementById("toast");
+  t.textContent=msg; t.classList.add("show");
+  clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove("show"),2800);
+}
+
+/* Primary copy path. Intercepting the copy event works inside a sandboxed
+   iframe, where navigator.clipboard is often blocked by permissions policy.
+   A live selection is required first, or Safari refuses execCommand. */
+function copyViaEvent(html, text){
+  const sel = window.getSelection();
+  if(!sel) return false;
+  const prior = sel.rangeCount ? sel.getRangeAt(0).cloneRange() : null;
+
+  const holder = document.createElement("div");
+  holder.setAttribute("contenteditable","true");
+  holder.innerHTML = html;
+  holder.style.cssText = "position:fixed;left:-9999px;top:0;width:1px;height:1px;overflow:hidden;opacity:0";
+  document.body.appendChild(holder);
+
+  const range = document.createRange();
+  range.selectNodeContents(holder);
+  sel.removeAllRanges(); sel.addRange(range);
+
+  let wrote = false;
+  const onCopy = e => {
+    if(!e.clipboardData) return;
+    e.clipboardData.setData("text/html", html);
+    e.clipboardData.setData("text/plain", text);
+    e.preventDefault();
+    wrote = true;
+  };
+  document.addEventListener("copy", onCopy, true);
+  let ran = false;
+  try{ ran = document.execCommand("copy"); }catch(err){ ran = false; }
+  document.removeEventListener("copy", onCopy, true);
+
+  holder.remove();
+  sel.removeAllRanges();
+  if(prior) sel.addRange(prior);
+  return wrote || ran;
+}
+
+function selectOnPage(n){
+  const card = document.querySelector('[data-card="'+n+'"]');
+  if(!card) return false;
+  const box = card.querySelector(".email");
+  if(!box) return false;
+  const sel = window.getSelection();
+  const range = document.createRange();
+  range.selectNodeContents(box);
+  sel.removeAllRanges(); sel.addRange(range);
+  box.classList.add("picked");
+  setTimeout(()=>box.classList.remove("picked"), 4000);
+  box.scrollIntoView({block:"center", behavior:"smooth"});
+  return true;
+}
+
+async function copyRich(l){
+  const html = emailHTML(l), text = emailText(l);
+  const warn = postalAddr.trim() ? "" : " Your postal address is still missing.";
+
+  if(copyViaEvent(html, text)){ toast("Copied. Paste into Zoho." + warn); return; }
+
+  if(navigator.clipboard && window.ClipboardItem){
+    try{
+      await navigator.clipboard.write([new ClipboardItem({
+        "text/html": new Blob([html],{type:"text/html"}),
+        "text/plain": new Blob([text],{type:"text/plain"})
+      })]);
+      toast("Copied. Paste into Zoho." + warn);
+      return;
+    }catch(e){}
+  }
+
+  if(selectOnPage(l.n)) toast("Selected on the page. Press Cmd+C now, then paste into Zoho.");
+  else toast("Copy blocked by the browser. Select the email above and press Cmd+C.");
+}
+
+async function copyPlain(str, label){
+  if(navigator.clipboard){
+    try{ await navigator.clipboard.writeText(str); toast(label+" copied"); return; }catch(e){}
+  }
+  const ta=document.createElement("textarea");
+  ta.value=str; ta.style.cssText="position:fixed;left:-9999px;top:0";
+  document.body.appendChild(ta); ta.select();
+  let ok=false; try{ ok=document.execCommand("copy"); }catch(e){}
+  ta.remove();
+  toast(ok ? label+" copied" : "Copy blocked. Select it by hand.");
+}
+
+function tally(){
+  const e = LEADS.filter(l=>sent[l.n]).length;
+  const c = CALLS.filter((_,i)=>sent[callKey(i)]).length;
+  document.getElementById("tally").textContent =
+    e + " of " + LEADS.length + " emailed, " + c + " of " + CALLS.length + " called";
+}
+
+function sigPreview(){
+  const a = addrForEmail();
+  const cls = postalAddr.trim() ? "" : ' class="gap"';
+  return '<p>Best,</p><div class="sig"><div class="nm">'+SIG.name+'</div>'
+    + '<div>'+SIG.phone+'</div><div><a href="mailto:'+SIG.email+'">'+SIG.email+'</a></div>'
+    + '<div><a href="https://'+SIG.site+'">'+SIG.site+'</a></div></div>'
+    + '<div class="legal"><div'+cls+'>'+esc(a)+'</div><div>'+esc(OPTOUT)+'</div></div>';
+}
+
+function cardHTML(l){
+  return '<article class="card '+(sent[l.n]?"done":"")+'" id="lead'+l.n+'" data-card="'+l.n+'">'
+   + '<div class="card-head">'
+   +   '<div class="rank mono">'+String(l.n).padStart(2,"0")+'</div>'
+   +   '<div class="who"><h3>'+esc(l.co)+'</h3>'
+   +     '<div class="meta"><span>'+esc(l.sec)+'</span><span>'+esc(l.loc)+'</span></div></div>'
+   + '</div>'
+   + '<div class="fields">'
+   +   '<div class="field"><span class="lab">To</span>'
+   +     '<span class="val mono">'+esc(l.to)+'</span>'
+   +     '<button data-act="addr" data-n="'+l.n+'">Copy</button></div>'
+   +   '<div class="field"><span class="lab">Subject</span>'
+   +     '<span class="val">'+esc(l.subj)+'</span>'
+   +     '<button data-act="subj" data-n="'+l.n+'">Copy</button></div>'
+   + '</div>'
+   + (l.note?'<div class="note"><b>Note</b> '+esc(l.note)+'</div>':'')
+   + '<div class="body-wrap"><div class="email">'
+   +   l.p.map(x=>'<p>'+esc(x)+'</p>').join("")
+   +   sigPreview()
+   + '</div></div>'
+   + '<div class="actions">'
+   +   '<button class="primary" data-act="copy" data-n="'+l.n+'">Copy email</button>'
+   +   '<button data-act="select" data-n="'+l.n+'">Select on page</button>'
+   +   '<button class="mark" data-act="mark" data-n="'+l.n+'" aria-pressed="'+(sent[l.n]?"true":"false")+'">'
+   +     (sent[l.n]?"Sent ✓":"Mark as sent")+'</button>'
+   + '</div></article>';
+}
+
+const batchOf = n => n <= 20 ? 1 : 2;
+const BATCH_LABEL = {1:"Batch one, ranks 1 to 20", 2:"Batch two, ranks 21 to 40"};
+
+function callKey(i){ return "c" + i; }
+
+function callHTML(c, i){
+  const k = callKey(i);
+  return '<article class="card call '+(sent[k]?"done":"")+'" id="call'+i+'" data-call="'+i+'">'
+   + '<div class="card-head">'
+   +   '<div class="rank mono tel">'+String(i+1).padStart(2,"0")+'</div>'
+   +   '<div class="who"><h3>'+esc(c.co)+'</h3>'
+   +     '<div class="meta"><span>'+esc(c.who)+'</span><span>'+esc(c.loc)+'</span></div></div>'
+   + '</div>'
+   + '<div class="fields">'
+   +   '<div class="field"><span class="lab">Call</span>'
+   +     '<span class="val mono">'+esc(c.tel)+'</span>'
+   +     '<button data-callact="tel" data-i="'+i+'">Copy</button></div>'
+   + '</div>'
+   + '<div class="note"><b>Why</b> '+esc(c.line)+'</div>'
+   + '<div class="body-wrap"><div class="email"><p>'+esc(c.open)+'</p></div></div>'
+   + '<div class="actions">'
+   +   '<button data-callact="open" data-i="'+i+'">Copy opener</button>'
+   +   '<button class="mark" data-callact="mark" data-i="'+i+'" aria-pressed="'+(sent[k]?"true":"false")+'">'
+   +     (sent[k]?"Called ✓":"Mark as called")+'</button>'
+   + '</div></article>';
+}
+
+function render(){
+  let rail = "", seen = null;
+  for(const l of LEADS){
+    const b = batchOf(l.n);
+    if(b !== seen){ seen = b; rail += '<h2>'+esc(BATCH_LABEL[b])+'</h2>'; }
+    rail += '<a href="#lead'+l.n+'" class="'+(sent[l.n]?"done":"")+'">'
+          + '<span class="n mono">'+String(l.n).padStart(2,"0")+'</span>'
+          + '<span>'+esc(l.co)+'</span></a>';
+  }
+  rail += '<h2>Call, no address published</h2>';
+  CALLS.forEach((c,i)=>{
+    rail += '<a href="#call'+i+'" class="'+(sent[callKey(i)]?"done":"")+'">'
+          + '<span class="n mono">'+String(i+1).padStart(2,"0")+'</span>'
+          + '<span>'+esc(c.co)+'</span></a>';
+  });
+  document.getElementById("railList").innerHTML = rail;
+
+  let out = ""; seen = null;
+  for(const l of LEADS){
+    const b = batchOf(l.n);
+    if(b !== seen){ seen = b; out += '<div class="batch">'+esc(BATCH_LABEL[b])+'</div>'; }
+    out += cardHTML(l);
+  }
+  out += '<div class="batch">Call, no address published</div>'
+       + '<div class="callintro">Fifteen organisations with a named decision maker but no email address I could verify. '
+       + 'I have not guessed at one. An Association Executive answers her own phone far more often than a managing '
+       + 'director does, so these are calls rather than skips. Best window is 3pm to 6pm UK, which is mid-morning '
+       + 'Eastern. Check the CTPS equivalent does not apply: US federal Do Not Call covers residential lines, not '
+       + 'business numbers, so association offices are fine.</div>'
+       + CALLS.map(callHTML).join("");
+  document.getElementById("cards").innerHTML = out;
+  tally();
+}
+
+function refreshAddrState(){
+  const box = document.getElementById("setup");
+  const st  = document.getElementById("addrState");
+  if(postalAddr.trim()){
+    box.classList.remove("missing");
+    st.className = "state ok";
+    st.textContent = "Set. It is now in all " + LEADS.length + " signatures.";
+  }else{
+    box.classList.add("missing");
+    st.className = "state bad";
+    st.textContent = "Not set. Emails will copy with a visible red placeholder until you fill this in.";
+  }
+}
+
+const addrInput = document.getElementById("addr");
+addrInput.value = postalAddr;
+addrInput.addEventListener("input", () => {
+  postalAddr = addrInput.value;
+  try{ localStorage.setItem("hoUsAddr", postalAddr); }catch(e){}
+  refreshAddrState();
+  render();
+});
+
+document.addEventListener("click", e=>{
+  const b=e.target.closest("button[data-act]");
+  if(b){
+    const l=LEADS.find(x=>x.n===+b.dataset.n);
+    const act=b.dataset.act;
+    if(act==="copy") copyRich(l);
+    else if(act==="select"){ if(selectOnPage(l.n)) toast("Selected. Press Cmd+C, then paste into Zoho."); }
+    else if(act==="subj") copyPlain(l.subj,"Subject");
+    else if(act==="addr") copyPlain(l.to,"Address");
+    else if(act==="mark"){ sent[l.n]=!sent[l.n]; persist(); render(); }
+    return;
+  }
+  const cb=e.target.closest("button[data-callact]");
+  if(!cb) return;
+  const i=+cb.dataset.i, c=CALLS[i], act=cb.dataset.callact;
+  if(act==="tel") copyPlain(c.tel,"Number");
+  else if(act==="open") copyPlain(c.open,"Opener");
+  else if(act==="mark"){ const k=callKey(i); sent[k]=!sent[k]; persist(); render(); }
+});
+
+refreshAddrState();
+render();
+</script>
